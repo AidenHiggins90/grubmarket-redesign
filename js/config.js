@@ -12,6 +12,6 @@
    service_role key here.
 ------------------------------------------------------------------ */
 window.GM_SUPABASE = {
-  url: "https://YOUR-PROJECT-REF.supabase.co",
-  anonKey: "YOUR-ANON-PUBLIC-KEY"
+  url: "https://ncdkgvdljfekfhzienxi.supabase.co",
+  anonKey: "sb_publishable_4DjPiA2FJ9cGiXu4arqutA_WI1AYWtr"
 };
