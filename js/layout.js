@@ -16,6 +16,7 @@
     info: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>',
     chat: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 21l1.8-5.2A8 8 0 1 1 21 12z"/></svg>',
     grid: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>',
+    chart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/><path d="M19 7h-3M19 7v3"/></svg>',
     arr:  '<svg class="arr" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
     check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>'
   };
@@ -41,6 +42,7 @@
     { h: "Company", items: [
       { t: "Blog",            d: "News & insights",      href: "blog.html",         i: "book" },
       { t: "Careers",         d: "Join the team",        href: "careers.html",      i: "user" },
+      { t: "Investor Relations", d: "Financials, funding & milestones", href: "investors.html", i: "chart" },
       { t: "Contact",         d: "Talk to the right team", href: "contact.html",    i: "chat" }
     ]}
   ];
@@ -84,7 +86,7 @@
         '<p class="blurb">Digitally transforming the American food supply chain industry — wholesale, software, AI, and delivery in one network.</p></div>' +
       '<div><h5>Platform</h5><a href="wholesale.html">Buy Wholesale</a><a href="software.html">ERP Software</a><a href="enterprise-ai.html">Enterprise AI</a></div>' +
       '<div><h5>Explore</h5><a href="index.html#delivery">Delivery</a><a href="sustainability.html">Sustainability</a><a href="index.html#about">About</a></div>' +
-      '<div><h5>Company</h5><a href="blog.html">Blog</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div>' +
+      '<div><h5>Company</h5><a href="blog.html">Blog</a><a href="careers.html">Careers</a><a href="investors.html">Investor Relations</a><a href="contact.html">Contact</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div>' +
     '</div>' +
     '<div class="bottom"><span>© 2026 GrubMarket. All rights reserved.</span>' +
       '<span><a href="terms.html">Terms of Service</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a></span></div>' +
