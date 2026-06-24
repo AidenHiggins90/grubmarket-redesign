@@ -456,3 +456,24 @@ img { max-width: 100%; }
 
 @media (max-width: 900px) { .app-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 600px) { .app-grid { grid-template-columns: 1fr; } }
+
+/* ---- Lead form ---- */
+.lead-form { max-width: 680px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.lead-form .field { display: flex; flex-direction: column; }
+.lead-form .field.full { grid-column: 1 / -1; }
+.lead-form label { font-weight: 700; font-size: 14px; color: var(--ink); margin-bottom: 8px; }
+.lead-form label .opt { font-weight: 400; color: var(--muted); }
+.lead-form input, .lead-form select, .lead-form textarea {
+  font-family: var(--sans); font-size: 15px; color: var(--ink);
+  background: #fff; border: 1px solid var(--line); border-radius: 9px; padding: 13px 14px;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.lead-form input:focus, .lead-form select:focus, .lead-form textarea:focus {
+  outline: none; border-color: var(--green); box-shadow: 0 0 0 3px rgba(20,134,79,.15);
+}
+.lead-form textarea { resize: vertical; }
+.lead-form button { width: fit-content; }
+.form-status { font-size: 14px; font-weight: 700; margin: 14px 0 0; }
+.form-status.ok { color: var(--green); }
+.form-status.err { color: #b94a48; }
+@media (max-width: 600px) { .lead-form { grid-template-columns: 1fr; } }

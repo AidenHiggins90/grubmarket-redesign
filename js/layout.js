@@ -40,7 +40,8 @@
     ]},
     { h: "Company", items: [
       { t: "Blog",            d: "News & insights",      href: "blog.html",         i: "book" },
-      { t: "Careers",         d: "Join the team",        href: "careers.html",      i: "user" }
+      { t: "Careers",         d: "Join the team",        href: "careers.html",      i: "user" },
+      { t: "Contact",         d: "Talk to the right team", href: "contact.html",    i: "chat" }
     ]}
   ];
 
@@ -83,7 +84,7 @@
         '<p class="blurb">Digitally transforming the American food supply chain industry — wholesale, software, AI, and delivery in one network.</p></div>' +
       '<div><h5>Platform</h5><a href="wholesale.html">Buy Wholesale</a><a href="software.html">ERP Software</a><a href="enterprise-ai.html">Enterprise AI</a></div>' +
       '<div><h5>Explore</h5><a href="index.html#delivery">Delivery</a><a href="sustainability.html">Sustainability</a><a href="index.html#about">About</a></div>' +
-      '<div><h5>Company</h5><a href="blog.html">Blog</a><a href="careers.html">Careers</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div>' +
+      '<div><h5>Company</h5><a href="blog.html">Blog</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div>' +
     '</div>' +
     '<div class="bottom"><span>© 2026 GrubMarket. All rights reserved.</span>' +
       '<span><a href="terms.html">Terms of Service</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a></span></div>' +
