@@ -196,7 +196,7 @@ img { max-width: 100%; }
   border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg);
   aspect-ratio: 4/3.2; background: var(--mint-100) center/cover no-repeat;
   background-image: url("https://www.grubmarket.com/hello/assets/images/image%2022.png");
-  animation: heroSlideUp .8s ease .15s both, heroBob 6s ease-in-out 1.2s infinite;
+  animation: heroSlideUp .8s ease .15s both;
 }
 
 /* ============================================================
