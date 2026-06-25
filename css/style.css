@@ -333,7 +333,7 @@ img { max-width: 100%; }
 .stat .l { font-size: 14px; color: var(--muted); margin-top: 8px; }
 
 /* ---- Credibility / proof band ---- */
-.proof { background: var(--paper); }
+.proof { background: var(--mint-50); }
 .proof-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
 .proof .pstat .n { font-family: var(--head); font-weight: 900; font-size: clamp(40px, 4.6vw, 56px); color: var(--green); line-height: 1; letter-spacing: -0.025em; }
 .proof .pstat .l { font-size: 14px; color: var(--muted); margin-top: 10px; }
@@ -343,11 +343,11 @@ img { max-width: 100%; }
 .proof-trust strong { color: var(--green-dark); font-weight: 700; }
 
 /* ---- Audience entry tiles ---- */
-.audience { background: var(--paper); }
+.audience { background: #fff; }
 .aud-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .aud-tile { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
 .aud-tile:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: var(--green-bright); }
-.aud-img { display: block; height: 150px; background: var(--mint-100) center/cover no-repeat; }
+.aud-img { display: block; height: 220px; background: var(--mint-100) center/cover no-repeat; }
 .aud-body { display: flex; flex-direction: column; flex: 1; padding: 24px; }
 .aud-tile h3 { font-size: 18px; color: var(--green-dark); margin: 0 0 6px; }
 .aud-tile p { font-size: 14px; color: var(--body); margin: 0 0 16px; flex: 1; }
