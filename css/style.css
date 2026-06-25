@@ -196,6 +196,40 @@ img { max-width: 100%; }
   border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg);
   aspect-ratio: 4/3.2; background: var(--mint-100) center/cover no-repeat;
   background-image: url("https://www.grubmarket.com/hello/assets/images/image%2022.png");
+  animation: heroSlideUp .8s ease .15s both, heroBob 6s ease-in-out 1.2s infinite;
+}
+
+/* ============================================================
+   HERO ANIMATIONS
+   ============================================================ */
+@keyframes heroSlideUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroBob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%       { transform: translateY(-14px) rotate(.35deg); }
+}
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: .45; }
+  50%       { transform: translateX(-50%) translateY(7px); opacity: .85; }
+}
+
+.hero .eyebrow  { animation: heroSlideUp .6s ease both .05s; }
+.hero h1        { animation: heroSlideUp .7s ease both .2s; }
+.hero .lead     { animation: heroSlideUp .7s ease both .36s; }
+.hero .hero-cta { animation: heroSlideUp .7s ease both .5s; }
+
+.scroll-hint {
+  position: absolute; bottom: 22px; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 5px;
+  font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--green-dark); pointer-events: none; user-select: none;
+  animation: heroSlideUp .8s ease both .9s;
+}
+.scroll-hint svg {
+  width: 18px; height: 18px;
+  animation: scrollBounce 1.8s ease-in-out infinite;
 }
 
 /* ============================================================
@@ -312,7 +346,7 @@ img { max-width: 100%; }
 .audience { background: var(--paper); }
 .aud-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .aud-tile { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
-.aud-tile:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--green-bright); }
+.aud-tile:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: var(--green-bright); }
 .aud-img { display: block; height: 150px; background: var(--mint-100) center/cover no-repeat; }
 .aud-body { display: flex; flex-direction: column; flex: 1; padding: 24px; }
 .aud-tile h3 { font-size: 18px; color: var(--green-dark); margin: 0 0 6px; }
