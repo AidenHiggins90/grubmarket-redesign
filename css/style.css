@@ -420,7 +420,7 @@ img { max-width: 100%; }
    FOOTER
    ============================================================ */
 .footer { background: #102018; color: #b8c4bd; padding: 64px 0 36px; }
-.footer .cols { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 32px; }
+.footer .cols { display: grid; grid-template-columns: 1.5fr repeat(4, 1fr); gap: 32px; }
 .footer img.logo { height: 28px; margin-bottom: 16px; filter: brightness(0) invert(1); }
 .footer .blurb { color: #93a399; max-width: 34ch; font-size: 15px; }
 .footer h5 { color: #fff; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 14px; font-weight: 700; font-family: var(--sans); }
