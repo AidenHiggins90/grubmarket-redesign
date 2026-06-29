@@ -526,6 +526,13 @@ img { max-width: 100%; }
 /* ============================================================
    INVESTOR RELATIONS
    ============================================================ */
+/* Careers culture photo strip. */
+.culture-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.culture-img { display: block; aspect-ratio: 4 / 3; border-radius: 14px; background: var(--mint-100) center/cover no-repeat; box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease; }
+.culture-img:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+@media (max-width: 760px) { .culture-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 460px) { .culture-grid { grid-template-columns: 1fr; } }
+
 /* IR reports library — corporate document download cards. */
 .ir-docs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 @media (max-width: 880px) { .ir-docs { grid-template-columns: 1fr 1fr; } }
