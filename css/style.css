@@ -526,6 +526,22 @@ img { max-width: 100%; }
 /* ============================================================
    INVESTOR RELATIONS
    ============================================================ */
+/* IR reports library — corporate document download cards. */
+.ir-docs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+@media (max-width: 880px) { .ir-docs { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .ir-docs { grid-template-columns: 1fr; } }
+
+/* IR investor FAQ — native accordion, no JS. */
+.ir-faq { max-width: 840px; margin: 0 auto; }
+.ir-faq details { border: 1px solid var(--line); border-radius: 12px; background: #fff; margin-bottom: 12px; box-shadow: var(--shadow-sm); }
+.ir-faq summary { list-style: none; cursor: pointer; padding: 20px 24px; font-family: var(--head); font-weight: 700; font-size: 16.5px; color: var(--ink); display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.ir-faq summary::-webkit-details-marker { display: none; }
+.ir-faq summary::after { content: "+"; font-family: var(--sans); font-weight: 700; font-size: 24px; color: var(--green); line-height: 1; flex: 0 0 auto; transition: transform .2s ease; }
+.ir-faq details[open] summary { color: var(--green-dark); }
+.ir-faq details[open] summary::after { transform: rotate(45deg); }
+.ir-faq .faq-a { padding: 0 24px 22px; margin: 0; font-size: 15.5px; line-height: 1.62; color: var(--body); }
+.ir-faq .faq-a a { font-weight: 700; }
+
 /* IR stock ticker strip — illustrative pre-IPO quote, styled like a real one. */
 .ir-stock-band { background: #fff; border-bottom: 1px solid var(--line); }
 .ir-stock { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; padding: 16px 24px; }
