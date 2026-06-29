@@ -528,6 +528,7 @@ img { max-width: 100%; }
    ============================================================ */
 /* Article (blog post) body — featured image, lists, quotes, source note. */
 .article-img { width: 100%; aspect-ratio: 16 / 7; border-radius: 16px; background: var(--mint-100) center/cover no-repeat; margin: 0 0 34px; box-shadow: var(--shadow-md); }
+.article-img.contain, .post .thumb.contain { background-size: contain; background-color: var(--mint-50); }
 .prose ul { margin: 0 0 18px; padding-left: 22px; }
 .prose li { font-size: 18px; line-height: 1.6; color: var(--body); margin-bottom: 9px; }
 .prose blockquote { margin: 26px 0; padding: 6px 0 6px 22px; border-left: 3px solid var(--green-bright); font-family: var(--head); font-weight: 700; color: var(--ink); font-size: 20px; line-height: 1.45; }
