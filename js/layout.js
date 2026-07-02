@@ -71,8 +71,7 @@
         { h: "About", items: [
           { t: "Who We Are",         d: "Our story, footprint & mission", href: "about.html" },
           { t: "Leadership Team",    d: "The people leading GrubMarket",  href: "leadership.html" },
-          { t: "Awards & Accolades", d: "Recognition & industry honors",  href: "awards.html" },
-          { t: "Diversity",          d: "Our commitment to our people",   href: "diversity.html" }
+          { t: "Awards & Accolades", d: "Recognition & industry honors",  href: "awards.html" }
         ]},
         { h: "Connect", items: [
           { t: "Investor Relations", d: "Financials, filings & investor kit", href: "investors.html" },
@@ -147,7 +146,7 @@
       '<div><h5>Platform</h5><a href="grubos.html">GrubOS</a><a href="wholesale.html">Buy Wholesale</a><a href="software.html">ERP Software</a><a href="enterprise-ai.html">Enterprise AI</a></div>' +
       '<div><h5>Resources</h5><a href="blog.html">Newsroom</a><a href="events.html">Events</a><a href="customers.html">Customer Stories</a><a href="sustainability.html">Sustainability</a></div>' +
       '<div><h5>Company</h5><a href="leadership.html">Leadership</a><a href="awards.html">Awards</a><a href="careers.html">Careers</a><a href="investors.html">Investor Relations</a></div>' +
-      '<div><h5>Legal</h5><a href="contact.html">Contact</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div>' +
+      '<div><h5>Legal</h5><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="cookie-policy.html">Cookie Policy</a><a href="accessibility.html">Accessibility</a></div>' +
     '</div>' +
     '<div class="bottom"><span>© 2026 GrubMarket. All rights reserved.</span>' +
       '<span><a href="terms.html">Terms of Service</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a></span></div>' +
