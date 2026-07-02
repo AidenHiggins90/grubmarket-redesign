@@ -1,79 +1,139 @@
 /* ============================================================
-   Shared layout: header (with Explore dropdown) + footer.
+   Shared layout: header (5 mega-dropdowns) + footer.
    Injected on every page so navigation stays consistent and DRY.
-   ALL links are internal to this site — except the food hubs.
+   Structure/interaction pattern modeled on Manhattan Associates'
+   mega-menu; branding/design tokens are GrubMarket's own.
    ============================================================ */
 (function () {
-  // ---- inline SVG icons (stroke-based, professional) ----
-  var I = {
-    cart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h2.2l2 12.5a1.5 1.5 0 0 0 1.5 1.2h9.6a1.5 1.5 0 0 0 1.5-1.2L20 7H5.4"/></svg>',
-    cpu:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg>',
-    ai:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8z"/><path d="M18.5 14.5l.8 1.9 1.9.8-1.9.8-.8 1.9-.8-1.9-1.9-.8 1.9-.8z"/></svg>',
-    truck:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v9H3zM14 9h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>',
-    leaf: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 6-13 15-13 0 9-5 15-13 15-1.5 0-2-.6-2-2z"/><path d="M5 19c3-5 6-7 10-8"/></svg>',
-    user: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>',
-    book: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M19 19H6"/></svg>',
-    info: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>',
-    chat: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 21l1.8-5.2A8 8 0 1 1 21 12z"/></svg>',
-    grid: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>',
-    chart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/><path d="M19 7h-3M19 7v3"/></svg>',
-    arr:  '<svg class="arr" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
-    check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>'
-  };
-  window.GM_ICONS = I;
-
   var LOGO   = "https://www.grubmarket.com/hello/assets/icons/logo_black.svg";
   var LOGO_W = "https://www.grubmarket.com/hello/assets/icons/logo.svg";
+  var IMG    = "https://www.grubmarket.com/hello/assets/images/";
 
-  // ---- navigation model (everything internal) ----
+  // ---- navigation model: 5 top-level dropdowns, each with grouped
+  //      subsections (like Manhattan's mega-menus) + a featured card ----
   var NAV = [
-    { h: "Platform", items: [
-      { t: "GrubOS",         d: "Open every GrubMarket platform in one place", href: "grubos.html", i: "grid" },
-      { t: "Buy Wholesale",  d: "B2B marketplace across the U.S. & Canada", href: "wholesale.html",     i: "cart" },
-      { t: "ERP Software",   d: "AI inventory, warehouse & eCommerce tools", href: "software.html",      i: "cpu"  },
-      { t: "Enterprise AI",  d: "Food supply chain AI & automation",         href: "enterprise-ai.html", i: "ai"   }
-    ]},
-    { h: "For You", items: [
-      { t: "Growers & Farmers",      d: "Reach more buyers and get paid on time", href: "growers.html",       i: "leaf"  },
-      { t: "Home & Office Delivery", d: "Farm-fresh food up to 50% off retail", href: "index.html#delivery", i: "truck" },
-      { t: "Sustainability",         d: "Sustainable California initiative",     href: "sustainability.html", i: "leaf"  },
-      { t: "Who We Are",             d: "Our story, footprint & mission",        href: "index.html#about",    i: "info"  }
-    ]},
-    { h: "Company", items: [
-      { t: "Blog",            d: "News & insights",      href: "blog.html",         i: "book" },
-      { t: "Careers",         d: "Join the team",        href: "careers.html",      i: "user" },
-      { t: "Investor Relations", d: "Financials, funding & milestones", href: "investors.html", i: "chart" },
-      { t: "Contact",         d: "Talk to the right team", href: "contact.html",    i: "chat" }
-    ]}
+    { label: "Platform", groups: [
+        { h: "Software", items: [
+          { t: "GrubOS",        d: "Every acquisition, one platform",   href: "grubos.html" },
+          { t: "ERP Software",  d: "Inventory, warehouse & eCommerce",  href: "software.html" },
+          { t: "Orders IO",     d: "Custom-branded mobile B2B ordering", href: "grubos.html" }
+        ]},
+        { h: "AI & Payments", items: [
+          { t: "Enterprise AI", d: "GrubAssist AI agents & automation",  href: "enterprise-ai.html" },
+          { t: "GrubPay",       d: "Integrated payments rail",           href: "grubos.html" }
+        ]}
+      ],
+      featured: { tag: "Platform", title: "Inside GrubOS", desc: "A decade of acquisitions, unified under one login.", href: "grubos.html", img: "farm_gpt_carousel_scaled628x1200.png" }
+    },
+
+    { label: "Marketplace", groups: [
+        { h: "Buy", items: [
+          { t: "Buy Wholesale",  d: "B2B marketplace across the U.S. & Canada", href: "wholesale.html" },
+          { t: "Product Catalog", d: "Browse quality products by category",     href: "wholesale.html" }
+        ]},
+        { h: "Sell & Deliver", items: [
+          { t: "Sell Your Harvest",      d: "For growers & farmers",           href: "growers.html" },
+          { t: "Home & Office Delivery", d: "Farm-fresh food, delivered (B2C)", href: "index.html#delivery" }
+        ]}
+      ],
+      featured: { tag: "Marketplace", title: "Buy Wholesale", desc: "Exclusive products at low prices, delivered on your schedule.", href: "wholesale.html", img: "boxes_anim.jpg" }
+    },
+
+    { label: "Who We Serve", groups: [
+        { h: "Businesses", items: [
+          { t: "Grocers & Restaurants",     d: "Source quality products at low prices", href: "wholesale.html" },
+          { t: "Distributors & Wholesalers", d: "Run your operation on one platform",    href: "software.html" }
+        ]},
+        { h: "Growers & Consumers", items: [
+          { t: "Growers & Farmers", d: "Reach more buyers, get paid on time", href: "growers.html" },
+          { t: "Home & Office",     d: "Farm-fresh food delivered to you",    href: "index.html#delivery" }
+        ]}
+      ],
+      featured: { tag: "Find your GrubMarket", title: "Whoever you are in food", desc: "There's a door for you — grow, distribute, sell, or source.", href: "index.html", img: "image%2022.png" }
+    },
+
+    { label: "Resources", groups: [
+        { h: "Newsroom", items: [
+          { t: "Newsroom",    d: "News, insights & press releases", href: "blog.html" },
+          { t: "Events",      d: "Webcasts & investor events",      href: "events.html" },
+          { t: "Trade Shows", d: "Where to meet the team",          href: "events.html#trade-shows" }
+        ]},
+        { h: "Community", items: [
+          { t: "Customer Stories", d: "How partners grow with GrubMarket", href: "customers.html" },
+          { t: "Community Hub",    d: "Connect with the network",          href: "customers.html#community" },
+          { t: "Sustainability",   d: "Sustainable California initiative",  href: "sustainability.html" }
+        ]}
+      ],
+      featured: { tag: "Newsroom", title: "The latest from GrubMarket", desc: "Three years of stories on food, technology, and growth.", href: "blog.html", img: "bg3.jpg" }
+    },
+
+    { label: "Company", groups: [
+        { h: "About", items: [
+          { t: "Who We Are",         d: "Our story, footprint & mission", href: "index.html#about" },
+          { t: "Leadership Team",    d: "The people leading GrubMarket",  href: "leadership.html" },
+          { t: "Awards & Accolades", d: "Recognition & industry honors",  href: "awards.html" },
+          { t: "Diversity",          d: "Our commitment to our people",   href: "leadership.html#diversity" }
+        ]},
+        { h: "Connect", items: [
+          { t: "Investor Relations", d: "Financials, filings & investor kit", href: "investors.html" },
+          { t: "Careers",            d: "Join the team",                      href: "careers.html" },
+          { t: "Contact",            d: "Talk to the right team",             href: "contact.html" }
+        ]}
+      ],
+      featured: { tag: "Careers", title: "Life at GrubMarket", desc: "Build the future of food technology with us.", href: "careers.html", img: "GettyImages-1182645061SMALL.jpg" }
+    }
   ];
 
-  function megaCols() {
-    return NAV.map(function (col) {
-      var links = col.items.map(function (it) {
-        return '<a class="mega-link" href="' + it.href + '">' +
-                 '<span class="mi">' + I[it.i] + '</span>' +
-                 '<span><span class="t">' + it.t + '</span>' +
-                 '<span class="d">' + it.d + '</span></span></a>';
+  // ---- render one dropdown ----
+  function megaFor(entry, idx) {
+    var groups = entry.groups.map(function (g) {
+      var links = g.items.map(function (it) {
+        return '<a class="m-link" role="menuitem" href="' + it.href + '">' +
+                 '<span class="m-t">' + it.t + '</span>' +
+                 '<span class="m-d">' + it.d + '</span></a>';
       }).join("");
-      return '<div class="mega-col"><h4>' + col.h + '</h4>' + links + '</div>';
+      return '<div class="mega-group"><h4>' + g.h + '</h4>' + links + '</div>';
     }).join("");
+
+    var f = entry.featured;
+    var featured = f ? (
+      '<a class="mega-featured" href="' + f.href + '">' +
+        '<span class="mf-img" style="background-image:url(\'' + IMG + f.img + '\')"></span>' +
+        '<span class="mf-body">' +
+          '<span class="mf-tag">' + f.tag + '</span>' +
+          '<span class="mf-title">' + f.title + '</span>' +
+          '<span class="mf-desc">' + f.desc + '</span>' +
+          '<span class="mf-link">Learn more →</span>' +
+        '</span></a>'
+    ) : "";
+
+    var panelId = "mega-" + idx;
+    return '<div class="dropdown">' +
+      '<button class="nav-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="' + panelId + '">' +
+        entry.label + ' <span class="chev" aria-hidden="true"></span></button>' +
+      '<div class="mega" id="' + panelId + '" role="menu" aria-label="' + entry.label + '">' +
+        '<div class="mega-inner">' +
+          '<div class="mega-groups">' + groups + '</div>' + featured +
+        '</div>' +
+      '</div></div>';
   }
 
+  function navHTML() { return NAV.map(megaFor).join(""); }
+
   function mobileLinks() {
-    return NAV.map(function (col) {
-      return '<h4>' + col.h + '</h4>' +
-        col.items.map(function (it) { return '<a href="' + it.href + '">' + it.t + '</a>'; }).join("");
+    return NAV.map(function (entry) {
+      var groups = entry.groups.map(function (g) {
+        return '<h5>' + g.h + '</h5>' +
+          g.items.map(function (it) { return '<a href="' + it.href + '">' + it.t + '</a>'; }).join("");
+      }).join("");
+      return '<div class="mp-section"><h4>' + entry.label + '</h4>' + groups + '</div>';
     }).join("") + '<a class="btn solid" href="wholesale.html">Buy Wholesale</a>';
   }
 
   var header =
     '<header class="site-header" id="siteHeader"><div class="wrap">' +
       '<a class="brand" href="index.html" aria-label="GrubMarket home"><img src="' + LOGO + '" alt="GrubMarket"/></a>' +
-      '<nav class="nav" id="nav">' +
-        '<div class="dropdown" id="dropdown">' +
-          '<button class="nav-trigger" id="navTrigger" aria-expanded="false" aria-haspopup="true">Explore <span class="chev"></span></button>' +
-          '<div class="mega" role="menu">' + megaCols() + '</div>' +
-        '</div>' +
+      '<nav class="nav" id="nav" aria-label="Primary">' + navHTML() +
         '<a class="btn solid sm nav-cta" href="wholesale.html">Buy Wholesale</a>' +
       '</nav>' +
       '<button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>' +
@@ -84,9 +144,9 @@
     '<footer class="footer"><div class="wrap"><div class="cols">' +
       '<div><img class="logo" src="' + LOGO_W + '" alt="GrubMarket"/>' +
         '<p class="blurb">Digitally transforming the American food supply chain industry — wholesale, software, AI, and delivery in one network.</p></div>' +
-      '<div><h5>Platform</h5><a href="wholesale.html">Buy Wholesale</a><a href="software.html">ERP Software</a><a href="enterprise-ai.html">Enterprise AI</a></div>' +
-      '<div><h5>Explore</h5><a href="index.html#delivery">Delivery</a><a href="sustainability.html">Sustainability</a><a href="index.html#about">About</a></div>' +
-      '<div><h5>Company</h5><a href="blog.html">Blog</a><a href="careers.html">Careers</a><a href="investors.html">Investor Relations</a></div>' +
+      '<div><h5>Platform</h5><a href="grubos.html">GrubOS</a><a href="wholesale.html">Buy Wholesale</a><a href="software.html">ERP Software</a><a href="enterprise-ai.html">Enterprise AI</a></div>' +
+      '<div><h5>Resources</h5><a href="blog.html">Newsroom</a><a href="events.html">Events</a><a href="customers.html">Customer Stories</a><a href="sustainability.html">Sustainability</a></div>' +
+      '<div><h5>Company</h5><a href="leadership.html">Leadership</a><a href="awards.html">Awards</a><a href="careers.html">Careers</a><a href="investors.html">Investor Relations</a></div>' +
       '<div><h5>Legal</h5><a href="contact.html">Contact</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div>' +
     '</div>' +
     '<div class="bottom"><span>© 2026 GrubMarket. All rights reserved.</span>' +
@@ -99,36 +159,75 @@
   if (hMount) hMount.outerHTML = header;
   if (fMount) fMount.outerHTML = footer;
 
-  // ---- highlight the current page in nav, dropdown, footer ----
+  // ---- highlight the current page ----
   (function () {
     var here = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-    document.querySelectorAll("#nav .nav-link, .mega-link, #mobilePanel a, .footer a").forEach(function (a) {
+    document.querySelectorAll(".m-link, #mobilePanel a, .footer a").forEach(function (a) {
       var href = a.getAttribute("href") || "";
-      if (href.indexOf("#") !== -1) return;   // in-page anchors aren't a "current page" match
+      if (href.indexOf("#") !== -1) return;
       var page = href.split("#")[0].toLowerCase();
       if (page && page === here) a.classList.add("is-active");
     });
   })();
 
-  // ---- interactions ----
-  var dropdown  = document.getElementById("dropdown");
-  var trigger   = document.getElementById("navTrigger");
+  // ---- dropdown interactions (hover + click + keyboard) ----
+  var dropdowns = [].slice.call(document.querySelectorAll(".dropdown"));
+  var closeTimer;
+
+  function closeAll(except) {
+    dropdowns.forEach(function (d) {
+      if (d !== except) {
+        d.classList.remove("open");
+        d.querySelector(".nav-trigger").setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+  function openDrop(d) {
+    clearTimeout(closeTimer);
+    closeAll(d);
+    d.classList.add("open");
+    d.querySelector(".nav-trigger").setAttribute("aria-expanded", "true");
+  }
+  function closeDrop(d) {
+    d.classList.remove("open");
+    d.querySelector(".nav-trigger").setAttribute("aria-expanded", "false");
+  }
+
+  dropdowns.forEach(function (d) {
+    var trig = d.querySelector(".nav-trigger");
+    d.addEventListener("mouseenter", function () { clearTimeout(closeTimer); openDrop(d); });
+    d.addEventListener("mouseleave", function () { closeTimer = setTimeout(function () { closeDrop(d); }, 140); });
+    trig.addEventListener("click", function (e) {
+      e.stopPropagation();
+      if (d.classList.contains("open")) closeDrop(d); else openDrop(d);
+    });
+    trig.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        if (d.classList.contains("open")) closeDrop(d); else openDrop(d);
+      } else if (e.key === "ArrowDown") {
+        e.preventDefault();
+        openDrop(d);
+        var first = d.querySelector(".m-link");
+        if (first) first.focus();
+      }
+    });
+    d.addEventListener("focusout", function (e) {
+      if (!d.contains(e.relatedTarget)) closeDrop(d);
+    });
+    d.querySelectorAll('a[href*="#"]').forEach(function (a) {
+      a.addEventListener("click", function () { closeDrop(d); });
+    });
+  });
+
+  document.addEventListener("click", function (e) { if (!e.target.closest(".dropdown")) closeAll(); });
+
+  // ---- mobile panel ----
   var hamburger = document.getElementById("hamburger");
   var panel     = document.getElementById("mobilePanel");
   var headerEl  = document.getElementById("siteHeader");
 
-  function closeDropdown(){ dropdown.classList.remove("open"); trigger.setAttribute("aria-expanded","false"); }
-  function closePanel(){ panel.classList.remove("open"); hamburger.setAttribute("aria-expanded","false"); }
-
-  trigger.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var open = dropdown.classList.toggle("open");
-    trigger.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  document.addEventListener("click", function (e) { if (!dropdown.contains(e.target)) closeDropdown(); });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape") { closeDropdown(); closePanel(); } });
-  dropdown.querySelectorAll('a[href*="#"]').forEach(function (a) { a.addEventListener("click", closeDropdown); });
-
+  function closePanel() { panel.classList.remove("open"); hamburger.setAttribute("aria-expanded", "false"); }
   hamburger.addEventListener("click", function (e) {
     e.stopPropagation();
     var open = panel.classList.toggle("open");
@@ -136,7 +235,10 @@
   });
   panel.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", closePanel); });
 
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") { closeAll(); closePanel(); } });
+
   // header shadow on scroll
-  function onScroll(){ headerEl.classList.toggle("scrolled", window.scrollY > 8); }
-  onScroll(); window.addEventListener("scroll", onScroll, { passive: true });
+  function onScroll() { headerEl.classList.toggle("scrolled", window.scrollY > 8); }
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
 })();
