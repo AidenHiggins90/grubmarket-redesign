@@ -16,11 +16,11 @@
         { h: "Software", items: [
           { t: "GrubOS",        d: "Every acquisition, one platform",   href: "grubos.html" },
           { t: "ERP Software",  d: "Inventory, warehouse & eCommerce",  href: "software.html" },
-          { t: "Orders IO",     d: "Custom-branded mobile B2B ordering", href: "grubos.html" }
+          { t: "Orders IO",     d: "Custom-branded mobile B2B ordering", href: "orders-io.html" }
         ]},
         { h: "AI & Payments", items: [
           { t: "Enterprise AI", d: "GrubAssist AI agents & automation",  href: "enterprise-ai.html" },
-          { t: "GrubPay",       d: "Integrated payments rail",           href: "grubos.html" }
+          { t: "GrubPay",       d: "Integrated payments rail",           href: "grubpay.html" }
         ]}
       ],
       featured: { tag: "Platform", title: "Inside GrubOS", desc: "A decade of acquisitions, unified under one login.", href: "grubos.html", img: "farm_gpt_carousel_scaled628x1200.png" }
@@ -29,11 +29,11 @@
     { label: "Marketplace", groups: [
         { h: "Buy", items: [
           { t: "Buy Wholesale",  d: "B2B marketplace across the U.S. & Canada", href: "wholesale.html" },
-          { t: "Product Catalog", d: "Browse quality products by category",     href: "wholesale.html" }
+          { t: "Product Catalog", d: "Browse quality products by category",     href: "catalog.html" }
         ]},
         { h: "Sell & Deliver", items: [
           { t: "Sell Your Harvest",      d: "For growers & farmers",           href: "growers.html" },
-          { t: "Home & Office Delivery", d: "Farm-fresh food, delivered (B2C)", href: "index.html#delivery" }
+          { t: "Home & Office Delivery", d: "Farm-fresh food, delivered (B2C)", href: "delivery.html" }
         ]}
       ],
       featured: { tag: "Marketplace", title: "Buy Wholesale", desc: "Exclusive products at low prices, delivered on your schedule.", href: "wholesale.html", img: "boxes_anim.jpg" }
@@ -41,12 +41,12 @@
 
     { label: "Who We Serve", groups: [
         { h: "Businesses", items: [
-          { t: "Grocers & Restaurants",     d: "Source quality products at low prices", href: "wholesale.html" },
-          { t: "Distributors & Wholesalers", d: "Run your operation on one platform",    href: "software.html" }
+          { t: "Grocers & Restaurants",     d: "Source quality products at low prices", href: "grocers.html" },
+          { t: "Distributors & Wholesalers", d: "Run your operation on one platform",    href: "distributors.html" }
         ]},
         { h: "Growers & Consumers", items: [
           { t: "Growers & Farmers", d: "Reach more buyers, get paid on time", href: "growers.html" },
-          { t: "Home & Office",     d: "Farm-fresh food delivered to you",    href: "index.html#delivery" }
+          { t: "Home & Office",     d: "Farm-fresh food delivered to you",    href: "delivery.html" }
         ]}
       ],
       featured: { tag: "Find your GrubMarket", title: "Whoever you are in food", desc: "There's a door for you — grow, distribute, sell, or source.", href: "index.html", img: "image%2022.png" }
@@ -56,11 +56,11 @@
         { h: "Newsroom", items: [
           { t: "Newsroom",    d: "News, insights & press releases", href: "blog.html" },
           { t: "Events",      d: "Webcasts & investor events",      href: "events.html" },
-          { t: "Trade Shows", d: "Where to meet the team",          href: "events.html#trade-shows" }
+          { t: "Trade Shows", d: "Where to meet the team",          href: "trade-shows.html" }
         ]},
         { h: "Community", items: [
           { t: "Customer Stories", d: "How partners grow with GrubMarket", href: "customers.html" },
-          { t: "Community Hub",    d: "Connect with the network",          href: "customers.html#community" },
+          { t: "Community Hub",    d: "Connect with the network",          href: "community.html" },
           { t: "Sustainability",   d: "Sustainable California initiative",  href: "sustainability.html" }
         ]}
       ],
@@ -69,10 +69,10 @@
 
     { label: "Company", groups: [
         { h: "About", items: [
-          { t: "Who We Are",         d: "Our story, footprint & mission", href: "index.html#about" },
+          { t: "Who We Are",         d: "Our story, footprint & mission", href: "about.html" },
           { t: "Leadership Team",    d: "The people leading GrubMarket",  href: "leadership.html" },
           { t: "Awards & Accolades", d: "Recognition & industry honors",  href: "awards.html" },
-          { t: "Diversity",          d: "Our commitment to our people",   href: "leadership.html#diversity" }
+          { t: "Diversity",          d: "Our commitment to our people",   href: "diversity.html" }
         ]},
         { h: "Connect", items: [
           { t: "Investor Relations", d: "Financials, filings & investor kit", href: "investors.html" },
