@@ -16,14 +16,14 @@
       intro: { eyebrow: "The Platform", text: "One connected system for ordering, running, and getting paid — every tool built specifically for fresh, perishable food." },
       groups: [
         { h: "Software", items: [
-          { t: "GrubOS",        d: "Every acquisition, one platform",   href: "grubos.html" },
-          { t: "ERP Software",  d: "Inventory, warehouse & eCommerce",  href: "software.html" },
-          { t: "WholesaleWare Login", d: "Sign in to the ERP platform", href: "https://erp.wholesaleware.com/#/" },
-          { t: "Orders IO",     d: "Custom-branded mobile B2B ordering", href: "orders-io.html" }
+          { t: "GrubOS",        d: "The single front door to a decade of acquisitions — one login, one data layer, six connected modules.",   href: "grubos.html" },
+          { t: "ERP Software",  d: "WholesaleWare handles inventory, warehouse, purchasing, lot tracking, and accounting for perishables.",  href: "software.html" },
+          { t: "WholesaleWare Login", d: "Existing customers: sign in here to run day-to-day operations on the ERP platform.", href: "https://erp.wholesaleware.com/#/" },
+          { t: "Orders IO",     d: "Give customers a branded ordering app for iOS and Android, synced straight to your catalog.", href: "orders-io.html" }
         ]},
         { h: "AI & Payments", items: [
-          { t: "Enterprise AI", d: "GrubAssist AI agents & automation",  href: "enterprise-ai.html" },
-          { t: "GrubPay",       d: "Integrated payments rail",           href: "grubpay.html" }
+          { t: "Enterprise AI", d: "GrubAssist AI agents that read incoming orders, monitor your business, and write reports automatically.",  href: "enterprise-ai.html" },
+          { t: "GrubPay",       d: "Collect payments and reconcile invoices automatically, built directly into your ERP.",           href: "grubpay.html" }
         ]}
       ],
       featured: { tag: "Platform", img: "farm_gpt_carousel_scaled628x1200.png", href: "grubos.html", linkText: "Explore the platform →",
@@ -35,12 +35,12 @@
       intro: { eyebrow: "The Marketplace", text: "Buy, sell, and deliver fresh food through a nationwide network — exclusive pricing and reliable fulfillment, all on one platform." },
       groups: [
         { h: "Buy", items: [
-          { t: "Buy Wholesale",  d: "B2B marketplace across the U.S. & Canada", href: "wholesale.html" },
-          { t: "Product Catalog", d: "Browse quality products by category",     href: "catalog.html" }
+          { t: "Buy Wholesale",  d: "Source thousands of exclusive products at wholesale prices, delivered on your schedule.", href: "wholesale.html" },
+          { t: "Product Catalog", d: "Browse produce, proteins, dairy, and specialty items available across the network.",     href: "catalog.html" }
         ]},
         { h: "Sell & Deliver", items: [
-          { t: "Sell Your Harvest",      d: "For growers & farmers",           href: "growers.html" },
-          { t: "Home & Office Delivery", d: "Farm-fresh food, delivered (B2C)", href: "delivery.html" }
+          { t: "Sell Your Harvest",      d: "List your harvest, reach buyers nationwide, and get paid reliably — no middlemen.",           href: "growers.html" },
+          { t: "Home & Office Delivery", d: "Farm-fresh groceries through local food hubs, for up to 50% less than retail.", href: "delivery.html" }
         ]}
       ],
       featured: { tag: "Marketplace", img: "boxes_anim.jpg", href: "wholesale.html", linkText: "Buy wholesale →",
@@ -52,12 +52,12 @@
       intro: { eyebrow: "Who We Serve", text: "Grower or grocer, distributor or family — GrubMarket meets you where you are in the food supply chain." },
       groups: [
         { h: "Businesses", items: [
-          { t: "Grocers & Restaurants",     d: "Source quality products at low prices", href: "grocers.html" },
-          { t: "Distributors & Wholesalers", d: "Run your operation on one platform",    href: "distributors.html" }
+          { t: "Grocers & Restaurants",     d: "Keep shelves and menus stocked with consistent quality at exclusive wholesale pricing.", href: "grocers.html" },
+          { t: "Distributors & Wholesalers", d: "Replace disconnected legacy tools with one system for ERP, ordering, and payments.",    href: "distributors.html" }
         ]},
         { h: "Growers & Consumers", items: [
-          { t: "Growers & Farmers", d: "Reach more buyers, get paid on time", href: "growers.html" },
-          { t: "Home & Office",     d: "Farm-fresh food delivered to you",    href: "delivery.html" }
+          { t: "Growers & Farmers", d: "Connect with buyers across North America and get paid reliably for every harvest.", href: "growers.html" },
+          { t: "Home & Office",     d: "Order farm-fresh groceries online and have them delivered to your door or office.",    href: "delivery.html" }
         ]}
       ],
       featured: { tag: "Partner voice", img: "image%2022.png", href: "customers.html", linkText: "Read customer stories →",
@@ -69,14 +69,14 @@
       intro: { eyebrow: "Resources", text: "News, customer stories, and events from across the food supply chain — three years of insight, all in one place." },
       groups: [
         { h: "Newsroom", items: [
-          { t: "Newsroom",    d: "News, insights & press releases", href: "blog.html" },
-          { t: "Events",      d: "Webcasts & investor events",      href: "events.html" },
-          { t: "Trade Shows", d: "Where to meet the team",          href: "trade-shows.html" }
+          { t: "Newsroom",    d: "Product launches, acquisitions, and company news — three years of GrubMarket's story.", href: "blog.html" },
+          { t: "Events",      d: "Upcoming earnings webcasts, investor summits, and company milestones.",      href: "events.html" },
+          { t: "Trade Shows", d: "See our software live at produce, foodservice, and food-tech industry events.",          href: "trade-shows.html" }
         ]},
         { h: "Community", items: [
-          { t: "Customer Stories", d: "How partners grow with GrubMarket", href: "customers.html" },
-          { t: "Community Hub",    d: "Connect with the network",          href: "community.html" },
-          { t: "Sustainability",   d: "Sustainable California initiative",  href: "sustainability.html" }
+          { t: "Customer Stories", d: "Real stories from growers, distributors, and grocers who scaled with our network.", href: "customers.html" },
+          { t: "Community Hub",    d: "Share feedback, join the product council, and connect with other customers.",          href: "community.html" },
+          { t: "Sustainability",   d: "230,000+ trees planted and support for farmers pursuing organic certification.",  href: "sustainability.html" }
         ]}
       ],
       featured: { tag: "Newsroom", img: "bg3.jpg", href: "article-schoenmann.html", linkText: "Read the story →",
@@ -88,14 +88,14 @@
       intro: { eyebrow: "Company", text: "Founded in 2014, GrubMarket is the largest private food technology company in the U.S. — and we're just getting started." },
       groups: [
         { h: "About", items: [
-          { t: "Who We Are",         d: "Our story, footprint & mission", href: "about.html" },
-          { t: "Leadership Team",    d: "The people leading GrubMarket",  href: "leadership.html" },
-          { t: "Awards & Accolades", d: "Recognition & industry honors",  href: "awards.html" }
+          { t: "Who We Are",         d: "Founded in 2014, now the largest private food technology company in the U.S. — see how we got here.", href: "about.html" },
+          { t: "Leadership Team",    d: "Meet Mike Xu and the executives building GrubMarket's platform and network.",  href: "leadership.html" },
+          { t: "Awards & Accolades", d: "TIME100 Industry Leaders, CNBC Disruptor 50, and other industry recognition.",  href: "awards.html" }
         ]},
         { h: "Connect", items: [
-          { t: "Investor Relations", d: "Financials, filings & investor kit", href: "investors.html" },
-          { t: "Careers",            d: "Join the team",                      href: "careers.html" },
-          { t: "Contact",            d: "Talk to the right team",             href: "contact.html" }
+          { t: "Investor Relations", d: "Financial dashboard, funding history, filings, and investor contact information.", href: "investors.html" },
+          { t: "Careers",            d: "Open roles across engineering, AI, operations, and sales — build the future of food tech.",                      href: "careers.html" },
+          { t: "Contact",            d: "Get routed to sales, support, or press based on exactly what you need.",             href: "contact.html" }
         ]}
       ],
       featured: { tag: "From our CEO", img: "GettyImages-1182645061SMALL.jpg", href: "leadership.html", linkText: "Meet the team →",
