@@ -144,7 +144,7 @@ img { max-width: 100%; }
   opacity: 0; visibility: hidden; transform: translateY(-6px);
   transition: opacity .18s ease, transform .18s ease, visibility .18s; z-index: 900;
 }
-.dropdown.open .mega { opacity: 1; visibility: visible; transform: translateY(0); }
+.dropdown:hover .mega, .dropdown.open .mega { opacity: 1; visibility: visible; transform: translateY(0); }
 .mega-inner {
   max-width: var(--maxw); margin: 0 auto;
   background: #fff; border: 1px solid var(--line); border-radius: 16px;

@@ -202,8 +202,11 @@
     d.addEventListener("mouseenter", function () { clearTimeout(closeTimer); openDrop(d); });
     d.addEventListener("mouseleave", function () { closeTimer = setTimeout(function () { closeDrop(d); }, 140); });
     trig.addEventListener("click", function (e) {
+      // A click is always preceded by the mouse moving onto the trigger,
+      // which already opens it via mouseenter/CSS :hover — so a click
+      // should just keep it open (never toggle it closed on the way in).
       e.stopPropagation();
-      if (d.classList.contains("open")) closeDrop(d); else openDrop(d);
+      openDrop(d);
     });
     trig.addEventListener("keydown", function (e) {
       if (e.key === "Enter" || e.key === " ") {
