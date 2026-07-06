@@ -12,7 +12,9 @@
   // ---- navigation model: 5 top-level dropdowns, each with grouped
   //      subsections (like Manhattan's mega-menus) + a featured card ----
   var NAV = [
-    { label: "Platform", groups: [
+    { label: "Platform",
+      intro: { eyebrow: "The Platform", text: "One connected system for ordering, running, and getting paid — every tool built specifically for fresh, perishable food." },
+      groups: [
         { h: "Software", items: [
           { t: "GrubOS",        d: "Every acquisition, one platform",   href: "grubos.html" },
           { t: "ERP Software",  d: "Inventory, warehouse & eCommerce",  href: "software.html" },
@@ -24,10 +26,14 @@
           { t: "GrubPay",       d: "Integrated payments rail",           href: "grubpay.html" }
         ]}
       ],
-      featured: { tag: "Platform", title: "Inside GrubOS", desc: "A decade of acquisitions, unified under one login.", href: "grubos.html", img: "farm_gpt_carousel_scaled628x1200.png" }
+      featured: { tag: "Platform", img: "farm_gpt_carousel_scaled628x1200.png", href: "grubos.html", linkText: "Explore the platform →",
+        quote: "We focused on our customers' real challenges and delivered powerful solutions that deliver immediate, positive impact to their businesses.",
+        name: "Genevieve Wang", role: "Chief Software Product Officer, GrubMarket" }
     },
 
-    { label: "Marketplace", groups: [
+    { label: "Marketplace",
+      intro: { eyebrow: "The Marketplace", text: "Buy, sell, and deliver fresh food through a nationwide network — exclusive pricing and reliable fulfillment, all on one platform." },
+      groups: [
         { h: "Buy", items: [
           { t: "Buy Wholesale",  d: "B2B marketplace across the U.S. & Canada", href: "wholesale.html" },
           { t: "Product Catalog", d: "Browse quality products by category",     href: "catalog.html" }
@@ -37,10 +43,14 @@
           { t: "Home & Office Delivery", d: "Farm-fresh food, delivered (B2C)", href: "delivery.html" }
         ]}
       ],
-      featured: { tag: "Marketplace", title: "Buy Wholesale", desc: "Exclusive products at low prices, delivered on your schedule.", href: "wholesale.html", img: "boxes_anim.jpg" }
+      featured: { tag: "Marketplace", img: "boxes_anim.jpg", href: "wholesale.html", linkText: "Buy wholesale →",
+        quote: "Our ability to offer superior services and the finest quality produce year after year is powered by our deep operational know-how and our investments in world-class digital transformation.",
+        name: "Carole Shandler", role: "President, Shapiro-Gilman Shandler at GrubMarket" }
     },
 
-    { label: "Who We Serve", groups: [
+    { label: "Who We Serve",
+      intro: { eyebrow: "Who We Serve", text: "Grower or grocer, distributor or family — GrubMarket meets you where you are in the food supply chain." },
+      groups: [
         { h: "Businesses", items: [
           { t: "Grocers & Restaurants",     d: "Source quality products at low prices", href: "grocers.html" },
           { t: "Distributors & Wholesalers", d: "Run your operation on one platform",    href: "distributors.html" }
@@ -50,10 +60,14 @@
           { t: "Home & Office",     d: "Farm-fresh food delivered to you",    href: "delivery.html" }
         ]}
       ],
-      featured: { tag: "Find your GrubMarket", title: "Whoever you are in food", desc: "There's a door for you — grow, distribute, sell, or source.", href: "index.html", img: "image%2022.png" }
+      featured: { tag: "Partner voice", img: "image%2022.png", href: "customers.html", linkText: "Read customer stories →",
+        quote: "GrubMarket's commitment to AI technology and innovation aligns perfectly with our vision to elevate our capabilities and drive future growth through technology integration.",
+        name: "Isabel Freeland", role: "President & CEO, Coast Citrus Distributors" }
     },
 
-    { label: "Resources", groups: [
+    { label: "Resources",
+      intro: { eyebrow: "Resources", text: "News, customer stories, and events from across the food supply chain — three years of insight, all in one place." },
+      groups: [
         { h: "Newsroom", items: [
           { t: "Newsroom",    d: "News, insights & press releases", href: "blog.html" },
           { t: "Events",      d: "Webcasts & investor events",      href: "events.html" },
@@ -65,10 +79,14 @@
           { t: "Sustainability",   d: "Sustainable California initiative",  href: "sustainability.html" }
         ]}
       ],
-      featured: { tag: "Newsroom", title: "The latest from GrubMarket", desc: "Three years of stories on food, technology, and growth.", href: "blog.html", img: "bg3.jpg" }
+      featured: { tag: "Newsroom", img: "bg3.jpg", href: "article-schoenmann.html", linkText: "Read the story →",
+        quote: "Joining GrubMarket reflects an important moment in the continued evolution of Schoenmann Produce.",
+        name: "Mark Steakley", role: "President, Schoenmann Produce" }
     },
 
-    { label: "Company", groups: [
+    { label: "Company",
+      intro: { eyebrow: "Company", text: "Founded in 2014, GrubMarket is the largest private food technology company in the U.S. — and we're just getting started." },
+      groups: [
         { h: "About", items: [
           { t: "Who We Are",         d: "Our story, footprint & mission", href: "about.html" },
           { t: "Leadership Team",    d: "The people leading GrubMarket",  href: "leadership.html" },
@@ -80,7 +98,9 @@
           { t: "Contact",            d: "Talk to the right team",             href: "contact.html" }
         ]}
       ],
-      featured: { tag: "Careers", title: "Life at GrubMarket", desc: "Build the future of food technology with us.", href: "careers.html", img: "GettyImages-1182645061SMALL.jpg" }
+      featured: { tag: "From our CEO", img: "GettyImages-1182645061SMALL.jpg", href: "leadership.html", linkText: "Meet the team →",
+        quote: "Our mission is to digitally transform the food supply chain through AI, eCommerce, and vertical Software-as-a-Service — driven by our team's relentless pursuit of operational excellence and sustainable growth.",
+        name: "Mike Xu", role: "Founder & CEO, GrubMarket" }
     }
   ];
 
@@ -98,14 +118,21 @@
 
     var f = entry.featured;
     var featured = f ? (
-      '<a class="mega-featured" href="' + f.href + '">' +
+      '<div class="mega-featured">' +
         '<span class="mf-img" style="background-image:url(\'' + IMG + f.img + '\')"></span>' +
-        '<span class="mf-body">' +
+        '<div class="mf-body">' +
           '<span class="mf-tag">' + f.tag + '</span>' +
-          '<span class="mf-title">' + f.title + '</span>' +
-          '<span class="mf-desc">' + f.desc + '</span>' +
-          '<span class="mf-link">Learn more →</span>' +
-        '</span></a>'
+          '<span class="mf-quotemark" aria-hidden="true">&ldquo;</span>' +
+          '<blockquote class="mf-quote">' + f.quote + '</blockquote>' +
+          '<span class="mf-name">' + f.name + '</span>' +
+          '<span class="mf-role">' + f.role + '</span>' +
+          '<a class="mf-link" href="' + f.href + '">' + f.linkText + '</a>' +
+        '</div></div>'
+    ) : "";
+
+    var intro = entry.intro ? (
+      '<div class="mega-intro"><span class="mi-eyebrow">' + entry.intro.eyebrow + '</span>' +
+        '<p class="mi-text">' + entry.intro.text + '</p></div>'
     ) : "";
 
     var panelId = "mega-" + idx;
@@ -114,7 +141,7 @@
         entry.label + ' <span class="chev" aria-hidden="true"></span></button>' +
       '<div class="mega" id="' + panelId + '" role="menu" aria-label="' + entry.label + '">' +
         '<div class="mega-inner">' +
-          '<div class="mega-groups">' + groups + '</div>' + featured +
+          '<div class="mega-main">' + intro + '<div class="mega-groups">' + groups + '</div></div>' + featured +
         '</div>' +
       '</div></div>';
   }
