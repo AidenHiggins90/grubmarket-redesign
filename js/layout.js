@@ -16,14 +16,14 @@
       intro: { eyebrow: "The Platform", text: "One connected system for ordering, running, and getting paid — every tool built specifically for fresh, perishable food." },
       groups: [
         { h: "Software", items: [
-          { t: "GrubOS",        d: "The single front door to a decade of acquisitions — one login, one data layer, six connected modules.",   href: "grubos.html" },
-          { t: "ERP Software",  d: "WholesaleWare handles inventory, warehouse, purchasing, lot tracking, and accounting for perishables.",  href: "software.html" },
-          { t: "WholesaleWare Login", d: "Existing customers: sign in here to run day-to-day operations on the ERP platform.", href: "https://erp.wholesaleware.com/#/" },
-          { t: "Orders IO",     d: "Give customers a branded ordering app for iOS and Android, synced straight to your catalog.", href: "orders-io.html" }
+          { t: "GrubOS",        d: "The single front door to a decade of GrubMarket acquisitions — one login, one data layer, six connected modules spanning ERP, commerce, safety, and AI.", href: "grubos.html" },
+          { t: "ERP Software",  d: "WholesaleWare is the food industry's fastest-growing cloud ERP, running inventory, warehouse ops, grower accounting, manufacturing, HR, and general ledger for wholesalers and distributors.", href: "software.html" },
+          { t: "WholesaleWare Login", d: "Existing customers sign in here to run daily operations — inventory, purchasing, lot tracking, and accounting — on the live WholesaleWare platform.", href: "https://erp.wholesaleware.com/#/" },
+          { t: "Orders IO",     d: "A custom-branded ordering app for your business — customers place orders, browse deals, and check status any hour of day, on iOS or Android.", href: "orders-io.html" }
         ]},
         { h: "AI & Payments", items: [
-          { t: "Enterprise AI", d: "GrubAssist AI agents that read incoming orders, monitor your business, and write reports automatically.",  href: "enterprise-ai.html" },
-          { t: "GrubPay",       d: "Collect payments and reconcile invoices automatically, built directly into your ERP.",           href: "grubpay.html" }
+          { t: "Enterprise AI", d: "GrubAssist, the food industry's first virtual AI assistant, plus AI Orders, which extracts orders 24/7 from voicemails, emails, and texts straight into your ERP.", href: "enterprise-ai.html" },
+          { t: "GrubPay",       d: "Accept ACH and credit card payments in one secure, simple workflow — built for distributors, retail stores, and online shops alike.", href: "grubpay.html" }
         ]}
       ],
       featured: { tag: "Platform", img: "farm_gpt_carousel_scaled628x1200.png", href: "grubos.html", linkText: "Explore the platform →",
@@ -35,12 +35,12 @@
       intro: { eyebrow: "The Marketplace", text: "Buy, sell, and deliver fresh food through a nationwide network — exclusive pricing and reliable fulfillment, all on one platform." },
       groups: [
         { h: "Buy", items: [
-          { t: "Buy Wholesale",  d: "Source thousands of exclusive products at wholesale prices, delivered on your schedule.", href: "wholesale.html" },
-          { t: "Product Catalog", d: "Browse produce, proteins, dairy, and specialty items available across the network.",     href: "catalog.html" }
+          { t: "Buy Wholesale",  d: "GrubMarket's B2B network serves grocers, foodservice operators, schools, government buyers, and restaurants across the U.S. and Canada at exclusive wholesale prices.", href: "wholesale.html" },
+          { t: "Product Catalog", d: "Thousands of products by category — fresh produce, proteins, dairy, pantry staples, floral, and specialty organic items — sourced from a nationwide grower network.", href: "catalog.html" }
         ]},
         { h: "Sell & Deliver", items: [
-          { t: "Sell Your Harvest",      d: "List your harvest, reach buyers nationwide, and get paid reliably — no middlemen.",           href: "growers.html" },
-          { t: "Home & Office Delivery", d: "Farm-fresh groceries through local food hubs, for up to 50% less than retail.", href: "delivery.html" }
+          { t: "Sell Your Harvest",      d: "List your harvest, manage CSA boxes and shares through Farmigo, and reach GrubMarket's nationwide buyer network with reliable payouts built in.", href: "growers.html" },
+          { t: "Home & Office Delivery", d: "Farm-fresh groceries delivered through local hubs like Good Eggs and FreshGOGO, for up to 50% less than grocery store prices.", href: "delivery.html" }
         ]}
       ],
       featured: { tag: "Marketplace", img: "boxes_anim.jpg", href: "wholesale.html", linkText: "Buy wholesale →",
@@ -52,12 +52,12 @@
       intro: { eyebrow: "Who We Serve", text: "Grower or grocer, distributor or family — GrubMarket meets you where you are in the food supply chain." },
       groups: [
         { h: "Businesses", items: [
-          { t: "Grocers & Restaurants",     d: "Keep shelves and menus stocked with consistent quality at exclusive wholesale pricing.", href: "grocers.html" },
-          { t: "Distributors & Wholesalers", d: "Replace disconnected legacy tools with one system for ERP, ordering, and payments.",    href: "distributors.html" }
+          { t: "Grocers & Restaurants",     d: "Keep shelves and menus stocked through GrubMarket's B2B network — quality inventory at wholesale prices, delivered across the U.S. and Canada.", href: "grocers.html" },
+          { t: "Distributors & Wholesalers", d: "Run inventory, warehouse, purchasing, HR, and accounting on WholesaleWare — the food industry's fastest-growing ERP — instead of disconnected legacy tools.", href: "distributors.html" }
         ]},
         { h: "Growers & Consumers", items: [
-          { t: "Growers & Farmers", d: "Connect with buyers across North America and get paid reliably for every harvest.", href: "growers.html" },
-          { t: "Home & Office",     d: "Order farm-fresh groceries online and have them delivered to your door or office.",    href: "delivery.html" }
+          { t: "Growers & Farmers", d: "List your harvest, manage CSA boxes through Farmigo, and get paid reliably through a nationwide buyer network — no middlemen.", href: "growers.html" },
+          { t: "Home & Office",     d: "Order fresh groceries online and get them delivered through local food hubs — Good Eggs, FreshGOGO, and DO Organics.", href: "delivery.html" }
         ]}
       ],
       featured: { tag: "Partner voice", img: "image%2022.png", href: "customers.html", linkText: "Read customer stories →",
@@ -69,14 +69,14 @@
       intro: { eyebrow: "Resources", text: "News, customer stories, and events from across the food supply chain — three years of insight, all in one place." },
       groups: [
         { h: "Newsroom", items: [
-          { t: "Newsroom",    d: "Product launches, acquisitions, and company news — three years of GrubMarket's story.", href: "blog.html" },
-          { t: "Events",      d: "Upcoming earnings webcasts, investor summits, and company milestones.",      href: "events.html" },
-          { t: "Trade Shows", d: "See our software live at produce, foodservice, and food-tech industry events.",          href: "trade-shows.html" }
+          { t: "Newsroom",    d: "From the Sales AI Agent launch to the Spring 2026 software release and TIME100 recognition — GrubMarket's product news and milestones.", href: "blog.html" },
+          { t: "Events",      d: "Quarterly earnings webcasts, investor summits, and company milestones — see what's coming and register to attend.", href: "events.html" },
+          { t: "Trade Shows", d: "Meet the team and see WholesaleWare, AI Orders, and Orders IO live at produce, foodservice, and food-tech industry events.", href: "trade-shows.html" }
         ]},
         { h: "Community", items: [
-          { t: "Customer Stories", d: "Real stories from growers, distributors, and grocers who scaled with our network.", href: "customers.html" },
-          { t: "Community Hub",    d: "Share feedback, join the product council, and connect with other customers.",          href: "community.html" },
-          { t: "Sustainability",   d: "230,000+ trees planted and support for farmers pursuing organic certification.",  href: "sustainability.html" }
+          { t: "Customer Stories", d: "Real accounts from partners like Coast Citrus Distributors and Schoenmann Produce on scaling their business with GrubMarket.", href: "customers.html" },
+          { t: "Community Hub",    d: "Share feedback, join the customer product council, and connect with other grocers, growers, and distributors on the platform.", href: "community.html" },
+          { t: "Sustainability",   d: "The Sustainable California initiative has sponsored 230,000+ trees with One Tree Planted and funded organic certification through CCOF.", href: "sustainability.html" }
         ]}
       ],
       featured: { tag: "Newsroom", img: "bg3.jpg", href: "article-schoenmann.html", linkText: "Read the story →",
@@ -88,14 +88,14 @@
       intro: { eyebrow: "Company", text: "Founded in 2014, GrubMarket is the largest private food technology company in the U.S. — and we're just getting started." },
       groups: [
         { h: "About", items: [
-          { t: "Who We Are",         d: "Founded in 2014, now the largest private food technology company in the U.S. — see how we got here.", href: "about.html" },
-          { t: "Leadership Team",    d: "Meet Mike Xu and the executives building GrubMarket's platform and network.",  href: "leadership.html" },
-          { t: "Awards & Accolades", d: "TIME100 Industry Leaders, CNBC Disruptor 50, and other industry recognition.",  href: "awards.html" }
+          { t: "Who We Are",         d: "Founded in 2014, GrubMarket now operates across 15 states and provinces as the largest private food technology company in the U.S.", href: "about.html" },
+          { t: "Leadership Team",    d: "Led by founder & CEO Mike Xu and Chief Software Product Officer Genevieve Wang, building the platform behind a decade of acquisitions.", href: "leadership.html" },
+          { t: "Awards & Accolades", d: "TIME100 Companies Industry Leaders, CNBC Disruptor 50 for three straight years (2023–2025), and the Shelby Report's Sustainability award.", href: "awards.html" }
         ]},
         { h: "Connect", items: [
-          { t: "Investor Relations", d: "Financial dashboard, funding history, filings, and investor contact information.", href: "investors.html" },
-          { t: "Careers",            d: "Open roles across engineering, AI, operations, and sales — build the future of food tech.",                      href: "careers.html" },
-          { t: "Contact",            d: "Get routed to sales, support, or press based on exactly what you need.",             href: "contact.html" }
+          { t: "Investor Relations", d: "See GrubMarket's $2.4B revenue, $4.5B valuation, Series H round, financial dashboard, filings, and how to request the investor kit.", href: "investors.html" },
+          { t: "Careers",            d: "Open roles in engineering, AI, operations, and sales — join the team behind a decade of acquisitions and a fast-growing AI platform.", href: "careers.html" },
+          { t: "Contact",            d: "Tell us who you are — grocer, grower, distributor, investor, or press — and we'll route you to the right team.", href: "contact.html" }
         ]}
       ],
       featured: { tag: "From our CEO", img: "GettyImages-1182645061SMALL.jpg", href: "leadership.html", linkText: "Meet the team →",
