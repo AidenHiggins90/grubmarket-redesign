@@ -16,6 +16,7 @@
         { h: "Software", items: [
           { t: "GrubOS",        d: "Every acquisition, one platform",   href: "grubos.html" },
           { t: "ERP Software",  d: "Inventory, warehouse & eCommerce",  href: "software.html" },
+          { t: "WholesaleWare Login", d: "Sign in to the ERP platform", href: "https://erp.wholesaleware.com/#/" },
           { t: "Orders IO",     d: "Custom-branded mobile B2B ordering", href: "orders-io.html" }
         ]},
         { h: "AI & Payments", items: [
@@ -87,8 +88,9 @@
   function megaFor(entry, idx) {
     var groups = entry.groups.map(function (g) {
       var links = g.items.map(function (it) {
-        return '<a class="m-link" role="menuitem" href="' + it.href + '">' +
-                 '<span class="m-t">' + it.t + '</span>' +
+        var ext = /^https?:/.test(it.href) ? ' target="_blank" rel="noopener"' : '';
+        return '<a class="m-link" role="menuitem" href="' + it.href + '"' + ext + '>' +
+                 '<span class="m-t">' + it.t + (ext ? ' <span class="m-ext" aria-hidden="true">↗</span>' : '') + '</span>' +
                  '<span class="m-d">' + it.d + '</span></a>';
       }).join("");
       return '<div class="mega-group"><h4>' + g.h + '</h4>' + links + '</div>';
@@ -123,7 +125,10 @@
     return NAV.map(function (entry) {
       var groups = entry.groups.map(function (g) {
         return '<h5>' + g.h + '</h5>' +
-          g.items.map(function (it) { return '<a href="' + it.href + '">' + it.t + '</a>'; }).join("");
+          g.items.map(function (it) {
+            var ext = /^https?:/.test(it.href) ? ' target="_blank" rel="noopener"' : '';
+            return '<a href="' + it.href + '"' + ext + '>' + it.t + (ext ? ' ↗' : '') + '</a>';
+          }).join("");
       }).join("");
       return '<div class="mp-section"><h4>' + entry.label + '</h4>' + groups + '</div>';
     }).join("") + '<a class="btn solid" href="wholesale.html">Buy Wholesale</a>';
