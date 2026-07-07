@@ -1,0 +1,124 @@
+/* Find a Wholesaler — state search + region map + detail panel.
+   Only real, currently active GrubMarket companies are named; every
+   other state gets an honest "reachable via our network" message
+   instead of an invented distributor name. */
+(function () {
+  var page = document.getElementById("finderMap");
+  if (!page) return;
+
+  var ICON_BUILDING = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 8h1M14 8h1M9 12h1M14 12h1M9 16h1M14 16h1"/></svg>';
+  var ICON_TRUCK    = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v9H3zM14 9h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>';
+
+  // ---- data: 50 states + DC, grouped into the 4 standard U.S. Census regions ----
+  var REGIONS = [
+    { h: "Northeast", states: ["CT","ME","MA","NH","RI","VT","NJ","NY","PA"] },
+    { h: "Midwest",   states: ["IL","IN","MI","OH","WI","IA","KS","MN","MO","NE","ND","SD"] },
+    { h: "South",     states: ["DE","FL","GA","MD","NC","SC","VA","WV","DC","AL","KY","MS","TN","AR","LA","OK","TX"] },
+    { h: "West",      states: ["AZ","CO","ID","MT","NV","NM","UT","WY","AK","CA","HI","OR","WA"] }
+  ];
+
+  var NAMES = {
+    AL:"Alabama",AK:"Alaska",AZ:"Arizona",AR:"Arkansas",CA:"California",CO:"Colorado",CT:"Connecticut",
+    DE:"Delaware",DC:"District of Columbia",FL:"Florida",GA:"Georgia",HI:"Hawaii",ID:"Idaho",IL:"Illinois",
+    IN:"Indiana",IA:"Iowa",KS:"Kansas",KY:"Kentucky",LA:"Louisiana",ME:"Maine",MD:"Maryland",MA:"Massachusetts",
+    MI:"Michigan",MN:"Minnesota",MS:"Mississippi",MO:"Missouri",MT:"Montana",NE:"Nebraska",NV:"Nevada",
+    NH:"New Hampshire",NJ:"New Jersey",NM:"New Mexico",NY:"New York",NC:"North Carolina",ND:"North Dakota",
+    OH:"Ohio",OK:"Oklahoma",OR:"Oregon",PA:"Pennsylvania",RI:"Rhode Island",SC:"South Carolina",SD:"South Dakota",
+    TN:"Tennessee",TX:"Texas",UT:"Utah",VT:"Vermont",VA:"Virginia",WA:"Washington",WV:"West Virginia",
+    WI:"Wisconsin",WY:"Wyoming"
+  };
+
+  // Real, currently-active named companies only (sourced from GrubMarket's own
+  // acquisition announcements). Nothing here is invented or discontinued.
+  var PARTNERS = {
+    TX: [
+      { name: "Schoenmann Produce", meta: "Houston, TX · Gulf Coast distributor since 1910", ico: ICON_BUILDING },
+      { name: "Coast Citrus Distributors", meta: "McAllen, TX · GrubMarket's largest acquisition to date", ico: ICON_TRUCK }
+    ],
+    CA: [
+      { name: "Coast Citrus Distributors", meta: "San Diego & Union City, CA facilities", ico: ICON_TRUCK },
+      { name: "Good Eggs", meta: "Home & office delivery hub", ico: ICON_BUILDING },
+      { name: "FreshGOGO", meta: "Home & office delivery hub", ico: ICON_BUILDING },
+      { name: "DO Organics", meta: "Home & office delivery hub", ico: ICON_BUILDING }
+    ],
+    AZ: [ { name: "Delta Fresh Produce", meta: "Arizona produce distributor, acquired 2025", ico: ICON_TRUCK } ],
+    FL: [ { name: "Coast Citrus Distributors", meta: "Princeton, FL facility", ico: ICON_TRUCK } ]
+  };
+
+  // States GrubMarket operates in directly, per its own "Who We Are" copy,
+  // without a specific named distributor to list here yet.
+  var OPERATING = ["CT","GA","MI","NY","NJ","MO","MA","NV","OR","PA","WA"];
+
+  var ALL_ABBR = Object.keys(NAMES).sort(function (a, b) { return NAMES[a].localeCompare(NAMES[b]); });
+
+  // ---- render region map ----
+  var mapHTML = REGIONS.map(function (region) {
+    var pills = region.states.map(function (abbr) {
+      var partner = PARTNERS[abbr] ? " has-partner" : "";
+      return '<button class="st' + partner + '" data-abbr="' + abbr + '" type="button">' +
+               abbr + '<span class="fl-dot"></span></button>';
+    }).join("");
+    return '<div class="finder-region"><h4>' + region.h + '</h4><div class="st-wrap">' + pills + '</div></div>';
+  }).join("");
+  page.innerHTML = mapHTML;
+
+  // ---- render alphabetical list ----
+  var listEl = document.getElementById("finderList");
+  function renderList(filter) {
+    var q = (filter || "").trim().toLowerCase();
+    var items = ALL_ABBR.filter(function (abbr) {
+      if (!q) return true;
+      if (NAMES[abbr].toLowerCase().indexOf(q) > -1 || abbr.toLowerCase() === q) return true;
+      var partners = PARTNERS[abbr] || [];
+      return partners.some(function (p) { return p.name.toLowerCase().indexOf(q) > -1; });
+    });
+    if (!items.length) {
+      listEl.innerHTML = '<li class="fl-empty">No states or companies match "' + filter + '".</li>';
+      return;
+    }
+    listEl.innerHTML = items.map(function (abbr) {
+      var hasPartner = PARTNERS[abbr] ? " has-partner" : "";
+      return '<li><button data-abbr="' + abbr + '" type="button" class="' + hasPartner.trim() + '">' +
+               NAMES[abbr] + '<span class="fl-dot"></span><span class="chev"></span></button></li>';
+    }).join("");
+  }
+  renderList("");
+
+  // ---- detail panel ----
+  var detail = document.getElementById("finderDetail");
+  function showState(abbr) {
+    var name = NAMES[abbr];
+    var partners = PARTNERS[abbr];
+    var html = '<span class="eyebrow">' + name + '</span>';
+    if (partners) {
+      html += '<h3>Active GrubMarket partners in ' + name + '</h3>';
+      html += partners.map(function (p) {
+        return '<div class="fd-partner"><span class="fd-ico">' + p.ico + '</span>' +
+                 '<span><span class="fd-name">' + p.name + '</span><span class="fd-meta">' + p.meta + '</span></span></div>';
+      }).join("");
+    } else if (OPERATING.indexOf(abbr) > -1) {
+      html += '<h3>GrubMarket operates in ' + name + '</h3>' +
+              '<p style="margin:6px 0 0">' + name + ' is one of GrubMarket\'s active operating states. A named regional partner isn\'t listed here yet — <a href="contact.html?role=grocer">reach out</a> and we\'ll connect you directly.</p>';
+    } else {
+      html += '<h3>Reach ' + name + ' through our network</h3>' +
+              '<p style="margin:6px 0 0">GrubMarket ships wholesale nationwide. We don\'t have a named regional partner in ' + name + ' listed yet, but our marketplace can still get product to you here.</p>';
+    }
+    html += '<p style="margin-top:16px"><a class="btn link" href="wholesale.html">Buy Wholesale <svg class="arr" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>';
+    detail.innerHTML = html;
+
+    document.querySelectorAll(".finder-map .st, .finder-list button").forEach(function (b) {
+      b.classList.toggle("active", b.getAttribute("data-abbr") === abbr);
+    });
+  }
+
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest("[data-abbr]");
+    if (btn) showState(btn.getAttribute("data-abbr"));
+  });
+
+  // ---- search ----
+  var search = document.getElementById("finderSearch");
+  var clearBtn = document.getElementById("finderClear");
+  search.addEventListener("input", function () { renderList(search.value); });
+  clearBtn.addEventListener("click", function () { search.value = ""; renderList(""); search.focus(); });
+})();

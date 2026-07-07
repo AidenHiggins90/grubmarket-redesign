@@ -610,6 +610,84 @@ img { max-width: 100%; }
 @media (max-width: 640px) { .ir-stock { gap: 10px; } .stk-meta { gap: 12px; } }
 
 /* IR preview notice — flags the page as an illustrative future-state mockup. */
+/* ============================================================
+   FIND A WHOLESALER — search + state grid map + detail panel
+   ============================================================ */
+.finder-layout { display: grid; grid-template-columns: 320px 1fr; gap: 32px; align-items: start; }
+.finder-search { position: relative; margin-bottom: 18px; }
+.finder-search input {
+  width: 100%; font-family: var(--sans); font-size: 15px; color: var(--ink);
+  padding: 13px 40px 13px 16px; border: 1.5px solid var(--line); border-radius: 10px;
+  outline: none; transition: border-color .15s ease;
+}
+.finder-search input:focus { border-color: var(--green); }
+.finder-search .fs-clear {
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+  width: 24px; height: 24px; border: 0; background: none; cursor: pointer;
+  color: var(--muted); display: grid; place-items: center; border-radius: 6px;
+}
+.finder-search .fs-clear:hover { background: var(--mint-50); color: var(--green-dark); }
+
+.finder-list { max-height: 560px; overflow-y: auto; border: 1px solid var(--line); border-radius: 12px; }
+.finder-list button {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  width: 100%; text-align: left; background: none; border: 0; cursor: pointer;
+  font-family: var(--sans); font-weight: 700; font-size: 15px; color: var(--ink);
+  padding: 12px 16px; border-bottom: 1px solid var(--line); transition: background .12s ease;
+}
+.finder-list li:last-child button { border-bottom: 0; }
+.finder-list button:hover, .finder-list button.active { background: var(--mint-50); color: var(--green-dark); }
+.finder-list button .fl-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green-bright); flex: 0 0 auto; opacity: 0; }
+.finder-list button.has-partner .fl-dot { opacity: 1; }
+.finder-list button .chev { width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(-45deg); opacity: .5; margin-left: auto; }
+.finder-list .fl-empty { padding: 24px 16px; color: var(--muted); font-size: 14px; text-align: center; }
+
+.finder-map { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.finder-region { border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px 20px; background: #fff; }
+.finder-region h4 {
+  font-family: var(--sans); font-weight: 700; font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--green-mid); margin: 0 0 12px;
+}
+.finder-region .st-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+.finder-map .st {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--sans); font-weight: 700; font-size: 12.5px; color: var(--green-dark);
+  background: var(--mint-100); border: 2px solid transparent; border-radius: 20px;
+  cursor: pointer; padding: 7px 12px; transition: background .15s ease, transform .1s ease, border-color .15s ease;
+}
+.finder-map .st:hover { background: var(--green-bright); color: #fff; transform: translateY(-1px); }
+.finder-map .st.active { background: var(--green); color: #fff; border-color: var(--green-dark); }
+.finder-map .st .fl-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green-dark); opacity: 0; }
+.finder-map .st.has-partner .fl-dot { opacity: 1; }
+.finder-map .st.has-partner:hover .fl-dot, .finder-map .st.active .fl-dot { background: #fff; }
+@media (max-width: 640px) { .finder-map { grid-template-columns: 1fr; } }
+.finder-legend { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 16px; font-size: 13px; color: var(--muted); }
+.finder-legend span { display: inline-flex; align-items: center; gap: 7px; }
+.finder-legend .lg-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--green-dark); }
+.finder-legend .lg-swatch { width: 14px; height: 14px; border-radius: 4px; background: var(--mint-100); }
+
+.finder-detail { margin-top: 26px; padding: 26px 28px; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; }
+.finder-detail h3 { margin: 0 0 4px; }
+.finder-detail .fd-partner { display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-top: 1px solid var(--line); margin-top: 14px; }
+.finder-detail .fd-partner:first-of-type { border-top: 0; margin-top: 10px; }
+.finder-detail .fd-partner .fd-ico { flex: 0 0 auto; width: 38px; height: 38px; border-radius: 10px; background: var(--mint-50); color: var(--green); display: grid; place-items: center; }
+.finder-detail .fd-name { font-weight: 700; color: var(--ink); font-size: 15px; }
+.finder-detail .fd-meta { font-size: 13px; color: var(--muted); margin-top: 1px; }
+@media (max-width: 860px) {
+  .finder-layout { grid-template-columns: 1fr; }
+}
+
+/* Hypothetical SEC filing cover sheet */
+.filing-cover { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 26px 30px; margin: 0 0 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px 28px; }
+.filing-cover div span { display: block; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+.filing-cover div strong { font-family: var(--head); font-size: 15px; color: var(--ink); }
+@media (max-width: 640px) { .filing-cover { grid-template-columns: 1fr 1fr; } }
+.prose .filing-toc { list-style: none; padding: 0; margin: 0 0 30px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.prose .filing-toc li a { display: flex; justify-content: space-between; padding: 12px 18px; border-bottom: 1px solid var(--line); font-weight: 700; color: var(--ink); font-size: 14.5px; }
+.prose .filing-toc li:last-child a { border-bottom: 0; }
+.prose .filing-toc li a:hover { background: var(--mint-50); color: var(--green-dark); }
+.prose .filing-toc li a span { color: var(--muted); font-weight: 400; }
+
 .ir-preview { background: var(--mint-50); border-bottom: 1px solid var(--line); }
 .ir-preview .wrap { display: flex; align-items: center; gap: 14px; padding: 14px 24px; }
 .ir-preview .tag { position: static; flex: 0 0 auto; font-family: var(--sans); font-weight: 700; font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: #fff; background: var(--green); padding: 5px 11px; border-radius: 20px; }

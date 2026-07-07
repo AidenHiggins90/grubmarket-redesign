@@ -36,6 +36,7 @@
       groups: [
         { h: "Buy", items: [
           { t: "Buy Wholesale",  d: "GrubMarket's B2B network serves grocers, foodservice operators, schools, government buyers, and restaurants across the U.S. and Canada at exclusive wholesale prices.", href: "wholesale.html" },
+          { t: "Find a Wholesaler", d: "Search by state to see GrubMarket's active regional partners and nationwide wholesale coverage.", href: "find-a-wholesaler.html" },
           { t: "Product Catalog", d: "Thousands of products by category — fresh produce, proteins, dairy, pantry staples, floral, and specialty organic items — sourced from a nationwide grower network.", href: "catalog.html" }
         ]},
         { h: "Sell & Deliver", items: [
