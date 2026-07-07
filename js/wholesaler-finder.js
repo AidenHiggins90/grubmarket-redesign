@@ -57,6 +57,10 @@
     .then(function (svgText) {
       // strip the file's own <style> block — we style states with our own CSS
       svgText = svgText.replace(/<style[\s\S]*?<\/style>/, "");
+      // strip the root-level <title> — it renders as a native tooltip that
+      // covers the map on hover; per-state <title> tags inside each path
+      // are kept, since those give real accessible names per state.
+      svgText = svgText.replace(/<title>Blank map[^<]*<\/title>\s*/, "");
       // make it scale responsively instead of a fixed pixel size
       svgText = svgText.replace('<svg xmlns="http://www.w3.org/2000/svg" width="959" height="593">',
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 959 593" id="usMapSvg">');
@@ -65,6 +69,10 @@
       var svg = document.getElementById("usMapSvg");
       if (!svg) return;
 
+      // pass 1: classify every state and wire up interaction — no layout
+      // reads here, since interleaving getBBox() with style/class changes
+      // was corrupting later elements' computed fill in some browsers.
+      var partnerEls = [];
       ALL_ABBR.forEach(function (abbr) {
         var el = svg.querySelector("." + abbr.toLowerCase());
         if (!el) return;
@@ -75,19 +83,24 @@
         el.setAttribute("aria-label", NAMES[abbr]);
         if (PARTNERS[abbr]) {
           el.classList.add("has-partner");
-          // drop a small marker dot at the state's visual center
-          var box = el.getBBox();
-          var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-          dot.setAttribute("cx", box.x + box.width / 2);
-          dot.setAttribute("cy", box.y + box.height / 2);
-          dot.setAttribute("r", 4.5);
-          dot.setAttribute("class", "map-partner-dot");
-          dot.setAttribute("pointer-events", "none");
-          svg.appendChild(dot);
+          partnerEls.push(el);
         }
         el.addEventListener("keydown", function (e) {
           if (e.key === "Enter" || e.key === " ") { e.preventDefault(); showState(abbr); }
         });
+      });
+
+      // pass 2: now that all classes are applied, read layout (getBBox)
+      // and drop a marker dot at each partner state's visual center.
+      partnerEls.forEach(function (el) {
+        var box = el.getBBox();
+        var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        dot.setAttribute("cx", box.x + box.width / 2);
+        dot.setAttribute("cy", box.y + box.height / 2);
+        dot.setAttribute("r", 4.5);
+        dot.setAttribute("class", "map-partner-dot");
+        dot.setAttribute("pointer-events", "none");
+        svg.appendChild(dot);
       });
     });
 

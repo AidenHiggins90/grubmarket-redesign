@@ -649,8 +649,9 @@ img { max-width: 100%; }
 .finder-map svg .st:hover, .finder-map svg .st:focus-visible { fill: var(--green-bright); }
 .finder-map svg .st.active { fill: var(--green); }
 .finder-map svg .map-partner-dot { fill: var(--green-dark); stroke: #fff; stroke-width: 1.5; pointer-events: none; }
-/* hairline "gap filler" paths (e.g. "al-fl") in the source map — keep invisible, not real shapes */
-.finder-map svg [class*="-"] { fill: none; stroke: none; }
+/* hairline "gap filler" paths (e.g. "al-fl") in the source map — keep invisible, not real shapes.
+   :not(.st) excludes real states even though "has-partner" also contains a hyphen. */
+.finder-map svg [class*="-"]:not(.st) { fill: none; stroke: none; }
 .finder-map svg .separator1 { fill: none; stroke: var(--line); stroke-width: 2; }
 .finder-legend { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 16px; font-size: 13px; color: var(--muted); }
 .finder-legend span { display: inline-flex; align-items: center; gap: 7px; }
