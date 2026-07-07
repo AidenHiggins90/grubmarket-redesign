@@ -677,6 +677,49 @@ img { max-width: 100%; }
   .finder-layout { grid-template-columns: 1fr; }
 }
 
+/* ============================================================
+   SEC FILINGS TABLE — filter bar + sortable results table
+   (standard IR-platform pattern: filter, then a dated table)
+   ============================================================ */
+.filing-filters { display: flex; flex-wrap: wrap; align-items: end; gap: 16px; padding: 20px 22px; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; margin-bottom: 24px; }
+.filing-filters .ff-field { display: flex; flex-direction: column; gap: 6px; min-width: 160px; }
+.filing-filters .ff-field.grow { flex: 1 1 220px; }
+.filing-filters label { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.filing-filters select, .filing-filters input {
+  font-family: var(--sans); font-size: 14.5px; color: var(--ink);
+  padding: 10px 12px; border: 1.5px solid var(--line); border-radius: 8px; background: #fff; outline: none;
+}
+.filing-filters select:focus, .filing-filters input:focus { border-color: var(--green); }
+.filing-filters .ff-reset { font-size: 13.5px; font-weight: 700; color: var(--green); background: none; border: 0; cursor: pointer; padding: 10px 0; }
+.filing-filters .ff-reset:hover { color: var(--green-dark); }
+
+.filing-table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+.filing-table thead th {
+  text-align: left; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--muted); padding: 0 14px 10px; border-bottom: 2px solid var(--line);
+}
+.filing-table tbody td { padding: 14px; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--body); }
+.filing-table tbody tr:hover { background: var(--mint-50); }
+.filing-table .ft-date { white-space: nowrap; color: var(--muted); font-size: 13.5px; }
+.filing-table .ft-form { white-space: nowrap; }
+.filing-table .ft-form span { display: inline-block; font-weight: 700; font-size: 12px; color: var(--green-dark); background: var(--mint-100); padding: 3px 9px; border-radius: 6px; }
+.filing-table .ft-desc strong { display: block; color: var(--ink); font-weight: 700; font-size: 14.5px; }
+.filing-table .ft-links { white-space: nowrap; text-align: right; }
+.filing-table .ft-links a { font-weight: 700; color: var(--green); margin-left: 14px; font-size: 13.5px; }
+.filing-table .ft-links a:first-child { margin-left: 0; }
+.filing-table .ft-links a:hover { color: var(--green-dark); }
+.filing-table .ft-empty td { text-align: center; color: var(--muted); padding: 30px 14px; }
+@media (max-width: 760px) {
+  .filing-table thead { display: none; }
+  .filing-table, .filing-table tbody, .filing-table tr, .filing-table td { display: block; width: 100%; }
+  .filing-table tbody tr { padding: 14px 0; }
+  .filing-table tbody td { border: 0; padding: 3px 0; }
+  .filing-table .ft-links { text-align: left; }
+  .filing-table .ft-links a { margin: 0 14px 0 0; }
+}
+.filing-footnote { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 18px; font-size: 13.5px; color: var(--muted); }
+.filing-footnote a { font-weight: 700; color: var(--green); }
+
 /* Hypothetical SEC filing cover sheet */
 .filing-cover { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 26px 30px; margin: 0 0 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px 28px; }
 .filing-cover div span { display: block; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
