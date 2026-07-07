@@ -642,25 +642,16 @@ img { max-width: 100%; }
 .finder-list button .chev { width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(-45deg); opacity: .5; margin-left: auto; }
 .finder-list .fl-empty { padding: 24px 16px; color: var(--muted); font-size: 14px; text-align: center; }
 
-.finder-map { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-.finder-region { border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px 20px; background: #fff; }
-.finder-region h4 {
-  font-family: var(--sans); font-weight: 700; font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
-  color: var(--green-mid); margin: 0 0 12px;
-}
-.finder-region .st-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
-.finder-map .st {
-  display: inline-flex; align-items: center; gap: 6px;
-  font-family: var(--sans); font-weight: 700; font-size: 12.5px; color: var(--green-dark);
-  background: var(--mint-100); border: 2px solid transparent; border-radius: 20px;
-  cursor: pointer; padding: 7px 12px; transition: background .15s ease, transform .1s ease, border-color .15s ease;
-}
-.finder-map .st:hover { background: var(--green-bright); color: #fff; transform: translateY(-1px); }
-.finder-map .st.active { background: var(--green); color: #fff; border-color: var(--green-dark); }
-.finder-map .st .fl-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green-dark); opacity: 0; }
-.finder-map .st.has-partner .fl-dot { opacity: 1; }
-.finder-map .st.has-partner:hover .fl-dot, .finder-map .st.active .fl-dot { background: #fff; }
-@media (max-width: 640px) { .finder-map { grid-template-columns: 1fr; } }
+.finder-map { border: 1px solid var(--line); border-radius: 14px; background: #fff; padding: 20px; }
+.finder-map svg { width: 100%; height: auto; display: block; overflow: visible; }
+/* real state shapes */
+.finder-map svg .st { fill: var(--mint-100); stroke: #fff; stroke-width: 1.4; cursor: pointer; transition: fill .15s ease; outline: none; }
+.finder-map svg .st:hover, .finder-map svg .st:focus-visible { fill: var(--green-bright); }
+.finder-map svg .st.active { fill: var(--green); }
+.finder-map svg .map-partner-dot { fill: var(--green-dark); stroke: #fff; stroke-width: 1.5; pointer-events: none; }
+/* hairline "gap filler" paths (e.g. "al-fl") in the source map — keep invisible, not real shapes */
+.finder-map svg [class*="-"] { fill: none; stroke: none; }
+.finder-map svg .separator1 { fill: none; stroke: var(--line); stroke-width: 2; }
 .finder-legend { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 16px; font-size: 13px; color: var(--muted); }
 .finder-legend span { display: inline-flex; align-items: center; gap: 7px; }
 .finder-legend .lg-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--green-dark); }

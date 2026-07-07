@@ -51,16 +51,45 @@
 
   var ALL_ABBR = Object.keys(NAMES).sort(function (a, b) { return NAMES[a].localeCompare(NAMES[b]); });
 
-  // ---- render region map ----
-  var mapHTML = REGIONS.map(function (region) {
-    var pills = region.states.map(function (abbr) {
-      var partner = PARTNERS[abbr] ? " has-partner" : "";
-      return '<button class="st' + partner + '" data-abbr="' + abbr + '" type="button">' +
-               abbr + '<span class="fl-dot"></span></button>';
-    }).join("");
-    return '<div class="finder-region"><h4>' + region.h + '</h4><div class="st-wrap">' + pills + '</div></div>';
-  }).join("");
-  page.innerHTML = mapHTML;
+  // ---- load the real (public-domain) US states map and wire it up ----
+  fetch("assets/img/us-states-map.svg")
+    .then(function (r) { return r.text(); })
+    .then(function (svgText) {
+      // strip the file's own <style> block — we style states with our own CSS
+      svgText = svgText.replace(/<style[\s\S]*?<\/style>/, "");
+      // make it scale responsively instead of a fixed pixel size
+      svgText = svgText.replace('<svg xmlns="http://www.w3.org/2000/svg" width="959" height="593">',
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 959 593" id="usMapSvg">');
+      page.innerHTML = svgText;
+
+      var svg = document.getElementById("usMapSvg");
+      if (!svg) return;
+
+      ALL_ABBR.forEach(function (abbr) {
+        var el = svg.querySelector("." + abbr.toLowerCase());
+        if (!el) return;
+        el.classList.add("st");
+        el.setAttribute("data-abbr", abbr);
+        el.setAttribute("tabindex", "0");
+        el.setAttribute("role", "button");
+        el.setAttribute("aria-label", NAMES[abbr]);
+        if (PARTNERS[abbr]) {
+          el.classList.add("has-partner");
+          // drop a small marker dot at the state's visual center
+          var box = el.getBBox();
+          var dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+          dot.setAttribute("cx", box.x + box.width / 2);
+          dot.setAttribute("cy", box.y + box.height / 2);
+          dot.setAttribute("r", 4.5);
+          dot.setAttribute("class", "map-partner-dot");
+          dot.setAttribute("pointer-events", "none");
+          svg.appendChild(dot);
+        }
+        el.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); showState(abbr); }
+        });
+      });
+    });
 
   // ---- render alphabetical list ----
   var listEl = document.getElementById("finderList");
