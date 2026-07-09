@@ -33,21 +33,65 @@
   var PARTNERS = {
     TX: [
       { name: "Schoenmann Produce", meta: "Houston, TX · Gulf Coast distributor since 1910", ico: ICON_BUILDING },
-      { name: "Coast Citrus Distributors", meta: "McAllen, TX · GrubMarket's largest acquisition to date", ico: ICON_TRUCK }
+      { name: "Coast Citrus Distributors", meta: "McAllen, TX · GrubMarket's largest acquisition to date", ico: ICON_TRUCK },
+      { name: "Brothers Produce", meta: "Houston, TX · Major foodservice distributor across Texas", ico: ICON_TRUCK },
+      { name: "Spring Valley", meta: "McAllen, TX · Fresh produce distributor", ico: ICON_TRUCK },
+      { name: "RJ Produce", meta: "Texas produce wholesaler", ico: ICON_TRUCK }
     ],
     CA: [
       { name: "Coast Citrus Distributors", meta: "San Diego & Union City, CA facilities", ico: ICON_TRUCK },
       { name: "Good Eggs", meta: "Home & office delivery hub", ico: ICON_BUILDING },
       { name: "FreshGOGO", meta: "Home & office delivery hub", ico: ICON_BUILDING },
-      { name: "DO Organics", meta: "Home & office delivery hub", ico: ICON_BUILDING }
+      { name: "DO Organics", meta: "Home & office delivery hub", ico: ICON_BUILDING },
+      { name: "Custom Produce Sales", meta: "West Coast · Apples, cherries, grapes & more", ico: ICON_TRUCK },
+      { name: "Atlantic Fresh Trading", meta: "Multi-state distributor with California offices", ico: ICON_TRUCK }
     ],
-    AZ: [ { name: "Delta Fresh Produce", meta: "Arizona produce distributor, acquired 2025", ico: ICON_TRUCK } ],
-    FL: [ { name: "Coast Citrus Distributors", meta: "Princeton, FL facility", ico: ICON_TRUCK } ]
+    AZ: [
+      { name: "Delta Fresh Produce", meta: "Arizona produce distributor, acquired 2025", ico: ICON_TRUCK },
+      { name: "SunFed", meta: "Nogales, AZ · Top U.S. squash importer", ico: ICON_TRUCK },
+      { name: "Produce Connection", meta: "Nogales, AZ · Fresh produce distributor", ico: ICON_TRUCK },
+      { name: "Atlantic Fresh Trading", meta: "Multi-state distributor with Arizona offices", ico: ICON_TRUCK }
+    ],
+    FL: [
+      { name: "Coast Citrus Distributors", meta: "Princeton, FL facility", ico: ICON_TRUCK },
+      { name: "Vega Produce", meta: "Miami, FL · Asian fruit & vegetable importer", ico: ICON_TRUCK },
+      { name: "A&B Tropical Produce", meta: "Miami, FL · Tropical produce from 11 countries", ico: ICON_TRUCK }
+    ],
+    PA: [
+      { name: "Bartolotta", meta: "Connecticut & Pennsylvania · Fresh fruit & vegetable distributor", ico: ICON_TRUCK },
+      { name: "Atlantic Fresh Trading", meta: "Multi-state distributor with Pennsylvania offices", ico: ICON_TRUCK },
+      { name: "PA China Farm", meta: "Philadelphia, PA · Specialty Asian produce", ico: ICON_TRUCK }
+    ],
+    GA: [ { name: "Atlantic Fresh Trading", meta: "GrubMarket's entry into Georgia", ico: ICON_TRUCK } ],
+    CT: [
+      { name: "Bartolotta", meta: "Connecticut & Pennsylvania · Fresh fruit & vegetable distributor", ico: ICON_TRUCK },
+      { name: "Atlantic Fresh Trading", meta: "Multi-state distributor with Connecticut offices", ico: ICON_TRUCK }
+    ],
+    MO: [ { name: "Vaccaro & Sons", meta: "St. Louis, MO · Second-largest regional produce distributor", ico: ICON_TRUCK } ],
+    NY: [
+      { name: "Frantoni", meta: "NYC produce wholesaler ERP", ico: ICON_BUILDING },
+      { name: "Terminal Produce", meta: "Brooklyn, NY · Tropical fruit, vegetable & seafood wholesaler", ico: ICON_TRUCK },
+      { name: "Mendez International", meta: "Hunts Point, NY · Fresh produce importer & distributor", ico: ICON_TRUCK },
+      { name: "L&J Produce", meta: "New York produce wholesaler", ico: ICON_TRUCK }
+    ],
+    NJ: [ { name: "Regatta Tropicals", meta: "Vineland, NJ · Top U.S. supplier of kiwifruit, persimmons & figs", ico: ICON_TRUCK } ],
+    MA: [ { name: "Boston Organics", meta: "Charlestown, MA · Farm-to-table organic grocery delivery", ico: ICON_BUILDING } ],
+    NV: [ { name: "Terra Exports", meta: "Las Vegas, NV · Global fresh produce import & export", ico: ICON_TRUCK } ],
+    WA: [
+      { name: "Hung San Foods", meta: "Seattle, WA area · Produce & specialty food supplier", ico: ICON_TRUCK },
+      { name: "Grant J. Hunt Co.", meta: "Northern CA & WA · Apples, pears, cherries & more", ico: ICON_TRUCK }
+    ],
+    OR: [ { name: "JC Cheyne", meta: "Oregon & California · Onion & potato wholesale house", ico: ICON_TRUCK } ],
+    IL: [
+      { name: "Fresh Software Solutions", meta: "Naperville, IL · ERP software for produce distributors", ico: ICON_BUILDING },
+      { name: "Nova Libra", meta: "Chicago, IL · Enterprise eCommerce software", ico: ICON_BUILDING }
+    ],
+    MI: [ { name: "Doorganics", meta: "Michigan · Farm-to-table organic grocery delivery", ico: ICON_BUILDING } ]
   };
 
   // States GrubMarket operates in directly, per its own "Who We Are" copy,
   // without a specific named distributor to list here yet.
-  var OPERATING = ["CT","GA","MI","NY","NJ","MO","MA","NV","OR","PA","WA"];
+  var OPERATING = [];
 
   var ALL_ABBR = Object.keys(NAMES).sort(function (a, b) { return NAMES[a].localeCompare(NAMES[b]); });
 
