@@ -26,7 +26,7 @@
           { t: "GrubPay",       d: "Accept ACH and credit card payments in one secure, simple workflow — built for distributors, retail stores, and online shops alike.", href: "grubpay.html" }
         ]}
       ],
-      featured: { tag: "Platform", img: "farm_gpt_carousel_scaled628x1200.png", href: "grubos.html", linkText: "Explore the platform →",
+      featured: { tag: "Platform", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=85", href: "grubos.html", linkText: "Explore the platform →",
         quote: "We focused on our customers' real challenges and delivered powerful solutions that deliver immediate, positive impact to their businesses.",
         name: "Genevieve Wang", role: "Chief Software Product Officer, GrubMarket" }
     },
@@ -99,7 +99,7 @@
           { t: "Contact",            d: "Tell us who you are — grocer, grower, distributor, investor, or press — and we'll route you to the right team.", href: "contact.html" }
         ]}
       ],
-      featured: { tag: "From our CEO", img: "GettyImages-1182645061SMALL.jpg", href: "leadership.html", linkText: "Meet the team →",
+      featured: { tag: "From our CEO", img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=85", href: "leadership.html", linkText: "Meet the team →",
         quote: "Our mission is to digitally transform the food supply chain through AI, eCommerce, and vertical Software-as-a-Service — driven by our team's relentless pursuit of operational excellence and sustainable growth.",
         name: "Mike Xu", role: "Founder & CEO, GrubMarket" }
     }
@@ -120,7 +120,7 @@
     var f = entry.featured;
     var featured = f ? (
       '<div class="mega-featured">' +
-        '<span class="mf-img" style="background-image:url(\'' + IMG + f.img + '\')"></span>' +
+        '<span class="mf-img" style="background-image:url(\'' + (/^https?:/.test(f.img) ? f.img : IMG + f.img) + '\')"></span>' +
         '<div class="mf-body">' +
           '<span class="mf-tag">' + f.tag + '</span>' +
           '<span class="mf-quotemark" aria-hidden="true">&ldquo;</span>' +
