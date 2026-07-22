@@ -48,6 +48,14 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); }
 
+/* ---- Global keyboard-focus indicator (a11y) — visible only for keyboard users ---- */
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--green-bright);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
 body {
   margin: 0; font-family: var(--sans); font-weight: 300;
   color: var(--body); background: #fff; line-height: 1.6;
