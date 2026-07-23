@@ -1,0 +1,4 @@
+# Files that shouldn't be publicly served on the deployed site
+.claude
+supabase
+DEPLOY.md
