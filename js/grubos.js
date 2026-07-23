@@ -42,7 +42,7 @@
     elTag.textContent = meta;
     elTag.style.display = meta ? "" : "none";
     elName.textContent = textOf(tile, ".app-name");
-    elDesc.textContent = textOf(tile, ".app-desc");
+    elDesc.textContent = tile.getAttribute("data-detail") || textOf(tile, ".app-desc");
     elLink.setAttribute("href", url);
     if (external) {
       elLink.setAttribute("target", "_blank");

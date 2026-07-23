@@ -159,7 +159,8 @@
           }).join("");
       }).join("");
       return '<div class="mp-section"><h4>' + entry.label + '</h4>' + groups + '</div>';
-    }).join("") + '<a class="btn solid" href="wholesale.html">Buy Wholesale</a>';
+    }).join("") + '<a class="mp-search" href="search.html"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg> Search the site</a>' +
+      '<a class="btn solid" href="wholesale.html">Buy Wholesale</a>';
   }
 
   var header =
@@ -167,6 +168,7 @@
     '<header class="site-header" id="siteHeader"><div class="wrap">' +
       '<a class="brand" href="index.html" aria-label="GrubMarket home"><img src="' + LOGO + '" alt="GrubMarket"/></a>' +
       '<nav class="nav" id="nav" aria-label="Primary">' + navHTML() +
+        '<a class="nav-search" href="search.html" aria-label="Search the site"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></a>' +
         '<a class="btn solid sm nav-cta" href="wholesale.html">Buy Wholesale</a>' +
       '</nav>' +
       '<button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>' +
