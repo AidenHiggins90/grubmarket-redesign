@@ -16,13 +16,13 @@
       intro: { eyebrow: "The Platform", text: "One connected system for ordering, running, and getting paid — every tool built specifically for fresh, perishable food." },
       groups: [
         { h: "Software", items: [
-          { t: "GrubOS",        d: "The single front door to a decade of GrubMarket acquisitions — one login, one data layer, six connected modules spanning ERP, commerce, safety, and AI.", href: "grubos.html" },
+          { t: "Enterprise AI",        d: "The single front door to a decade of GrubMarket acquisitions — one login, one data layer, eight connected modules spanning ERP, commerce, safety, and AI.", href: "grubos.html" },
           { t: "ERP Software",  d: "WholesaleWare is the food industry's fastest-growing cloud ERP, running inventory, warehouse ops, grower accounting, manufacturing, HR, and general ledger for wholesalers and distributors.", href: "software.html" },
           { t: "WholesaleWare Login", d: "Existing customers sign in here to run daily operations — inventory, purchasing, lot tracking, and accounting — on the live WholesaleWare platform.", href: "https://erp.wholesaleware.com/#/" },
           { t: "Orders IO",     d: "A custom-branded ordering app for your business — customers place orders, browse deals, and check status any hour of day, on iOS or Android.", href: "orders-io.html" }
         ]},
         { h: "AI & Payments", items: [
-          { t: "Enterprise AI", d: "GrubAssist, the food industry's first virtual AI assistant, plus AI Orders, which extracts orders 24/7 from voicemails, emails, and texts straight into your ERP.", href: "enterprise-ai.html" },
+          { t: "GrubAssist", d: "GrubAssist, the food industry's first virtual AI assistant, plus AI Orders, which extracts orders 24/7 from voicemails, emails, and texts straight into your ERP.", href: "enterprise-ai.html" },
           { t: "GrubPay",       d: "Accept ACH and credit card payments in one secure, simple workflow — built for distributors, retail stores, and online shops alike.", href: "grubpay.html" }
         ]}
       ],
@@ -179,7 +179,7 @@
     '<footer class="footer"><div class="wrap"><div class="cols">' +
       '<div><img class="logo" src="' + LOGO_W + '" alt="GrubMarket"/>' +
         '<p class="blurb">Digitally transforming the American food supply chain industry — wholesale, software, AI, and delivery in one network.</p></div>' +
-      '<div><h5>Platform</h5><a href="grubos.html">GrubOS</a><a href="wholesale.html">Buy Wholesale</a><a href="software.html">ERP Software</a><a href="enterprise-ai.html">Enterprise AI</a></div>' +
+      '<div><h5>Platform</h5><a href="grubos.html">Enterprise AI</a><a href="wholesale.html">Buy Wholesale</a><a href="software.html">ERP Software</a><a href="enterprise-ai.html">GrubAssist</a></div>' +
       '<div><h5>Resources</h5><a href="blog.html">Newsroom</a><a href="events.html">Events</a><a href="customers.html">Customer Stories</a><a href="sustainability.html">Sustainability</a></div>' +
       '<div><h5>Company</h5><a href="leadership.html">Leadership</a><a href="awards.html">Awards</a><a href="careers.html">Careers</a><a href="investors.html">Investor Relations</a></div>' +
       '<div><h5>Legal</h5><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="cookie-policy.html">Cookie Policy</a><a href="accessibility.html">Accessibility</a></div>' +

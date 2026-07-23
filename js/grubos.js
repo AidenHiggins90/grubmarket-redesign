@@ -1,4 +1,4 @@
-/* GrubOS directory — each module is a cube. Clicking one opens an
+/* Enterprise AI directory — each module is a cube. Clicking one opens an
    informational modal (role=dialog) describing the module, with the
    products inside it as links. ESC / overlay / X close it; focus is
    managed and background scroll locked. */
@@ -14,7 +14,7 @@
       '<button class="gm-modal-close" type="button" aria-label="Close">' +
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>' +
       '</button>' +
-      '<span class="gm-modal-tag">GrubOS module</span>' +
+      '<span class="gm-modal-tag">Enterprise AI module</span>' +
       '<h3 id="gmModalName"></h3>' +
       '<p class="gm-modal-desc"></p>' +
       '<div class="gm-modal-links"></div>' +
