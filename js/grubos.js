@@ -1,10 +1,10 @@
-/* GrubOS directory — intercept product-tile clicks and show an
-   informational modal (with the outbound link inside) instead of
-   navigating away. Progressive enhancement: middle-click, cmd/ctrl-click,
-   and no-JS all still follow the anchor normally. */
+/* GrubOS directory — each module is a cube. Clicking one opens an
+   informational modal (role=dialog) describing the module, with the
+   products inside it as links. ESC / overlay / X close it; focus is
+   managed and background scroll locked. */
 (function () {
-  var tiles = document.querySelectorAll(".app-tile");
-  if (!tiles.length) return;
+  var cubes = document.querySelectorAll(".os-cube");
+  if (!cubes.length) return;
 
   var overlay = document.createElement("div");
   overlay.className = "gm-modal-overlay";
@@ -14,45 +14,37 @@
       '<button class="gm-modal-close" type="button" aria-label="Close">' +
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>' +
       '</button>' +
-      '<span class="gm-modal-tag"></span>' +
+      '<span class="gm-modal-tag">GrubOS module</span>' +
       '<h3 id="gmModalName"></h3>' +
       '<p class="gm-modal-desc"></p>' +
-      '<a class="btn solid gm-modal-link" href="#"></a>' +
+      '<div class="gm-modal-links"></div>' +
     '</div>';
   document.body.appendChild(overlay);
 
-  var elTag = overlay.querySelector(".gm-modal-tag");
   var elName = overlay.querySelector("#gmModalName");
   var elDesc = overlay.querySelector(".gm-modal-desc");
-  var elLink = overlay.querySelector(".gm-modal-link");
+  var elLinks = overlay.querySelector(".gm-modal-links");
   var closeBtn = overlay.querySelector(".gm-modal-close");
+  var arrowExt = '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>';
+  var arrowInt = '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
   var lastFocus = null;
 
-  function textOf(tile, sel) {
-    var el = tile.querySelector(sel);
-    return el ? el.textContent.trim() : "";
-  }
+  function openModal(cube) {
+    lastFocus = cube;
+    elName.innerHTML = cube.getAttribute("data-module") || "";
+    elDesc.textContent = cube.getAttribute("data-detail") || "";
 
-  function openModal(tile) {
-    lastFocus = tile;
-    var url = tile.getAttribute("href");
-    var external = /^https?:/.test(url);
-    var meta = textOf(tile, ".app-meta");
-
-    elTag.textContent = meta;
-    elTag.style.display = meta ? "" : "none";
-    elName.textContent = textOf(tile, ".app-name");
-    elDesc.textContent = tile.getAttribute("data-detail") || textOf(tile, ".app-desc");
-    elLink.setAttribute("href", url);
-    if (external) {
-      elLink.setAttribute("target", "_blank");
-      elLink.setAttribute("rel", "noopener");
-      elLink.textContent = "Visit site ↗";
-    } else {
-      elLink.removeAttribute("target");
-      elLink.removeAttribute("rel");
-      elLink.textContent = "Open page →";
-    }
+    var links = cube.querySelectorAll(".os-links a");
+    var html = links.length ? '<h4>' + (links.length > 1 ? "Products in this module" : "In this module") + '</h4>' : "";
+    links.forEach(function (a) {
+      var href = a.getAttribute("href");
+      var external = /^https?:/.test(href);
+      var attrs = external ? ' target="_blank" rel="noopener"' : "";
+      html += '<a href="' + href + '"' + attrs + '>' +
+                '<span>' + a.textContent + '</span>' + (external ? arrowExt : arrowInt) +
+              '</a>';
+    });
+    elLinks.innerHTML = html;
 
     overlay.removeAttribute("hidden");
     document.body.style.overflow = "hidden";
@@ -71,12 +63,8 @@
 
   function onKey(e) { if (e.key === "Escape") closeModal(); }
 
-  tiles.forEach(function (t) {
-    t.addEventListener("click", function (e) {
-      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return; // let new-tab through
-      e.preventDefault();
-      openModal(t);
-    });
+  cubes.forEach(function (c) {
+    c.addEventListener("click", function () { openModal(c); });
   });
   closeBtn.addEventListener("click", closeModal);
   overlay.addEventListener("click", function (e) { if (e.target === overlay) closeModal(); });

@@ -6,7 +6,7 @@
   <meta name="description" content="GrubOS is the single front door to GrubMarket's software, with eight modules spanning the entire food supply chain under one login." />
   <title>GrubOS — Every GrubMarket platform, one place | GrubMarket</title>
   <link rel="icon" href="https://www.grubmarket.com/hello/favicon.ico" />
-  <link rel="stylesheet" href="css/style.css?v=20260725" />
+  <link rel="stylesheet" href="css/style.css?v=20260726" />
 </head>
 <body>
   <div id="site-header-mount"></div>
@@ -17,117 +17,126 @@
       <div class="wrap">
         <div class="crumb"><a href="index.html">Home</a><span class="sep">›</span>Platform<span class="sep">›</span>GrubOS</div>
         <h1>Every GrubMarket platform, one place.</h1>
-        <p class="lead">GrubOS is the single front door to GrubMarket's software — every product and capability, organized into eight modules under one login, one contract, and one data layer. See them all below and jump straight in.</p>
+        <p class="lead">GrubOS is the single front door to GrubMarket's software — every product and capability, organized into eight modules under one login, one contract, and one data layer. Select any module to see what's inside.</p>
         <div class="hero-cta">
           <a class="btn solid-light" href="#directory">Explore GrubOS</a>
         </div>
       </div>
     </section>
 
-    <!-- DIRECTORY / LAUNCHER -->
+    <!-- DIRECTORY / CUBES -->
     <section class="section" id="directory">
       <div class="wrap">
         <div class="section-head">
           <span class="eyebrow">GrubOS</span>
-          <h2>Open any product, from one place</h2>
-          <p>Eight GrubOS modules covering the entire supply chain. Select any one to jump in — no separate logins, no hunting for the right site.</p>
+          <h2>Eight modules, one platform</h2>
+          <p>Every GrubOS capability across the supply chain. Select a module to see what it does and the products inside it.</p>
         </div>
 
-        <!-- 1. FIELD LABOR -->
-        <div class="module-group">
-          <div class="module-head">
-            <span class="mh-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="18" cy="8" r="2.4"/><path d="M15.5 14.2c2.6.4 4.5 2.7 4.5 5.8"/></svg></span>
-            <div><h3>Field Labor <span class="core-tag">1</span></h3><p class="mh-desc">Scheduling, time tracking, and payroll for field crews and warehouse teams.</p></div>
-          </div>
-          <div class="app-grid">
-            <a class="app-tile" data-detail="Pacific Farm Management runs payroll, workers&#x27; compensation, and staffing for agricultural operations. GrubMarket acquired it to give growers and field-labor employers a compliant, purpose-built way to manage seasonal crews, handling the wage, tax, and insurance complexity specific to farm labor." href="https://blog.grubmarket.com/grubmarket-acquires-pacific-farm-management-to-become-major-provider-of-farm-management-services/" target="_blank" rel="noopener"><span class="app-name">Pacific Farm Management <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="app-desc">Ag payroll, workers' comp &amp; staffing.</span><span class="app-meta">Field Labor</span></a>
-          </div>
-        </div>
+        <div class="os-grid">
+          <!-- 1. FIELD LABOR -->
+          <button class="os-cube" type="button" data-module="Field Labor"
+            data-detail="Scheduling, time tracking, and payroll built for field crews and warehouse teams — handling the wage, tax, and workers'-comp complexity specific to agricultural labor.">
+            <span class="os-num">1</span>
+            <span class="os-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="18" cy="8" r="2.4"/><path d="M15.5 14.2c2.6.4 4.5 2.7 4.5 5.8"/></svg></span>
+            <span class="os-name">Field Labor</span>
+            <span class="os-tagline">Scheduling, time tracking &amp; payroll for crews.</span>
+            <ul class="os-links" hidden>
+              <li><a href="https://blog.grubmarket.com/grubmarket-acquires-pacific-farm-management-to-become-major-provider-of-farm-management-services/" target="_blank" rel="noopener">Pacific Farm Management</a></li>
+            </ul>
+          </button>
 
-        <!-- 2. FOOD SAFETY -->
-        <div class="module-group">
-          <div class="module-head">
-            <span class="mh-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M9.5 12l2 2 3.5-4"/></svg></span>
-            <div><h3>Food Safety <span class="core-tag">2</span></h3><p class="mh-desc">Traceability, inspections, and compliance built into every step of the supply chain.</p></div>
-          </div>
-          <div class="app-grid">
-            <a class="app-tile" data-detail="PICS (Produce Inventory Control System) by WaudWare is a produce ERP used widely across Canada for inventory and traceability. Its PTI- and FSMA-aligned lot tracking lets distributors trace any case back to its source in a recall — the food-safety backbone GrubMarket layers across the platform." href="https://www.produceinventory.com/" target="_blank" rel="noopener"><span class="app-name">WaudWare / PICS <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="app-desc">PTI/FSMA produce traceability.</span><span class="app-meta">Food Safety</span></a>
-            <a class="app-tile" data-detail="Procurant is a SaaS trading and supply-chain platform for perishables, covering procurement, inspections, and traceability. It connects buyers and suppliers with digital audits and compliance records built in, so GrubMarket uses it as both a commerce channel and a food-safety layer." href="https://www.procurant.com/" target="_blank" rel="noopener"><span class="app-name">Procurant <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="app-desc">Inspections, compliance &amp; supplier audits.</span><span class="app-meta">Food Safety</span></a>
-          </div>
-        </div>
+          <!-- 2. FOOD SAFETY -->
+          <button class="os-cube" type="button" data-module="Food Safety"
+            data-detail="Food-prep safety built in — HACCP plans, receiving and in-plant inspections, and audit-ready compliance records across the supply chain, with recall-grade lot traceability underneath.">
+            <span class="os-num">2</span>
+            <span class="os-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M9.5 12l2 2 3.5-4"/></svg></span>
+            <span class="os-name">Food Safety</span>
+            <span class="os-tagline">HACCP, inspections &amp; compliance at every step.</span>
+            <ul class="os-links" hidden>
+              <li><a href="https://www.produceinventory.com/" target="_blank" rel="noopener">WaudWare / PICS</a></li>
+              <li><a href="https://www.procurant.com/" target="_blank" rel="noopener">Procurant</a></li>
+            </ul>
+          </button>
 
-        <!-- 3. MARKET INTELLIGENCE -->
-        <div class="module-group">
-          <div class="module-head">
-            <span class="mh-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l3-4 3 3 4-6"/></svg></span>
-            <div><h3>Market Intelligence <span class="core-tag">3</span></h3><p class="mh-desc">Analytics, benchmarking, and AI-driven insight into pricing, demand, and performance.</p></div>
-          </div>
-          <div class="app-grid">
-            <a class="app-tile" data-detail="QBIX Analytics is a business-intelligence and reporting platform tuned for the food supply chain. It turns ERP and commerce data into dashboards for pricing, demand, and financial planning, letting teams spot margin and inventory trends without hand-building reports." href="https://www.qbixanalytics.com/" target="_blank" rel="noopener"><span class="app-name">QBIX Analytics <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="app-desc">Data analytics, BI &amp; FP&amp;A reporting.</span><span class="app-meta">Market Intelligence</span></a>
-            <a class="app-tile" data-detail="GrubAssist is GrubMarket&#x27;s virtual AI assistant, and AI Orders extracts orders 24/7 from voicemails, emails, and texts straight into the ERP. Together they automate the order-entry and question-answering work that used to tie up sales desks, running across every module&#x27;s data." href="https://www.grubmarket.ai/" target="_blank" rel="noopener"><span class="app-name">GrubAssist / AI Orders <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="app-desc">AI ordering agents &amp; automation.</span><span class="app-meta">Market Intelligence</span></a>
-          </div>
-        </div>
+          <!-- 3. WAREHOUSE (WMS) -->
+          <button class="os-cube" type="button" data-module="Warehouse (WMS)"
+            data-detail="WholesaleWare's warehouse module runs receiving, put-away, pick-and-pack, and real-time inventory accuracy — built for perishables, tracking lots, catch-weights, and grades rather than fixed SKUs.">
+            <span class="os-num">3</span>
+            <span class="os-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 12 4l9 6"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-6h4v6"/></svg></span>
+            <span class="os-name">Warehouse</span>
+            <span class="os-tagline">Receiving, put-away, pick &amp; pack, live inventory.</span>
+            <ul class="os-links" hidden>
+              <li><a href="software.html">WholesaleWare® WMS</a></li>
+            </ul>
+          </button>
 
-        <!-- 4. WAREHOUSE (WMS) -->
-        <div class="module-group">
-          <div class="module-head">
-            <span class="mh-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 12 4l9 6"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-6h4v6"/></svg></span>
-            <div><h3>Warehouse (WMS) <span class="core-tag">4</span></h3><p class="mh-desc">Receiving, put-away, pick-and-pack, and real-time inventory accuracy across every facility.</p></div>
-          </div>
-          <div class="app-grid">
-            <a class="app-tile" data-detail="WholesaleWare is GrubMarket&#x27;s cloud, AI-powered ERP for fresh food; its warehouse module handles receiving, put-away, pick-and-pack, and real-time inventory accuracy. Built for perishables, it tracks lots, catch-weights, and grades rather than fixed SKUs — the operational core most other modules connect to." href="software.html"><span class="app-name">WholesaleWare® WMS <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="app-desc">Ground receiving, put-away &amp; pick/pack for every warehouse.</span><span class="app-meta">Warehouse</span></a>
-          </div>
-        </div>
+          <!-- 4. EDI -->
+          <button class="os-cube" type="button" data-module="EDI"
+            data-detail="Electronic Data Interchange connects GrubMarket to your trading partners' systems — exchanging purchase orders, invoices, and advance ship notices automatically, so orders flow between buyers and suppliers without re-keying.">
+            <span class="os-num">4</span>
+            <span class="os-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3l4 4-4 4"/><path d="M21 7H8a4 4 0 0 0-4 4"/><path d="M7 21l-4-4 4-4"/><path d="M3 17h13a4 4 0 0 0 4-4"/></svg></span>
+            <span class="os-name">EDI</span>
+            <span class="os-tagline">Automated trading-partner data exchange.</span>
+            <ul class="os-links" hidden>
+              <li><a href="https://www.procurant.com/" target="_blank" rel="noopener">Procurant</a></li>
+            </ul>
+          </button>
 
-        <!-- 5. TRANSPORTATION -->
-        <div class="module-group">
-          <div class="module-head">
-            <span class="mh-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="8" width="12" height="9"/><path d="M13.5 11h4l3 3v3h-7z"/><circle cx="6" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/></svg></span>
-            <div><h3>Transportation <span class="core-tag">5</span></h3><p class="mh-desc">Freight matching, dispatch, and carrier management for inbound and outbound loads.</p></div>
-          </div>
-          <div class="app-grid">
-            <a class="app-tile" data-detail="Uber Freight is a freight brokerage and load-matching network GrubMarket uses to move inbound and outbound loads. It gives shippers on-demand carrier capacity and transparent pricing without maintaining a private fleet. This is a partner integration rather than a GrubMarket-owned product." href="https://www.uberfreight.com/" target="_blank" rel="noopener"><span class="app-name">Uber Freight <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="app-desc">Freight brokerage &amp; load-matching network.</span><span class="app-meta">Transportation</span></a>
-          </div>
-        </div>
+          <!-- 5. TRANSPORTATION -->
+          <button class="os-cube" type="button" data-module="Transportation"
+            data-detail="Freight brokerage and load-matching for inbound and outbound loads, giving on-demand carrier capacity and transparent pricing without running a private fleet.">
+            <span class="os-num">5</span>
+            <span class="os-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="8" width="12" height="9"/><path d="M13.5 11h4l3 3v3h-7z"/><circle cx="6" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/></svg></span>
+            <span class="os-name">Transportation</span>
+            <span class="os-tagline">Freight matching, dispatch &amp; carrier management.</span>
+            <ul class="os-links" hidden>
+              <li><a href="https://www.uberfreight.com/" target="_blank" rel="noopener">Uber Freight</a></li>
+            </ul>
+          </button>
 
-        <!-- 6. COMMERCE -->
-        <div class="module-group">
-          <div class="module-head">
-            <span class="mh-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h2.2l2 12.5a1.5 1.5 0 0 0 1.5 1.2h9.6a1.5 1.5 0 0 0 1.5-1.2L20 7H5.4"/></svg></span>
-            <div><h3>Commerce <span class="core-tag">6</span></h3><p class="mh-desc">eCommerce, mobile B2B ordering, and direct-to-consumer.</p></div>
-          </div>
-          <div class="app-grid">
-            <a class="app-tile" data-detail="Nova Libra&#x27;s CORAL is enterprise eCommerce software with product-information management (PIM) and POS integration. It powers large, catalog-heavy online storefronts for distributors, sitting at the enterprise tier of GrubMarket&#x27;s commerce offering." href="https://blog.grubmarket.com/grubmarket-acquires-supply-chain-software-provider-nova-libra/" target="_blank" rel="noopener"><span class="app-name">Nova Libra / CORAL <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="app-desc">Enterprise eCommerce, PIM &amp; POS integration.</span><span class="app-meta">Enterprise tier</span></a>
-            <a class="app-tile" data-detail="Orders IO gives a business its own custom-branded mobile ordering app for iOS and Android. Customers place orders, browse deals, and check status any time, and those orders flow straight into the ERP — self-service ordering under the distributor&#x27;s own brand." href="https://www.grubmarket.com/hello/orders-io/index.html" target="_blank" rel="noopener"><span class="app-name">Orders IO <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="app-desc">Custom-branded mobile B2B ordering apps.</span><span class="app-meta">Mobile B2B</span></a>
-            <a class="app-tile" data-detail="Farmigo is CSA and food-hub management software for farms selling directly to members. It handles shares, memberships, recurring billing, and pickup logistics, extending GrubMarket&#x27;s commerce tools to direct-to-consumer farm operations." href="https://farmigo.com/" target="_blank" rel="noopener"><span class="app-name">Farmigo <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="app-desc">CSA &amp; food-hub member commerce.</span><span class="app-meta">Direct-to-consumer / CSA</span></a>
-            <a class="app-tile" data-detail="Procurant is a SaaS trading and supply-chain platform for perishables, covering procurement, inspections, and traceability. It connects buyers and suppliers with digital audits and compliance records built in, so GrubMarket uses it as both a commerce channel and a food-safety layer." href="https://www.procurant.com/" target="_blank" rel="noopener"><span class="app-name">Procurant <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="app-desc">Perishables procurement, inspections &amp; traceability.</span><span class="app-meta">Commerce backbone</span></a>
-          </div>
-        </div>
+          <!-- 6. COMMERCE -->
+          <button class="os-cube" type="button" data-module="Commerce"
+            data-detail="Sell across every channel — enterprise eCommerce, custom-branded mobile B2B ordering apps, and direct-to-consumer CSA commerce — all on one platform.">
+            <span class="os-num">6</span>
+            <span class="os-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h2.2l2 12.5a1.5 1.5 0 0 0 1.5 1.2h9.6a1.5 1.5 0 0 0 1.5-1.2L20 7H5.4"/></svg></span>
+            <span class="os-name">Commerce</span>
+            <span class="os-tagline">eCommerce, mobile B2B ordering &amp; direct-to-consumer.</span>
+            <ul class="os-links" hidden>
+              <li><a href="https://blog.grubmarket.com/grubmarket-acquires-supply-chain-software-provider-nova-libra/" target="_blank" rel="noopener">Nova Libra / CORAL</a></li>
+              <li><a href="https://www.grubmarket.com/hello/orders-io/index.html" target="_blank" rel="noopener">Orders IO</a></li>
+              <li><a href="https://farmigo.com/" target="_blank" rel="noopener">Farmigo</a></li>
+            </ul>
+          </button>
 
-        <!-- 7. ERP & FINANCIALS -->
-        <div class="module-group">
-          <div class="module-head">
-            <span class="mh-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M3 11h18M8 7V4h8v3"/></svg></span>
-            <div><h3>ERP &amp; Financials <span class="core-tag">7</span></h3><p class="mh-desc">Produce ERP, inventory, grower accounting, and payments in one ledger.</p></div>
-          </div>
-          <div class="app-grid">
-            <a class="app-tile" data-detail="Fresh Software Solutions (Thyme) is a cloud ERP with online ordering built for produce wholesalers. It covers inventory, purchasing, sales, and accounting in one system, offered as a full ERP-and-commerce package for mid-size distributors." href="https://www.freshsoftwaresolutions.com/" target="_blank" rel="noopener"><span class="app-name">Fresh Software / Thyme <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="app-desc">Cloud ERP + online ordering for wholesalers.</span><span class="app-meta">ERP &amp; Financials</span></a>
-            <a class="app-tile" data-detail="Parsimoni&#x27;s Profitsense pairs a warehouse point-of-sale system with online ordering. It&#x27;s aimed at wholesalers who sell both on the floor and online and need one record of truth, feeding the same ERP and financials layer as the rest of the platform." href="https://blog.grubmarket.com/grubmarket-acquires-food-supply-chain-software-services-provider-parsemony/" target="_blank" rel="noopener"><span class="app-name">Parsimoni / Profitsense <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="app-desc">Warehouse POS + online ordering.</span><span class="app-meta">ERP &amp; Financials</span></a>
-            <a class="app-tile" data-detail="Frantoni is a produce-wholesaler ERP with deep roots in the New York metro market, handling the ordering, inventory, and accounting workflows of Northeast distributors. GrubMarket keeps it running for the regional operators who rely on it rather than forcing a migration." href="https://blog.grubmarket.com/grubmarket-acquires-produce-software-providers-frantoni-and-granite-state-software/" target="_blank" rel="noopener"><span class="app-name">Frantoni <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="app-desc">NYC produce wholesaler ERP.</span><span class="app-meta">Northeast regional</span></a>
-            <a class="app-tile" data-detail="Granite State Software is a greengrocer ERP for produce wholesalers, strong across the Midwest and East. Like GrubMarket&#x27;s other regional ERPs it manages inventory, purchasing, and billing for its established customer base, joining the same platform backbone rather than being replaced." href="https://blog.grubmarket.com/grubmarket-acquires-produce-software-providers-frantoni-and-granite-state-software/" target="_blank" rel="noopener"><span class="app-name">Granite State Software <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="app-desc">Greengrocer ERP for produce wholesalers.</span><span class="app-meta">Midwest / East regional</span></a>
-            <a class="app-tile" data-detail="GrubPay handles payments for food businesses — ACH and credit-card processing built directly into the ordering and ERP flow. It lets distributors collect and reconcile payments without bolting on a separate processor, the financial rail beneath the commerce modules." href="grubpay.html"><span class="app-name">GrubPay <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="app-desc">Payments, ACH &amp; card processing built into every order.</span><span class="app-meta">Financials</span></a>
-          </div>
-        </div>
+          <!-- 7. AI -->
+          <button class="os-cube" type="button" data-module="AI"
+            data-detail="GrubMarket's AI tools — GrubAssist, the food industry's first virtual assistant; AI Orders, which extracts orders 24/7 from voicemails, emails, and texts straight into your ERP; and QBIX analytics for pricing, demand, and performance insight.">
+            <span class="os-num">7</span>
+            <span class="os-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M18.5 14.5l.9 2.3 2.3.9-2.3.9-.9 2.3-.9-2.3-2.3-.9 2.3-.9z"/></svg></span>
+            <span class="os-name">AI</span>
+            <span class="os-tagline">GrubAssist, AI Orders &amp; analytics.</span>
+            <ul class="os-links" hidden>
+              <li><a href="https://www.grubmarket.ai/" target="_blank" rel="noopener">GrubAssist / AI Orders</a></li>
+              <li><a href="https://www.qbixanalytics.com/" target="_blank" rel="noopener">QBIX Analytics</a></li>
+            </ul>
+          </button>
 
-        <!-- 8. SUSTAINABILITY -->
-        <div class="module-group">
-          <div class="module-head">
-            <span class="mh-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21c0-9 5-16 14-16 0 9-5 16-14 16z"/><path d="M5 21c3-5 6-8 10-11"/></svg></span>
-            <div><h3>Sustainability <span class="core-tag">8</span></h3><p class="mh-desc">Sourcing, operations, and supply-chain reporting for a lower environmental footprint.</p></div>
-          </div>
-          <div class="app-grid">
-            <a class="app-tile" data-detail="Sustainable California is GrubMarket&#x27;s sustainability initiative supporting growers and reducing supply-chain waste. It has funded tree planting and free organic-certification support for underserved farmers, and this module surfaces that work alongside environmental reporting." href="sustainability.html"><span class="app-name">Sustainable California <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="app-desc">Grower support &amp; environmental reporting across the supply chain.</span><span class="app-meta">Sustainability</span></a>
-          </div>
+          <!-- 8. ERP & FINANCIALS -->
+          <button class="os-cube" type="button" data-module="ERP &amp; Financials"
+            data-detail="Produce ERP, inventory, grower accounting, and payments in one ledger — from regional produce ERPs to GrubPay's built-in ACH and card processing.">
+            <span class="os-num">8</span>
+            <span class="os-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M3 11h18M8 7V4h8v3"/></svg></span>
+            <span class="os-name">ERP &amp; Financials</span>
+            <span class="os-tagline">Produce ERP, accounting &amp; payments in one ledger.</span>
+            <ul class="os-links" hidden>
+              <li><a href="https://www.freshsoftwaresolutions.com/" target="_blank" rel="noopener">Fresh Software / Thyme</a></li>
+              <li><a href="https://blog.grubmarket.com/grubmarket-acquires-food-supply-chain-software-services-provider-parsemony/" target="_blank" rel="noopener">Parsimoni / Profitsense</a></li>
+              <li><a href="https://blog.grubmarket.com/grubmarket-acquires-produce-software-providers-frantoni-and-granite-state-software/" target="_blank" rel="noopener">Frantoni</a></li>
+              <li><a href="https://blog.grubmarket.com/grubmarket-acquires-produce-software-providers-frantoni-and-granite-state-software/" target="_blank" rel="noopener">Granite State Software</a></li>
+              <li><a href="grubpay.html">GrubPay</a></li>
+            </ul>
+          </button>
         </div>
       </div>
     </section>
@@ -146,7 +155,7 @@
   </main>
 
   <div id="site-footer-mount"></div>
-  <script src="js/grubos.js?v=20260725"></script>
-  <script src="js/layout.js?v=20260725"></script>
+  <script src="js/grubos.js?v=20260726"></script>
+  <script src="js/layout.js?v=20260726"></script>
 </body>
 </html>
