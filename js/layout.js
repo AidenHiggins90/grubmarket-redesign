@@ -39,9 +39,15 @@
           { t: "Find a Wholesaler", d: "Search by state to see GrubMarket's active regional partners and nationwide wholesale coverage.", href: "find-a-wholesaler.html" },
           { t: "Product Catalog", d: "Thousands of products by category — fresh produce, proteins, dairy, pantry staples, floral, and specialty organic items — sourced from a nationwide grower network.", href: "catalog.html" }
         ]},
-        { h: "Sell & Deliver", items: [
-          { t: "Sell Your Harvest",      d: "List your harvest, manage CSA boxes and shares through Farmigo, and reach GrubMarket's nationwide buyer network with reliable payouts built in.", href: "growers.html" },
-          { t: "Home & Office Delivery", d: "Farm-fresh groceries delivered through local hubs like Good Eggs, SPUD, and FreshGOGO, for up to 50% less than grocery store prices.", href: "delivery.html" }
+        { h: "Sell", items: [
+          { t: "Sell Your Harvest",      d: "List your harvest, manage CSA boxes and shares through Farmigo, and reach GrubMarket's nationwide buyer network with reliable payouts built in.", href: "growers.html" }
+        ]},
+        { h: "Home & Office Delivery", items: [
+          { t: "How delivery works", d: "Farm-fresh groceries delivered to your door or your office, for up to 50% less than grocery store prices. Order through the local hub that serves your area:", href: "delivery.html" },
+          { t: "Good Eggs",    href: "https://www.goodeggs.com/home" },
+          { t: "SPUD",         href: "https://www.spud.ca/" },
+          { t: "FreshGOGO",    href: "https://www.freshgogo.com/?language=en" },
+          { t: "DO Organics",  href: "https://doorganics.grubmarket.com/" }
         ]}
       ],
       featured: { tag: "Marketplace", img: "boxes_anim.jpg", href: "wholesale.html", linkText: "Buy wholesale →",
@@ -112,10 +118,13 @@
         var ext = /^https?:/.test(it.href) ? ' target="_blank" rel="noopener"' : '';
         return '<a class="m-link" role="menuitem" href="' + it.href + '"' + ext + '>' +
                  '<span class="m-t">' + it.t + (ext ? ' <span class="m-ext" aria-hidden="true">↗</span>' : '') + '</span>' +
-                 '<span class="m-d">' + it.d + '</span></a>';
+                 (it.d ? '<span class="m-d">' + it.d + '</span>' : '') + '</a>';
       }).join("");
       return '<div class="mega-group"><h4>' + g.h + '</h4>' + links + '</div>';
     }).join("");
+    // three groups would otherwise wrap to a second row and make the panel
+    // too tall for shorter laptop screens — give them their own column each
+    var groupCols = entry.groups.length >= 3 ? " cols-3" : "";
 
     var f = entry.featured;
     var featured = f ? (
@@ -142,7 +151,7 @@
         entry.label + ' <span class="chev" aria-hidden="true"></span></button>' +
       '<div class="mega" id="' + panelId + '" role="menu" aria-label="' + entry.label + '">' +
         '<div class="mega-inner">' +
-          '<div class="mega-main">' + intro + '<div class="mega-groups">' + groups + '</div></div>' + featured +
+          '<div class="mega-main">' + intro + '<div class="mega-groups' + groupCols + '">' + groups + '</div></div>' + featured +
         '</div>' +
       '</div></div>';
   }
