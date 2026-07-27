@@ -41,7 +41,7 @@
         ]},
         { h: "Sell & Deliver", items: [
           { t: "Sell Your Harvest",      d: "List your harvest, manage CSA boxes and shares through Farmigo, and reach GrubMarket's nationwide buyer network with reliable payouts built in.", href: "growers.html" },
-          { t: "Home & Office Delivery", d: "Farm-fresh groceries delivered through local hubs like Good Eggs and FreshGOGO, for up to 50% less than grocery store prices.", href: "delivery.html" }
+          { t: "Home & Office Delivery", d: "Farm-fresh groceries delivered through local hubs like Good Eggs, SPUD, and FreshGOGO, for up to 50% less than grocery store prices.", href: "delivery.html" }
         ]}
       ],
       featured: { tag: "Marketplace", img: "boxes_anim.jpg", href: "wholesale.html", linkText: "Buy wholesale →",
@@ -58,7 +58,7 @@
         ]},
         { h: "Growers & Consumers", items: [
           { t: "Growers & Farmers", d: "List your harvest, manage CSA boxes through Farmigo, and get paid reliably through a nationwide buyer network — no middlemen.", href: "growers.html" },
-          { t: "Home & Office",     d: "Order fresh groceries online and get them delivered through local food hubs — Good Eggs, FreshGOGO, and DO Organics.", href: "delivery.html" }
+          { t: "Home & Office",     d: "Order fresh groceries online and get them delivered through local food hubs — Good Eggs, SPUD, FreshGOGO, and DO Organics.", href: "delivery.html" }
         ]}
       ],
       featured: { tag: "Partner voice", img: "image%2022.png", href: "customers.html", linkText: "Read customer stories →",
