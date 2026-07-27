@@ -69,8 +69,8 @@
     { label: "Resources",
       intro: { eyebrow: "Resources", text: "News, customer stories, and events from across the food supply chain — three years of insight, all in one place." },
       groups: [
-        { h: "Newsroom", items: [
-          { t: "Newsroom",    d: "From the Sales AI Agent launch to the Spring 2026 software release and TIME100 recognition — GrubMarket's product news and milestones.", href: "blog.html" },
+        { h: "News & Events", items: [
+          { t: "In the News", d: "From the Sales AI Agent launch to the Spring 2026 software release and TIME100 recognition — GrubMarket's product news and milestones.", href: "blog.html" },
           { t: "Events",      d: "Quarterly earnings webcasts, investor summits, and company milestones — see what's coming and register to attend.", href: "events.html" },
           { t: "Trade Shows", d: "Meet the team and see WholesaleWare, AI Orders, and Orders IO live at produce, foodservice, and food-tech industry events.", href: "trade-shows.html" }
         ]},
@@ -80,7 +80,7 @@
           { t: "Sustainability",   d: "The Sustainable California initiative has sponsored 230,000+ trees with One Tree Planted and funded organic certification through CCOF.", href: "sustainability.html" }
         ]}
       ],
-      featured: { tag: "Newsroom", img: "bg3.jpg", href: "article-schoenmann.html", linkText: "Read the story →",
+      featured: { tag: "In the News", img: "bg3.jpg", href: "article-schoenmann.html", linkText: "Read the story →",
         quote: "Joining GrubMarket reflects an important moment in the continued evolution of Schoenmann Produce.",
         name: "Mark Steakley", role: "President, Schoenmann Produce" }
     },
@@ -180,7 +180,7 @@
       '<div><img class="logo" src="' + LOGO_W + '" alt="GrubMarket" width="225" height="41"/>' +
         '<p class="blurb">Digitally transforming the American food supply chain industry — wholesale, software, AI, and delivery in one network.</p></div>' +
       '<div><h5>Platform</h5><a href="grubos.html">Enterprise AI</a><a href="wholesale.html">Buy Wholesale</a><a href="software.html">ERP Software</a><a href="enterprise-ai.html">GrubAssist</a></div>' +
-      '<div><h5>Resources</h5><a href="blog.html">Newsroom</a><a href="events.html">Events</a><a href="customers.html">Customer Stories</a><a href="sustainability.html">Sustainability</a></div>' +
+      '<div><h5>Resources</h5><a href="blog.html">In the News</a><a href="events.html">Events</a><a href="customers.html">Customer Stories</a><a href="sustainability.html">Sustainability</a></div>' +
       '<div><h5>Company</h5><a href="leadership.html">Leadership</a><a href="awards.html">Awards</a><a href="careers.html">Careers</a><a href="investors.html">Investor Relations</a></div>' +
       '<div><h5>Legal</h5><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="cookie-policy.html">Cookie Policy</a><a href="accessibility.html">Accessibility</a></div>' +
     '</div>' +
