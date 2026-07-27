@@ -166,7 +166,7 @@
   var header =
     '<a class="skip-link" href="#main">Skip to content</a>' +
     '<header class="site-header" id="siteHeader"><div class="wrap">' +
-      '<a class="brand" href="index.html" aria-label="GrubMarket home"><img src="' + LOGO + '" alt="GrubMarket"/></a>' +
+      '<a class="brand" href="index.html" aria-label="GrubMarket home"><img src="' + LOGO + '" alt="GrubMarket" width="284" height="54"/></a>' +
       '<nav class="nav" id="nav" aria-label="Primary">' + navHTML() +
         '<a class="nav-search" href="search.html" aria-label="Search the site"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></a>' +
         '<a class="btn solid sm nav-cta" href="wholesale.html">Buy Wholesale</a>' +
@@ -177,7 +177,7 @@
 
   var footer =
     '<footer class="footer"><div class="wrap"><div class="cols">' +
-      '<div><img class="logo" src="' + LOGO_W + '" alt="GrubMarket"/>' +
+      '<div><img class="logo" src="' + LOGO_W + '" alt="GrubMarket" width="225" height="41"/>' +
         '<p class="blurb">Digitally transforming the American food supply chain industry — wholesale, software, AI, and delivery in one network.</p></div>' +
       '<div><h5>Platform</h5><a href="grubos.html">Enterprise AI</a><a href="wholesale.html">Buy Wholesale</a><a href="software.html">ERP Software</a><a href="enterprise-ai.html">GrubAssist</a></div>' +
       '<div><h5>Resources</h5><a href="blog.html">Newsroom</a><a href="events.html">Events</a><a href="customers.html">Customer Stories</a><a href="sustainability.html">Sustainability</a></div>' +
