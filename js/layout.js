@@ -91,7 +91,7 @@
         { h: "About", items: [
           { t: "Who We Are",         d: "Founded in 2014, GrubMarket now operates across 15 states and provinces as the largest private food technology company in the U.S.", href: "about.html" },
           { t: "Leadership Team",    d: "Led by founder & CEO Mike Xu and Chief Software Product Officer Genevieve Wang, building the platform behind a decade of acquisitions.", href: "leadership.html" },
-          { t: "Awards & Accolades", d: "TIME100 Companies Industry Leaders, CNBC Disruptor 50 for three straight years (2023–2025), and the Shelby Report's Sustainability award.", href: "awards.html" }
+          { t: "Recognition", d: "TIME100 Companies Industry Leaders, CNBC Disruptor 50 for three straight years (2023–2025), and the Shelby Report's Sustainability award.", href: "recognition.html" }
         ]},
         { h: "Connect", items: [
           { t: "Investor Relations", d: "See GrubMarket's $2.4B revenue, $4.5B valuation, Series H round, financial dashboard, filings, and how to request the investor kit.", href: "investors.html" },
@@ -181,7 +181,7 @@
         '<p class="blurb">Digitally transforming the American food supply chain industry — wholesale, software, AI, and delivery in one network.</p></div>' +
       '<div><h5>Platform</h5><a href="grubos.html">Enterprise AI</a><a href="wholesale.html">Buy Wholesale</a><a href="software.html">ERP Software</a><a href="enterprise-ai.html">GrubAssist</a></div>' +
       '<div><h5>Resources</h5><a href="blog.html">In the News</a><a href="events.html">Events</a><a href="customers.html">Customer Stories</a><a href="sustainability.html">Sustainability</a></div>' +
-      '<div><h5>Company</h5><a href="leadership.html">Leadership</a><a href="awards.html">Awards</a><a href="careers.html">Careers</a><a href="investors.html">Investor Relations</a></div>' +
+      '<div><h5>Company</h5><a href="leadership.html">Leadership</a><a href="recognition.html">Recognition</a><a href="careers.html">Careers</a><a href="investors.html">Investor Relations</a></div>' +
       '<div><h5>Legal</h5><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="cookie-policy.html">Cookie Policy</a><a href="accessibility.html">Accessibility</a></div>' +
     '</div>' +
     '<div class="bottom"><span>© 2026 GrubMarket. All rights reserved.</span>' +

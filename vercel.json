@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/awards.html", "destination": "/recognition.html", "permanent": true },
+    { "source": "/awards", "destination": "/recognition.html", "permanent": true }
+  ]
+}
