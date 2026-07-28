@@ -953,40 +953,39 @@ img { max-width: 100%; }
 /* wide tables scroll in their own container so the page never scrolls sideways */
 .table-scroll { overflow-x: auto; }
 
-/* ---- Imagery: media-section backgrounds (self-hosted) ---- */
-.bg-warehouse::before  { background-image: url("../assets/img/remote/gm-warehouse.jpg"); }
-.bg-payments::before   { background-image: url("../assets/img/remote/gm-payments.jpg"); }
-.bg-conference::before { background-image: url("../assets/img/remote/gm-conference.jpg"); }
-.bg-boardroom::before  { background-image: url("../assets/img/remote/gm-boardroom.jpg"); }
-.bg-market::before     { background-image: url("../assets/img/remote/gm-market.jpg"); }
-.bg-mobile::before     { background-image: url("../assets/img/remote/gm-mobile.jpg"); }
-.bg-greenhouse::before { background-image: url("../assets/img/remote/gm-greenhouse.jpg"); }
-.bg-datatech::before   { background-image: url("../assets/img/remote/gm-datatech.jpg"); }
-.bg-teamwork::before   { background-image: url("../assets/img/remote/gm-teamwork.jpg"); }
-.bg-desk::before       { background-image: url("../assets/img/remote/gm-desk.jpg"); }
-.bg-community::before  { background-image: url("../assets/img/remote/gm-community.jpg"); }
-.bg-farmfield::before  { background-image: url("../assets/img/remote/gm-field.jpg"); }
-.bg-grocery::before    { background-image: url("../assets/img/remote/unsplash-1488459716781-31db52582fe9.jpg"); }
+/* ---- Imagery. Every image below was visually checked: it is used on exactly
+   one page, matches that page's subject, and its background-position is set
+   from where the subject actually sits in the frame. ---- */
+.bg-aisle::before { background-image: url("../assets/img/remote/gm-aisle.jpg"); background-position: center center; }
+.bg-planning::before { background-image: url("../assets/img/remote/gm-field.jpg"); background-position: center 45%; }
 
-/* photo hero — image behind the dark hero, brand gradient over it for contrast */
 .page-hero.photo { position: relative; background: var(--green-dark); overflow: hidden; }
 .page-hero.photo::before { content: ""; position: absolute; inset: 0;
-  background-size: cover; background-position: center; opacity: .38; }
+  background-size: cover; background-repeat: no-repeat; opacity: .38; }
 .page-hero.photo::after { content: ""; position: absolute; inset: 0;
   background: linear-gradient(100deg, var(--green-dark) 6%, rgba(13,75,28,.72) 48%, rgba(13,75,28,.30) 100%); }
 .page-hero.photo .wrap { position: relative; z-index: 2; }
-.ph-grocery::before   { background-image: url("../assets/img/remote/unsplash-1488459716781-31db52582fe9.jpg"); }
-.ph-warehouse::before { background-image: url("../assets/img/remote/gm-warehouse.jpg"); }
-.ph-field::before     { background-image: url("../assets/img/remote/gm-field.jpg"); }
-.ph-market::before    { background-image: url("../assets/img/remote/gm-market.jpg"); }
-.ph-datatech::before  { background-image: url("../assets/img/remote/gm-datatech.jpg"); }
-.ph-mobile::before    { background-image: url("../assets/img/remote/gm-mobile.jpg"); }
-.ph-payments::before  { background-image: url("../assets/img/remote/gm-payments.jpg"); }
-.ph-teamwork::before  { background-image: url("../assets/img/remote/gm-teamwork.jpg"); }
-.ph-boardroom::before { background-image: url("../assets/img/remote/gm-boardroom.jpg"); }
-.ph-conference::before{ background-image: url("../assets/img/remote/gm-conference.jpg"); }
-.ph-community::before { background-image: url("../assets/img/remote/gm-community.jpg"); }
-.ph-desk::before      { background-image: url("../assets/img/remote/gm-desk.jpg"); }
+.ph-apples::before { background-image: url("../assets/img/remote/gm-storefront.jpg"); background-position: center 50%; }
+.ph-produce::before { background-image: url("../assets/img/remote/gm-market.jpg"); background-position: center 50%; }
+.ph-warehouse::before { background-image: url("../assets/img/remote/gm-warehouse.jpg"); background-position: center 55%; }
+.ph-erp::before { background-image: url("../assets/img/remote/gm-community.jpg"); background-position: center 50%; }
+.ph-platform::before { background-image: url("../assets/img/remote/gm-dashboard.jpg"); background-position: center 45%; }
+.ph-office::before { background-image: url("../assets/img/remote/gm-clients.jpg"); background-position: center 50%; }
+.ph-handshake::before { background-image: url("../assets/img/remote/gm-teamwork.jpg"); background-position: center 50%; }
+.ph-strategy::before { background-image: url("../assets/img/remote/gm-execteam.jpg"); background-position: center 45%; }
+.ph-eventhall::before { background-image: url("../assets/img/remote/gm-awardstage.jpg"); background-position: center 62%; }
+.ph-audience::before { background-image: url("../assets/img/remote/gm-conference.jpg"); background-position: center 60%; }
+.ph-tomato::before { background-image: url("../assets/img/remote/gm-produceboxes.jpg"); background-position: center 50%; }
+.ph-pos::before { background-image: url("../assets/img/remote/gm-payments.jpg"); background-position: center 50%; }
+
+
+/* dark hero with a richer brand gradient — used where a photo would be
+   decorative rather than relevant. Still visually distinct from flat green. */
+.page-hero.dark.tinted { position: relative; overflow: hidden;
+  background: linear-gradient(115deg, #0B3D17 0%, var(--green-dark) 42%, #14764A 100%); }
+.page-hero.dark.tinted::before { content: ""; position: absolute; inset: 0;
+  background: radial-gradient(120% 90% at 88% 12%, rgba(43,196,108,.30), rgba(43,196,108,0) 60%); }
+.page-hero.dark.tinted .wrap { position: relative; z-index: 2; }
 
 /* soft gradient wash for text-only utility/legal heroes — no photo, stays sober */
 .page-hero.tint { background: linear-gradient(135deg, var(--mint-50) 0%, var(--mint-25) 55%, #fff 100%);
