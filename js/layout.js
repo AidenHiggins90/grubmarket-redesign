@@ -12,10 +12,10 @@
   // ---- navigation model: 5 top-level dropdowns, each with grouped
   //      subsections (like Manhattan's mega-menus) + a featured card ----
   var NAV = [
-    { label: "Platform",
-      intro: { eyebrow: "The Platform", text: "One connected system for ordering, running, and getting paid — every tool built specifically for fresh, perishable food." },
+    { label: "Tech",
+      intro: { eyebrow: "Tech", text: "One connected system for ordering, running, and getting paid — every tool built specifically for fresh, perishable food." },
       groups: [
-        { h: "Software", items: [
+        { h: "ERP & Ordering", items: [
           { t: "Enterprise AI",        d: "The single front door to a decade of GrubMarket acquisitions — one login, one data layer, eight connected modules spanning ERP, commerce, safety, and AI.", href: "grubos.html" },
           { t: "ERP Software",  d: "WholesaleWare is the food industry's fastest-growing cloud ERP, running inventory, warehouse ops, grower accounting, manufacturing, HR, and general ledger for wholesalers and distributors.", href: "software.html" },
           { t: "WholesaleWare Login", d: "Existing customers sign in here to run daily operations — inventory, purchasing, lot tracking, and accounting — on the live WholesaleWare platform.", href: "https://erp.wholesaleware.com/#/" },
@@ -26,13 +26,13 @@
           { t: "GrubPay",       d: "Accept ACH and credit card payments in one secure, simple workflow — built for distributors, retail stores, and online shops alike.", href: "grubpay.html" }
         ]}
       ],
-      featured: { tag: "Platform", img: "assets/img/remote/unsplash-1551288049-bebda4e38f71.jpg", href: "grubos.html", linkText: "Explore the platform →",
+      featured: { tag: "Tech", img: "assets/img/remote/unsplash-1551288049-bebda4e38f71.jpg", href: "grubos.html", linkText: "Explore Enterprise AI →",
         quote: "We focused on our customers' real challenges and delivered powerful solutions that deliver immediate, positive impact to their businesses.",
         name: "Genevieve Wang", role: "Chief Software Product Officer, GrubMarket" }
     },
 
-    { label: "Marketplace",
-      intro: { eyebrow: "The Marketplace", text: "Buy, sell, and deliver fresh food through a nationwide network — exclusive pricing and reliable fulfillment, all on one platform." },
+    { label: "Buy & Sell",
+      intro: { eyebrow: "Buy & Sell", text: "Buy, sell, and deliver fresh food through a nationwide network — exclusive wholesale pricing and reliable fulfillment, all in one place." },
       groups: [
         { h: "Buy", items: [
           { t: "Buy Wholesale",  d: "GrubMarket's B2B network serves grocers, foodservice operators, schools, government buyers, and restaurants across the U.S. and Canada at exclusive wholesale prices.", href: "wholesale.html" },
@@ -50,7 +50,7 @@
           { t: "DO Organics",  href: "https://doorganics.grubmarket.com/" }
         ]}
       ],
-      featured: { tag: "Marketplace", img: "boxes_anim.jpg", href: "wholesale.html", linkText: "Buy wholesale →",
+      featured: { tag: "Buy & Sell", img: "boxes_anim.jpg", href: "wholesale.html", linkText: "Buy wholesale →",
         quote: "Our ability to offer superior services and the finest quality produce year after year is powered by our deep operational know-how and our investments in world-class digital transformation.",
         name: "Carole Shandler", role: "President, Shapiro-Gilman Shandler at GrubMarket" }
     },
@@ -72,8 +72,8 @@
         name: "Isabel Freeland", role: "President & CEO, Coast Citrus Distributors" }
     },
 
-    { label: "Resources",
-      intro: { eyebrow: "Resources", text: "News, customer stories, and events from across the food supply chain — three years of insight, all in one place." },
+    { label: "News",
+      intro: { eyebrow: "News", text: "News, customer stories, and events from across the food supply chain — three years of insight, all in one place." },
       groups: [
         { h: "News & Events", items: [
           { t: "In the News", d: "From the Sales AI Agent launch to the Spring 2026 software release and TIME100 recognition — GrubMarket's product news and milestones.", href: "blog.html" },
@@ -188,8 +188,9 @@
     '<footer class="footer"><div class="wrap"><div class="cols">' +
       '<div><img class="logo" src="' + LOGO_W + '" alt="GrubMarket" width="225" height="41"/>' +
         '<p class="blurb">Digitally transforming the American food supply chain industry — wholesale, software, AI, and delivery in one network.</p></div>' +
-      '<div><h5>Platform</h5><a href="grubos.html">Enterprise AI</a><a href="wholesale.html">Buy Wholesale</a><a href="software.html">ERP Software</a><a href="enterprise-ai.html">GrubAssist</a></div>' +
-      '<div><h5>Resources</h5><a href="blog.html">In the News</a><a href="events.html">Events</a><a href="customers.html">Customer Stories</a><a href="sustainability.html">Sustainability</a></div>' +
+      '<div><h5>Buy &amp; Sell</h5><a href="wholesale.html">Buy Wholesale</a><a href="catalog.html">Product Catalog</a><a href="growers.html">Sell Your Harvest</a><a href="delivery.html">Home &amp; Office Delivery</a></div>' +
+      '<div><h5>Tech</h5><a href="grubos.html">Enterprise AI</a><a href="software.html">ERP Software</a><a href="orders-io.html">Orders IO</a><a href="enterprise-ai.html">GrubAssist</a></div>' +
+      '<div><h5>News</h5><a href="blog.html">In the News</a><a href="events.html">Events</a><a href="customers.html">Customer Stories</a><a href="sustainability.html">Sustainability</a></div>' +
       '<div><h5>Company</h5><a href="leadership.html">Leadership</a><a href="recognition.html">Recognition</a><a href="careers.html">Careers</a><a href="investors.html">Investor Relations</a></div>' +
       '<div><h5>Legal</h5><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="cookie-policy.html">Cookie Policy</a><a href="accessibility.html">Accessibility</a></div>' +
     '</div>' +
