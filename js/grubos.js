@@ -66,20 +66,22 @@
   // fill each cube's body with product chips + an "Explore" cue so it
   // reads as content rather than a blank square
   cubes.forEach(function (c) {
-    var anchor = c.querySelector(".os-links");
+    // chips and the CTA live inside .os-body, which carries the padding — the
+    // cube itself is padding-free so the gradient header band can go full-bleed
+    var host = c.querySelector(".os-body") || c;
     var names = [].map.call(c.querySelectorAll(".os-links a"), function (a) { return a.textContent.trim(); });
-    if (names.length && anchor) {
+    if (names.length) {
       var tags = document.createElement("span");
       tags.className = "os-tags";
-      var shown = names.slice(0, 3);
+      var shown = names.slice(0, 2);
       tags.innerHTML = shown.map(function (n) { return "<span>" + n + "</span>"; }).join("") +
-        (names.length > 3 ? '<span class="os-tag-more">+' + (names.length - 3) + " more</span>" : "");
-      c.insertBefore(tags, anchor);
+        (names.length > 2 ? '<span class="os-tag-more">+' + (names.length - 2) + " more</span>" : "");
+      host.appendChild(tags);
     }
     var more = document.createElement("span");
     more.className = "os-more";
     more.innerHTML = 'Explore module <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
-    if (anchor) c.insertBefore(more, anchor); else c.appendChild(more);
+    host.appendChild(more);
 
     c.addEventListener("click", function () { openModal(c); });
   });

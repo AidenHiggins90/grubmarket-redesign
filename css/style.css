@@ -904,32 +904,65 @@ img { max-width: 100%; }
 .search-results mark, .sr-title mark { background: var(--mint-100); color: inherit; padding: 0 2px; border-radius: 3px; }
 
 /* ---- GrubOS module cubes (4 x 2 grid) ---- */
-.os-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-.os-cube { position: relative; display: flex; flex-direction: column; align-items: flex-start;
+/* grid-auto-rows:1fr makes every row as tall as its tallest cube, and the cubes
+   stretch to fill it — aspect-ratio alone only sets a floor, so cubes with more
+   product chips used to grow past the square and break the even grid. */
+.os-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 1fr; gap: 16px; }
+.os-cube { position: relative; display: flex; flex-direction: column; align-items: stretch;
   min-width: 0; /* let grid tracks shrink below content min-width, else the 4th cube overflows */
-  aspect-ratio: 1 / 1; border: 1px solid var(--line); border-radius: 16px; background: #fff;
-  padding: 22px; cursor: pointer; text-align: left; box-shadow: var(--shadow-sm); font: inherit;
+  min-height: 268px; overflow: hidden;
+  border: 1px solid var(--line); border-radius: 16px; background: #fff;
+  padding: 0; cursor: pointer; text-align: left; box-shadow: var(--shadow-sm); font: inherit;
   transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
 .os-cube:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--green-bright); }
-.os-num { position: absolute; top: 16px; right: 18px; font-family: var(--head); font-weight: 800;
-  font-size: 15px; color: var(--mint-100); }
-.os-cube:hover .os-num { color: var(--green-bright); }
-.os-ico { width: 46px; height: 46px; border-radius: 12px; background: var(--mint-50); color: var(--green);
-  display: grid; place-items: center; margin-bottom: 16px; }
-.os-ico svg { width: 24px; height: 24px; }
-.os-name { font-family: var(--head); font-weight: 800; font-size: 18px; color: var(--green-dark); margin-top: 0; }
-.os-tagline { font-size: 12.5px; color: var(--muted); margin-top: 5px; line-height: 1.45; }
-.os-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+
+/* Illustrated header band. Each module gets its own gradient from --c1/--c2 set
+   per cube below, plus a dot texture, so the eight cubes read as one family
+   while staying individually recognisable at a glance. */
+.os-cube::before { content: ""; display: block; height: 84px; flex: none;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,.22) 1px, transparent 0),
+    radial-gradient(130% 120% at 82% 0%, rgba(255,255,255,.28), rgba(255,255,255,0) 62%),
+    linear-gradient(135deg, var(--c1) 0%, var(--c2) 100%);
+  background-size: 9px 9px, 100% 100%, 100% 100%; }
+.os-cube:nth-child(1) { --c1: #1C6E31; --c2: #4E9A3C; }
+.os-cube:nth-child(2) { --c1: #0F6B4F; --c2: #1F9E74; }
+.os-cube:nth-child(3) { --c1: #0D4B1C; --c2: #226A3A; }
+.os-cube:nth-child(4) { --c1: #14624F; --c2: #2E8C7A; }
+.os-cube:nth-child(5) { --c1: #175E2C; --c2: #3E9150; }
+.os-cube:nth-child(6) { --c1: #14864F; --c2: #2BC46C; }
+.os-cube:nth-child(7) { --c1: #0E6A57; --c2: #34B58C; }
+.os-cube:nth-child(8) { --c1: #0B3D17; --c2: #1C6E31; }
+
+.os-body { display: flex; flex-direction: column; align-items: flex-start; flex: 1 1 auto;
+  min-height: 0; padding: 0 20px 20px; }
+.os-num { position: absolute; top: 13px; right: 16px; font-family: var(--head); font-weight: 800;
+  font-size: 15px; color: rgba(255,255,255,.9); }
+.os-cube:hover .os-num { color: #fff; }
+/* icon straddles the band and the white body, tying the two halves together */
+.os-ico { position: absolute; top: 52px; left: 20px; z-index: 2;
+  width: 52px; height: 52px; border-radius: 14px; background: #fff; color: var(--green);
+  display: grid; place-items: center; box-shadow: 0 3px 10px rgba(13,75,28,.16); }
+.os-ico svg { width: 25px; height: 25px; }
+.os-name { font-family: var(--head); font-weight: 800; font-size: 18px; color: var(--green-dark);
+  margin-top: 40px; }
+.os-tagline { font-size: 12.5px; color: var(--body); margin-top: 5px; line-height: 1.45; }
+/* fixed two-row box so the chip area is the same height in every cube even
+   when a module has more products than fit on one line */
+.os-tags { display: flex; flex-wrap: wrap; align-content: flex-start; gap: 6px;
+  margin-top: 12px; min-height: 46px; }
 .os-tags span { font-size: 11px; font-weight: 600; color: var(--green-mid); background: var(--mint-50);
   border: 1px solid var(--line); border-radius: 20px; padding: 3px 9px; line-height: 1.3; }
-.os-tags .os-tag-more { color: var(--muted); background: transparent; border-color: transparent; padding-left: 2px; }
+.os-tags .os-tag-more { color: var(--muted); background: transparent; border-color: transparent;
+  padding-left: 2px; align-self: center; }
 .os-more { display: flex; align-items: center; gap: 5px; margin-top: auto; padding-top: 16px;
   font-size: 12.5px; font-weight: 700; color: var(--green); }
 .os-more svg { width: 15px; height: 15px; transition: transform .15s ease; }
 .os-cube:hover .os-more { color: var(--green-dark); }
 .os-cube:hover .os-more svg { transform: translateX(3px); }
 @media (max-width: 900px) { .os-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .os-cube { aspect-ratio: auto; } }
+@media (max-width: 480px) { .os-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
+  .os-cube { min-height: 0; } }
 
 /* modal: product links list inside a module pop-up */
 .gm-modal-links { margin-top: 4px; }
