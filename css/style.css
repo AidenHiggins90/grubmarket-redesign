@@ -474,8 +474,7 @@ img { max-width: 100%; }
 .prose { max-width: 760px; margin: 0 auto; }
 .prose h2 { font-size: 26px; margin-top: 40px; }
 .prose h3 { font-size: 19px; margin-top: 28px; color: var(--green-dark); }
-.prose p, .prose li { font-size: 16px; color: var(--body); }
-.prose ul { padding-left: 20px; }
+.prose p, .prose li { font-size: 17px; line-height: 1.68; color: var(--body); }
 .note { background: var(--mint-50); border: 1px solid var(--line); border-left: 3px solid var(--green); border-radius: 8px; padding: 14px 18px; font-size: 14px; color: var(--muted); margin-bottom: 32px; }
 
 /* ---- Blog cards ---- */
@@ -614,7 +613,9 @@ img { max-width: 100%; }
 .article-img { width: 100%; aspect-ratio: 16 / 7; border-radius: 16px; background: var(--mint-100) center/cover no-repeat; margin: 0 0 34px; box-shadow: var(--shadow-md); }
 .article-img.contain, .post .thumb.contain { background-size: contain; background-color: var(--mint-50); }
 .prose ul { margin: 0 0 18px; padding-left: 22px; }
-.prose li { font-size: 18px; line-height: 1.6; color: var(--body); margin-bottom: 9px; }
+/* size/colour come from the .prose p, .prose li rule above — keep only spacing
+   here so bullets and paragraphs in the same block stay the same size */
+.prose li { margin-bottom: 9px; }
 .prose blockquote { margin: 26px 0; padding: 6px 0 6px 22px; border-left: 3px solid var(--green-bright); font-family: var(--head); font-weight: 700; color: var(--ink); font-size: 20px; line-height: 1.45; }
 .prose blockquote cite { display: block; font-family: var(--sans); font-weight: 700; font-style: normal; font-size: 14px; color: var(--muted); margin-top: 12px; }
 .article-meta { font-size: 14px; color: var(--muted); font-weight: 700; margin: 0 0 26px; }
