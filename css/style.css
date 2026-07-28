@@ -604,6 +604,11 @@ img { max-width: 100%; }
 .form-status { font-size: 14px; font-weight: 700; margin: 14px 0 0; }
 .form-status.ok { color: var(--green); }
 .form-status.err { color: #b94a48; }
+/* the error state can carry a mailto fallback, so its links need to be visible
+   and underlined against the red rather than inheriting the green link colour */
+.form-status a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.form-status a:hover { text-decoration-thickness: 2px; }
+.form-status.err { line-height: 1.55; font-weight: 600; }
 @media (max-width: 600px) { .lead-form { grid-template-columns: 1fr; } }
 
 /* ============================================================
