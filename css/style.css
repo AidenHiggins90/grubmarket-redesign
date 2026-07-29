@@ -941,16 +941,16 @@ img { max-width: 100%; }
 .os-cube::before { content: ""; display: block; height: 84px; flex: none;
   background-image:
     radial-gradient(circle at 1px 1px, rgba(255,255,255,.22) 1px, transparent 0),
-    radial-gradient(130% 120% at 82% 0%, rgba(255,255,255,.28), rgba(255,255,255,0) 62%),
+    radial-gradient(130% 120% at 82% 0%, rgba(255,255,255,.14), rgba(255,255,255,0) 62%),
     linear-gradient(135deg, var(--c1) 0%, var(--c2) 100%);
   background-size: 9px 9px, 100% 100%, 100% 100%; }
-.os-cube:nth-child(1) { --c1: #1C6E31; --c2: #4E9A3C; }
-.os-cube:nth-child(2) { --c1: #0F6B4F; --c2: #1F9E74; }
+.os-cube:nth-child(1) { --c1: #1C6E31; --c2: #417F32; }
+.os-cube:nth-child(2) { --c1: #0F6B4F; --c2: #19805E; }
 .os-cube:nth-child(3) { --c1: #0D4B1C; --c2: #226A3A; }
-.os-cube:nth-child(4) { --c1: #14624F; --c2: #2E8C7A; }
-.os-cube:nth-child(5) { --c1: #175E2C; --c2: #3E9150; }
-.os-cube:nth-child(6) { --c1: #14864F; --c2: #2BC46C; }
-.os-cube:nth-child(7) { --c1: #0E6A57; --c2: #34B58C; }
+.os-cube:nth-child(4) { --c1: #14624F; --c2: #2A7E6E; }
+.os-cube:nth-child(5) { --c1: #175E2C; --c2: #377F46; }
+.os-cube:nth-child(6) { --c1: #14864F; --c2: #1C8147; }
+.os-cube:nth-child(7) { --c1: #0E6A57; --c2: #257F63; }
 .os-cube:nth-child(8) { --c1: #0B3D17; --c2: #1C6E31; }
 
 .os-body { display: flex; flex-direction: column; align-items: flex-start; flex: 1 1 auto;
