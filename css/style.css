@@ -1033,6 +1033,11 @@ img { max-width: 100%; }
 /* ---- Customer press cards ---- */
 /* .tag is absolutely positioned top-right elsewhere, which collides with these
    longer company-name headings — inside #press let it sit in the flow instead. */
+/* four press cards need their own track count — .grid is fixed at 3 */
+.press-grid { grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.press-grid .card { padding: 24px 22px; }
+@media (max-width: 1040px) { .press-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px)  { .press-grid { grid-template-columns: 1fr; } }
 #press .card .tag { position: static; align-self: flex-start; margin-bottom: 10px; }
 #press .card h3 { margin-top: 0; }
 /* a short pull-quote under the summary, attributed to the partner's own
