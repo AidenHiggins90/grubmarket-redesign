@@ -1081,6 +1081,14 @@ img { max-width: 100%; }
 .press-quote .pq-by { display: block; margin-top: 7px; font-style: normal; font-weight: 700;
   font-size: 12.5px; color: var(--green-mid); }
 
+/* Homepage hero sits on a mint→bright-green gradient. Text there must clear AA
+   against the BRIGHT stop too, not just the mint base — --green-mid measures
+   2.77:1 and --body 3.63:1 against #2bc46c, so both are pinned darker here.
+   Verified: #0B3D17 = 5.44:1 on the bright stop, 9.29:1 on the mint. */
+.hero .eyebrow, .hero .rotator { color: #0B3D17; }
+.hero .lead { color: #24302A; }
+.hero .btn:not(.solid) { color: #0B3D17; border-color: #0B3D17; }
+
 /* ============================================================
    Dark mode. Only tokens are redefined — every surface already
    resolves through var(--page)/var(--surface)/var(--line), so the
@@ -1116,6 +1124,11 @@ img { max-width: 100%; }
     --shadow-md: 0 6px 22px rgba(0,0,0,.45);
     --shadow-lg: 0 18px 50px rgba(0,0,0,.55);
   }
+  /* the hero-text pins above are dark on purpose for the light mint gradient;
+     dark mode flips the hero to deep green, so they must go light again */
+  .hero .eyebrow, .hero .rotator { color: var(--green-mid); }
+  .hero .lead { color: var(--body); }
+  .hero .btn:not(.solid) { color: var(--green-bright); border-color: var(--green-bright); }
   /* Components with hard-coded mint/green gradients can't follow the tokens —
      they need their own dark treatment or near-white text lands on pale green. */
   .site-header { background: rgba(15,21,18,.86); }
