@@ -1029,6 +1029,19 @@ img { max-width: 100%; }
 .ph-eventhall::before { background-image: image-set(url("../assets/img/remote/gm-awardstage.webp") type("image/webp"), url("../assets/img/remote/gm-awardstage.jpg") type("image/jpeg")); background-position: center 62%; }
 .ph-audience::before { background-image: image-set(url("../assets/img/remote/gm-conference.webp") type("image/webp"), url("../assets/img/remote/gm-conference.jpg") type("image/jpeg")); background-position: center 60%; }
 .ph-tomato::before { background-image: image-set(url("../assets/img/remote/gm-produceboxes.webp") type("image/webp"), url("../assets/img/remote/gm-produceboxes.jpg") type("image/jpeg")); background-position: center 50%; }
+.ph-deliveryvan::before { background-image: image-set(url("../assets/img/remote/gm-deliveryvan.webp") type("image/webp"), url("../assets/img/remote/gm-deliveryvan.jpg") type("image/jpeg")); background-position: center 62%;
+  /* the van interior is dark, so the default .38 loses the produce crates */
+  opacity: .55; }
+.ph-marketcrowd::before { background-image: image-set(url("../assets/img/remote/gm-marketcrowd.webp") type("image/webp"), url("../assets/img/remote/gm-marketcrowd.jpg") type("image/jpeg")); background-position: center 55%; }
+.ph-boardmeeting::before { background-image: image-set(url("../assets/img/remote/gm-boardmeeting.webp") type("image/webp"), url("../assets/img/remote/gm-boardmeeting.jpg") type("image/jpeg")); background-position: center 45%; }
+.ph-boardroom::before { background-image: image-set(url("../assets/img/remote/gm-boardroom.webp") type("image/webp"), url("../assets/img/remote/gm-boardroom.jpg") type("image/jpeg")); background-position: center 55%; }
+.ph-orchard::before { background-image: image-set(url("../assets/img/remote/gm-orchard.webp") type("image/webp"), url("../assets/img/remote/gm-orchard.jpg") type("image/jpeg")); background-position: center 55%; }
+.ph-newsstack::before { background-image: image-set(url("../assets/img/remote/gm-newsstack.webp") type("image/webp"), url("../assets/img/remote/gm-newsstack.jpg") type("image/jpeg")); background-position: center 50%; }
+.ph-truckdock::before { background-image: image-set(url("../assets/img/remote/gm-truckdock.webp") type("image/webp"), url("../assets/img/remote/gm-truckdock.jpg") type("image/jpeg")); background-position: center 52%; }
+.ph-officecall::before { background-image: image-set(url("../assets/img/remote/gm-officecall.webp") type("image/webp"), url("../assets/img/remote/gm-officecall.jpg") type("image/jpeg")); background-position: center 42%; }
+.ph-binders::before { background-image: image-set(url("../assets/img/remote/gm-binders.webp") type("image/webp"), url("../assets/img/remote/gm-binders.jpg") type("image/jpeg")); background-position: center 50%; }
+.ph-warehousetablet::before { background-image: image-set(url("../assets/img/remote/gm-warehousetablet.webp") type("image/webp"), url("../assets/img/remote/gm-warehousetablet.jpg") type("image/jpeg")); background-position: center 30%; }
+.ph-cratestack::before { background-image: image-set(url("../assets/img/remote/gm-cratestack.webp") type("image/webp"), url("../assets/img/remote/gm-cratestack.jpg") type("image/jpeg")); background-position: center 45%; }
 .ph-cratewall::before { background-image: image-set(url("../assets/img/remote/gm-cratewall.webp") type("image/webp"), url("../assets/img/remote/gm-cratewall.jpg") type("image/jpeg")); background-position: center 58%; }
 .ph-pos::before { background-image: image-set(url("../assets/img/remote/gm-payments.webp") type("image/webp"), url("../assets/img/remote/gm-payments.jpg") type("image/jpeg")); background-position: center 50%; }
 
