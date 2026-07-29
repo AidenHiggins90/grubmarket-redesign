@@ -51,8 +51,8 @@
         ]}
       ],
       featured: { tag: "Buy & Sell", img: "boxes_anim.jpg", href: "wholesale.html", linkText: "Buy wholesale →",
-        quote: "Our ability to offer superior services and the finest quality produce year after year is powered by our deep operational know-how and our investments in world-class digital transformation.",
-        name: "Carole Shandler", role: "President, Shapiro-Gilman Shandler at GrubMarket" }
+        quote: "Our ability to offer superior services and the finest quality produce year after year is powered by our deep operational know-how, enduring relationships with our customers and vendors, and our investments in world-class digital transformation.",
+        name: "Carole Shandler", role: "President, Shapiro-Gilman-Shandler at GrubMarket" }
     },
 
     { label: "Who We Serve",
