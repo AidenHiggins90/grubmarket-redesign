@@ -752,7 +752,7 @@ img { max-width: 100%; }
   padding: 10px 12px; border: 1.5px solid var(--line); border-radius: 8px; background: var(--surface); outline: none;
 }
 .filing-filters select:focus, .filing-filters input:focus { border-color: var(--green); }
-.filing-filters .ff-reset { font-size: 13.5px; font-weight: 700; color: var(--green); background: none; border: 0; cursor: pointer; padding: 10px 0; }
+.filing-filters .ff-reset { font-size: 13.5px; font-weight: 700; color: var(--green-mid); background: none; border: 0; cursor: pointer; padding: 10px 0; }
 .filing-filters .ff-reset:hover { color: var(--ink-green); }
 
 .filing-table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
@@ -860,7 +860,7 @@ img { max-width: 100%; }
 .ir-events { display: grid; gap: 14px; }
 .ir-event { display: flex; align-items: center; gap: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 22px; box-shadow: var(--shadow-sm); }
 .date-chip { flex: none; width: 62px; text-align: center; background: var(--mint-50); border-radius: 12px; padding: 10px 6px; }
-.date-chip .mo { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--green); }
+.date-chip .mo { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--green-mid); }
 .date-chip .dy { display: block; font-family: var(--head); font-weight: 900; font-size: 24px; color: var(--ink-green); line-height: 1; }
 .ev-info { flex: 1; display: flex; flex-direction: column; }
 .ev-info strong { color: var(--ink); font-size: 16px; }
