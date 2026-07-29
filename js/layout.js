@@ -5,9 +5,9 @@
    mega-menu; branding/design tokens are GrubMarket's own.
    ============================================================ */
 (function () {
-  var LOGO   = "https://www.grubmarket.com/hello/assets/icons/logo_black.svg";
-  var LOGO_W = "https://www.grubmarket.com/hello/assets/icons/logo.svg";
-  var IMG    = "https://www.grubmarket.com/hello/assets/images/";
+  var LOGO   = "assets/icons/gm-logo-black.svg";
+  var LOGO_W = "assets/icons/gm-logo-white.svg";
+  var IMG    = "assets/img/gm/";   // self-hosted; no dependency on grubmarket.com
 
   // ---- navigation model: 5 top-level dropdowns, each with grouped
   //      subsections (like Manhattan's mega-menus) + a featured card ----
@@ -50,7 +50,7 @@
           { t: "DO Organics",  href: "https://doorganics.grubmarket.com/" }
         ]}
       ],
-      featured: { tag: "Buy & Sell", img: "boxes_anim.jpg", href: "wholesale.html", linkText: "Buy wholesale →",
+      featured: { tag: "Buy & Sell", img: "boxes.jpg", href: "wholesale.html", linkText: "Buy wholesale →",
         quote: "Our ability to offer superior services and the finest quality produce year after year is powered by our deep operational know-how, enduring relationships with our customers and vendors, and our investments in world-class digital transformation.",
         name: "Carole Shandler", role: "President, Shapiro-Gilman-Shandler at GrubMarket" }
     },
@@ -67,7 +67,7 @@
           { t: "Home & Office",     d: "Order fresh groceries online and get them delivered through local food hubs — Good Eggs, SPUD, FreshGOGO, and DO Organics.", href: "delivery.html" }
         ]}
       ],
-      featured: { tag: "Partner voice", img: "image%2022.png", href: "customers.html", linkText: "Read customer stories →",
+      featured: { tag: "Partner voice", img: "partner-voice.png", href: "customers.html", linkText: "Read customer stories →",
         quote: "GrubMarket's commitment to AI technology and innovation aligns perfectly with our vision to elevate our capabilities and drive future growth through technology integration.",
         name: "Isabel Freeland", role: "President & CEO, Coast Citrus Distributors" }
     },
@@ -86,7 +86,7 @@
           { t: "Sustainability",   d: "The Sustainable California initiative has sponsored 230,000+ trees with One Tree Planted and funded organic certification through CCOF.", href: "sustainability.html" }
         ]}
       ],
-      featured: { tag: "In the News", img: "bg3.jpg", href: "article-schoenmann.html", linkText: "Read the story →",
+      featured: { tag: "In the News", img: "news-bg.jpg", href: "article-schoenmann.html", linkText: "Read the story →",
         quote: "Joining GrubMarket reflects an important moment in the continued evolution of Schoenmann Produce.",
         name: "Mark Steakley", role: "President, Schoenmann Produce" }
     },
@@ -175,7 +175,10 @@
   var header =
     '<a class="skip-link" href="#main">Skip to content</a>' +
     '<header class="site-header" id="siteHeader"><div class="wrap">' +
-      '<a class="brand" href="index.html" aria-label="GrubMarket home"><img src="' + LOGO + '" alt="GrubMarket" width="284" height="54"/></a>' +
+      '<a class="brand" href="index.html" aria-label="GrubMarket home">' +
+        // the dark wordmark disappears on a dark header, so serve the white one there
+        '<picture><source media="(prefers-color-scheme: dark)" srcset="' + LOGO_W + '" />' +
+        '<img src="' + LOGO + '" alt="GrubMarket" width="284" height="54"/></picture></a>' +
       '<nav class="nav" id="nav" aria-label="Primary">' + navHTML() +
         '<a class="nav-search" href="search.html" aria-label="Search the site"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></a>' +
         '<a class="btn solid sm nav-cta" href="wholesale.html">Buy Wholesale</a>' +
