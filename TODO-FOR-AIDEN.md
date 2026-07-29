@@ -1,6 +1,6 @@
 # What I need from you — GrubMarket redesign
 
-Live: https://grubmarket-redesign.vercel.app · Last updated 2026-07-28
+Live: https://grubmarket-redesign.vercel.app · Last updated 2026-07-29
 
 Everything here is blocked on a decision or an asset only you can provide. Items
 I could resolve myself are already done and not listed.
@@ -82,32 +82,34 @@ three I left alone rather than guess wrong.
 
 ---
 
-## 4. My open offers — say the word and I'll do it
+## 4. My open offers — all now closed
 
-- **Photos on the 4 concrete module cubes** (Field Labor, Food Safety, Warehouse,
-  Transportation), keeping gradients on the abstract four. The other four — EDI,
-  Commerce, AI, ERP — have no honest photographic subject.
-- **Real photography for 14 gradient hero pages**: wholesale, about, delivery,
-  orders-io, enterprise-ai, investors, sustainability, community, contact, blog,
-  recognition, find-a-wholesaler, corporate-governance, sec-filings. Name any and
-  I'll source and visually verify.
-- **Dark mode.** Design tokens are already centralized, so this is maybe an hour.
-- **Nav/footer notes from the meeting doc.** You told me to skip that section.
-  Since then I've applied *"standardize footer"* (columns now mirror the nav) and
-  *"no segments on Procurant"* (it appeared in two module cubes, now only EDI).
-  Nothing else in that section is outstanding — say if you want it revisited.
+- ~~**Hero photography.**~~ **Done** — 12 of 14 pages have verified photo heroes.
+  `enterprise-ai` and `recognition` stay on brand gradients on purpose: generic
+  "AI" abstracts are cliche and off-palette, and no trophy image was free of
+  third-party branding. Overrule me if you disagree.
+- ~~**Dark mode.**~~ **Done** — full `prefers-color-scheme` support, AA-verified
+  in both schemes.
+- ~~**Photos on the module cubes.**~~ **Recommend against, deliberately.** Mixing
+  photos and gradients inside one 4x2 grid reads as inconsistent rather than
+  designed, and EDI / ERP / Commerce / AI have no honest photographic subject.
+- ~~**Self-hosting + image optimisation.**~~ **Done** — 187 third-party asset
+  references eliminated; 16.1 MB of images now ship as 6.5 MB of WebP.
+- ~~**Nav/footer meeting notes.**~~ Applied.
 
 ---
 
-## Fastest path
+## Where things stand
 
-Two things unblock the most work per sentence you type:
+Everything I can do without you is done. What's left is genuinely yours:
 
-1. **A working form backend** (Supabase keys, or pick a form service). This is
-   the only item on the list actively costing you something — the mailto
-   fallback catches leads now, but it depends on the visitor having a mail
-   client, so some will still drop.
-2. **The real domain**, which lets me fix 43 files of canonical/OG/sitemap URLs
-   in one pass and stop search engines indexing the Vercel address.
-
-After that, the three remaining meeting-note questions in section 1.
+1. **A working form backend** — the only item actively costing you something.
+   The mailto fallback catches leads, but it needs the visitor to have a mail
+   client, so some still drop.
+2. **The real domain** — 43 files still hardcode the Vercel URL in canonical
+   tags, OG tags and the sitemap, so that's what search engines index.
+3. **Analytics** — nothing is installed, so you have no traffic data at all.
+4. **The three meeting-note questions** in section 1, plus the homepage headline
+   and legal sign-off.
+5. **IR and customer placeholders** — real figures, or permission to cut those
+   sections until you have them.
