@@ -73,9 +73,10 @@ three I left alone rather than guess wrong.
   need either a working Supabase URL + anon key, or a decision to drop Supabase
   and use a form service (Formspree, Vercel Forms) instead — tell me which and
   I'll wire it up.
-- **Vercel ↔ GitHub auto-deploy.** Currently I deploy manually via CLI; GitHub is
-  just a backup. Connect the repo in Vercel's dashboard if you want pushes to
-  deploy themselves.
+- ~~**Vercel ↔ GitHub auto-deploy.**~~ **Done.** The Vercel GitHub App is
+  installed and the project link is no longer `sourceless`. Every push to `main`
+  now deploys to production on its own, and pushes to other branches get their
+  own preview URL. No more manual CLI deploys.
 - **Deployment protection.** The site is publicly reachable. If it shouldn't be
   yet, turn on password protection in Vercel project settings.
 
