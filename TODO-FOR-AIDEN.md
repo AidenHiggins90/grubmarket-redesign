@@ -11,7 +11,7 @@ I could resolve myself are already done and not listed.
 
 ### Meeting-note items whose meaning I couldn't work out
 From `7-23 grub msite meeting.docx`. I applied everything I understood; these
-three I left alone rather than guess wrong.
+four I left alone rather than guess wrong.
 
 | Note | Why I'm stuck |
 |---|---|
@@ -39,10 +39,13 @@ three I left alone rather than guess wrong.
 ## 2. Accuracy risks — placeholder content that could mislead
 
 - **Investor Relations stock + analyst sections.** Ticker shows AMRKT per the
-  notes. Every number is an em-dash and firms read "Research firm A/B/C —
-  Not rated," with a disclaimer saying so. Nothing is fabricated, but it will
-  look unfinished to a real investor. I need either real figures/a data feed, or
-  permission to cut the sections until you have them.
+  notes. The stock band and grid carry *illustrative* figures ($24.80, a day
+  range, a market cap) behind a "Preview" notice and an "illustrative · pre-IPO"
+  label; the analyst table is the part that reads "Research firm A/B/C — Not
+  rated". Nothing is fabricated as real, but a visiting investor may not read the
+  disclaimers before the numbers. I need real figures/a data feed, or permission
+  to cut these sections until you have them.
+  (Earlier I described this as "every number is an em-dash" — that was wrong.)
 - **Customer stories.** Marked "illustrative — named case studies to follow."
   Real quotes from Coast Citrus and Schoenmann are in place and sourced. If you
   want named case studies, I need approved copy.
