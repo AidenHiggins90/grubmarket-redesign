@@ -1029,6 +1029,7 @@ img { max-width: 100%; }
 .ph-eventhall::before { background-image: image-set(url("../assets/img/remote/gm-awardstage.webp") type("image/webp"), url("../assets/img/remote/gm-awardstage.jpg") type("image/jpeg")); background-position: center 62%; }
 .ph-audience::before { background-image: image-set(url("../assets/img/remote/gm-conference.webp") type("image/webp"), url("../assets/img/remote/gm-conference.jpg") type("image/jpeg")); background-position: center 60%; }
 .ph-tomato::before { background-image: image-set(url("../assets/img/remote/gm-produceboxes.webp") type("image/webp"), url("../assets/img/remote/gm-produceboxes.jpg") type("image/jpeg")); background-position: center 50%; }
+.ph-cratewall::before { background-image: image-set(url("../assets/img/remote/gm-cratewall.webp") type("image/webp"), url("../assets/img/remote/gm-cratewall.jpg") type("image/jpeg")); background-position: center 58%; }
 .ph-pos::before { background-image: image-set(url("../assets/img/remote/gm-payments.webp") type("image/webp"), url("../assets/img/remote/gm-payments.jpg") type("image/jpeg")); background-position: center 50%; }
 
 
