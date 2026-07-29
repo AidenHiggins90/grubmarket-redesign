@@ -161,6 +161,10 @@ img { max-width: 100%; }
   padding-top: 12px;                 /* transparent hover bridge */
   opacity: 0; visibility: hidden; transform: translateY(-6px);
   transition: opacity .18s ease, transform .18s ease, visibility .18s; z-index: 900;
+  /* A 1366x768 laptop leaves roughly 650px of viewport. The tallest panel (Tech,
+     621px) started at y=65 and ran off the bottom with nothing to scroll, so the
+     last links were unreachable. Cap to the space available and scroll inside. */
+  max-height: calc(100vh - 84px); overflow-y: auto; overscroll-behavior: contain;
 }
 .dropdown:hover .mega, .dropdown.open .mega { opacity: 1; visibility: visible; transform: translateY(0); }
 .mega-inner {
@@ -574,7 +578,11 @@ img { max-width: 100%; }
 .gm-modal-overlay.open { opacity: 1; }
 .gm-modal-overlay[hidden] { display: none; }
 .gm-modal { position: relative; background: #fff; border-radius: 16px; padding: 30px 30px 28px; max-width: 440px; width: 100%;
-  box-shadow: var(--shadow-lg); transform: translateY(10px); transition: transform .2s ease; }
+  box-shadow: var(--shadow-lg); transform: translateY(10px); transition: transform .2s ease;
+  /* In phone landscape (~371px tall) the tallest module ran off both ends: the
+     heading sat above the viewport and the last product link below it, with body
+     scroll locked and no way to reach either. Cap and scroll inside instead. */
+  max-height: calc(100vh - 48px); overflow-y: auto; overscroll-behavior: contain; }
 .gm-modal-overlay.open .gm-modal { transform: none; }
 .gm-modal-close { position: absolute; top: 14px; right: 14px; width: 34px; height: 34px; border: 0; background: var(--mint-50);
   border-radius: 9px; color: var(--green-dark); display: grid; place-items: center; cursor: pointer; transition: background .15s ease; }
