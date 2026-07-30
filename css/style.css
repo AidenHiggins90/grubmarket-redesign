@@ -71,6 +71,17 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
   outline-offset: 2px;
   border-radius: 3px;
 }
+/* On the dark green surfaces --green only reaches 2.23:1, below the 3:1 WCAG
+   requires of a focus indicator — and those sections hold the primary CTAs, so
+   keyboard focus was effectively invisible there. Switch to white (10.29:1). */
+.page-hero.dark :focus-visible,
+.cta-band :focus-visible,
+.site-footer :focus-visible,
+.ir-alerts :focus-visible,
+.ir-alerts-card :focus-visible,
+.ir-latest :focus-visible {
+  outline-color: #fff;
+}
 
 body {
   margin: 0; font-family: var(--sans); font-weight: 300;
@@ -1090,11 +1101,35 @@ img { max-width: 100%; }
 .hero .btn:not(.solid) { color: #0B3D17; border-color: #0B3D17; }
 
 /* ============================================================
+   Reduced motion. The site declares 41 transitions/animations,
+   including a looping word rotator in the hero and lift-on-hover
+   across every card. Visitors who ask the OS for less motion get
+   the same layout with the movement removed — not a degraded page.
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+  /* hover/entrance transforms would still jump, so neutralise them */
+  .card:hover, .aud-tile:hover, .os-cube:hover, .post:hover,
+  .app-tile:hover, .mega-featured:hover, .btn.solid:hover {
+    transform: none !important;
+  }
+  /* the hero animations are entrance effects — show the end state */
+  .hero .eyebrow, .hero h1, .hero .lead, .hero .hero-cta, .hero-art {
+    animation: none !important; opacity: 1 !important; transform: none !important;
+  }
+}
+
+/* ============================================================
    Dark mode. Only tokens are redefined — every surface already
    resolves through var(--page)/var(--surface)/var(--line), so the
    layout is untouched.
 
-   Two tokens have to inverate their meaning rather than just darken:
+   Two tokens have to invert their meaning rather than just darken:
    --green-dark is used as a heading colour, and --mint-* as light
    fills; both would vanish on a dark background.
    ============================================================ */
