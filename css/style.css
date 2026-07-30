@@ -275,7 +275,7 @@ img { max-width: 100%; }
 .hero-art {
   border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg);
   aspect-ratio: 4/3.2; background: var(--mint-100) center/cover no-repeat;
-  background-image: url("https://www.grubmarket.com/hello/assets/images/image%2022.png");
+  background-image: image-set(url("../assets/img/gm/partner-voice.webp") type("image/webp"), url("../assets/img/gm/partner-voice.png") type("image/png"));
   animation: heroSlideUp .8s ease .15s both;
 }
 
@@ -405,13 +405,14 @@ img { max-width: 100%; }
 .media.img-right::after { background: linear-gradient(88deg,  #fff 42%, rgba(255,255,255,0) 92%); }
 .media.img-left::after  { background: linear-gradient(272deg, #fff 42%, rgba(255,255,255,0) 92%); }
 
-/* image sources (loaded from grubmarket's CDN — assets render cross-origin fine) */
-.bg-boxes::before   { background-image: url("https://www.grubmarket.com/hello/assets/images/boxes.png"); }
-.bg-about::before   { background-image: url("https://www.grubmarket.com/hello/assets/images/gallery/1.png"); }
-.bg-group::before   { background-image: url("https://www.grubmarket.com/hello/assets/images/group1968.png"); }
-.bg-farmgpt::before { background-image: url("https://www.grubmarket.com/hello/assets/images/farm_gpt.png"); }
-.bg-sustain::before { background-image: url("https://www.grubmarket.com/hello/assets/images/sustainablility_img_1.png"); }
-.bg-field::before { background-image: url("https://www.grubmarket.com/hello/assets/images/photo-1518843875459-f738682238a6.jpg"); }
+/* image sources — self-hosted; these were the last cross-origin loads and the
+   new CSP (img-src 'self') blocks anything external */
+.bg-boxes::before   { background-image: image-set(url("../assets/img/gm/boxes-illus.webp") type("image/webp"), url("../assets/img/gm/boxes-illus.png") type("image/png")); }
+.bg-about::before   { background-image: image-set(url("../assets/img/gm/about-gallery.webp") type("image/webp"), url("../assets/img/gm/about-gallery.png") type("image/png")); }
+.bg-group::before   { background-image: image-set(url("../assets/img/gm/group.webp") type("image/webp"), url("../assets/img/gm/group.png") type("image/png")); }
+.bg-farmgpt::before { background-image: image-set(url("../assets/img/gm/farm-gpt-wide.webp") type("image/webp"), url("../assets/img/gm/farm-gpt-wide.png") type("image/png")); }
+.bg-sustain::before { background-image: image-set(url("../assets/img/gm/sustain.webp") type("image/webp"), url("../assets/img/gm/sustain.png") type("image/png")); }
+.bg-field::before { background-image: image-set(url("../assets/img/gm/field-old.webp") type("image/webp"), url("../assets/img/gm/field-old.jpg") type("image/jpeg")); }
 
 @media (max-width: 900px) {
   .media .wrap { grid-template-columns: 1fr; min-height: auto; }
