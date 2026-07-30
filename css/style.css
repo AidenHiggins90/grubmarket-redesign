@@ -8,14 +8,19 @@
   src: url("../assets/fonts/MuseoSansRounded-300-webfont.woff2") format("woff2"),
        url("../assets/fonts/MuseoSansRounded-300-webfont.woff") format("woff"); }
 @font-face { font-family: "Museo Sans Rounded"; font-weight: 500; font-display: swap;
-  src: url("../assets/fonts/MuseoSansRounded-500.otf") format("opentype"); }
+  src: url("../assets/fonts/MuseoSansRounded-500.woff2") format("woff2"),
+       url("../assets/fonts/MuseoSansRounded-500.otf") format("opentype"); }
 @font-face { font-family: "Museo Sans Rounded"; font-weight: 700; font-display: swap;
   src: url("../assets/fonts/MuseoSansRounded-700-webfont.woff2") format("woff2"),
        url("../assets/fonts/MuseoSansRounded-700-webfont.woff") format("woff"); }
+/* weight 900 also answers the 800 rules — it is the heaviest face shipped, so it
+   downloads on nearly every page; woff2 takes it from 79KB to 26KB */
 @font-face { font-family: "Museo Sans Rounded"; font-weight: 900; font-display: swap;
-  src: url("../assets/fonts/MuseoSansRounded-900.otf") format("opentype"); }
+  src: url("../assets/fonts/MuseoSansRounded-900.woff2") format("woff2"),
+       url("../assets/fonts/MuseoSansRounded-900.otf") format("opentype"); }
 @font-face { font-family: "Patua One"; font-display: swap;
-  src: url("../assets/fonts/PatuaOne-Regular.ttf") format("truetype"); }
+  src: url("../assets/fonts/PatuaOne-Regular.woff2") format("woff2"),
+       url("../assets/fonts/PatuaOne-Regular.ttf") format("truetype"); }
 
 /* ---- Design tokens ---- */
 :root {
