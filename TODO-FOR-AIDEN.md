@@ -11,15 +11,21 @@ I could resolve myself are already done and not listed.
 
 ### Meeting-note items whose meaning I couldn't work out
 From `7-23 grub msite meeting.docx`. I applied everything I understood; these
-four I left alone rather than guess wrong.
+nine I left alone rather than guess wrong. **Three of them (marked NEW) I had
+missed off earlier versions of this list — I only caught them re-reading the
+notes line by line.**
 
 | Note | Why I'm stuck |
 |---|---|
+| **NEW** — "Grub OS font" | No verb, so I can't tell the intent. Change the typeface on that page? Fix a font that was rendering wrong at the time? The page uses the same Museo Sans Rounded as the rest of the site. |
+| **NEW** — "Delete top font 'new build' etc." | I can't find anything on the site reading "new build". This may refer to something in the version you were reviewing on 7/23 that no longer exists, or to a banner I never saw. |
+| **NEW** — "Service offerings" | A bare heading with no instruction. Add a service-offerings section? Rename something to it? |
 | "Delete S — sellable today" | Can't tell what "S" is. A module? A page? SPUD? Deleting the wrong thing is costly. |
-| "Food prep over traceability? Hasp, Prisma, inspection" | Researched this. **No food-safety or produce product called "Prisma" exists publicly** — I checked the food-safety software market and GrubMarket's acquisition history. "Hasp" is almost certainly HACCP, which is already on the Food Safety module. So either Prisma is an internal/unannounced tool you'll have to describe to me, or the transcription garbled another name. Note the acquisition **Parsemony** is phonetically close — but it's ERP/accounting, not food safety, and it's already on the ERP module. |
+| "Food prep over traceability? Hasp, Prisma, inspection" | Researched. **No food-safety product called "Prisma" exists publicly** — I checked the market and GrubMarket's acquisition history. "Hasp" is almost certainly HACCP, already on the Food Safety module. So Prisma is either internal/unannounced, or the transcription garbled a name. |
 | "Rid of service states" | The 15-state list appears in the homepage About block and on about.html. Remove the list entirely, or just stop framing it as service territory? |
 | "Change verbiage into our terms on pop-ups" | Which terms? Give me 3–4 words you'd swap in and I'll apply the pattern across all 8 module pop-ups. |
-| ~~"Market intelligence"~~ / ~~EDI's product~~ | **Resolved.** EDI now carries WholesaleWare EDI, whose real integrations (Produce Alliance, Restaurant365) are named in the module detail, plus Procurant as the trading platform. |
+| "Possibly broaden Grub OS terms — one word?" | Partly done by accident: 5 of 8 modules are one word (Warehouse, EDI, Transportation, Commerce, AI). Three are not — Field Labor, Food Safety, ERP & Financials. Do you want those shortened too? |
+| "Note: Software tab disappear?" | Written as a question, so I only did the safe half: the nav tab is now "Tech" and the "Software" group heading is gone. But `software.html` still exists and the nav links to it twice. Did you want the page itself retired? |
 
 ### Content decisions
 - **Homepage headline.** The note says *"America to world for home page"* but the h1
@@ -112,7 +118,7 @@ Everything I can do without you is done. What's left is genuinely yours:
 2. **The real domain** — 43 files still hardcode the Vercel URL in canonical
    tags, OG tags and the sitemap, so that's what search engines index.
 3. **Analytics** — nothing is installed, so you have no traffic data at all.
-4. **The three meeting-note questions** in section 1, plus the homepage headline
+4. **The nine meeting-note questions** in section 1, plus the homepage headline
    and legal sign-off.
 5. **IR and customer placeholders** — real figures, or permission to cut those
    sections until you have them.
