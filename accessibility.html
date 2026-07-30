@@ -19,7 +19,7 @@
   <meta name="twitter:description" content="GrubMarket's commitment to accessible digital experiences for all users across our marketplace and software platforms." />
   <meta name="twitter:image" content="https://grubmarket-redesign.vercel.app/assets/img/gm/boxes.jpg" />
   <meta name="theme-color" content="#14864F" />
-  <link rel="stylesheet" href="css/style.css?v=20260775" />
+  <link rel="stylesheet" href="css/style.css?v=20260776" />
 
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://grubmarket-redesign.vercel.app/index.html"}, {"@type": "ListItem", "position": 2, "name": "Accessibility", "item": "https://grubmarket-redesign.vercel.app/accessibility.html"}]}</script>
 </head>
@@ -44,10 +44,18 @@
         <p>We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA and to align with applicable requirements such as the Americans with Disabilities Act (ADA).</p>
         <h2>What we do</h2>
         <ul>
-          <li>Support keyboard navigation and visible focus across interactive elements.</li>
+          <li>Support keyboard navigation and visible focus across interactive elements. Menus open with Enter, Space or Arrow&nbsp;Down, close with Escape, and expose their state through <code>aria-expanded</code>.</li>
           <li>Use semantic markup and ARIA labels so assistive technologies can interpret content.</li>
-          <li>Maintain sufficient color contrast and scalable, legible typography.</li>
+          <li>Maintain colour contrast at WCAG&nbsp;AA (4.5:1 for body text, 3:1 for focus indicators) and scalable, legible typography.</li>
           <li>Provide text alternatives for meaningful images.</li>
+          <li>Respect the operating system's reduced-motion setting.</li>
+        </ul>
+        <h2>Known limitations</h2>
+        <p>We test this site continuously and publish what we have not yet resolved:</p>
+        <ul>
+          <li>Mobile touch-target sizes have not been audited against the 44&nbsp;&times;&nbsp;44&nbsp;px minimum.</li>
+          <li>The site has not been tested end to end with a screen reader; our checks so far have been automated plus manual keyboard testing.</li>
+          <li>The contact form currently falls back to email if submission fails.</li>
         </ul>
         <h2>Ongoing effort</h2>
         <p>Accessibility is an ongoing process. We test regularly, train our teams, and work to remediate issues as we identify them.</p>
