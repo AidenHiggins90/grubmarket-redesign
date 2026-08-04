@@ -51,7 +51,7 @@
         ]}
       ],
       featured: { tag: "Buy & Sell", img: "boxes.jpg", href: "wholesale.html", linkText: "Buy wholesale →",
-        quote: "Our ability to offer superior services and the finest quality produce year after year is powered by our deep operational know-how, enduring relationships with our customers and vendors, and our investments in world-class digital transformation.",
+        quote: "Our ability to offer the finest quality produce year after year is powered by our investments in world-class digital transformation.",
         name: "Carole Shandler", role: "President, Shapiro-Gilman-Shandler at GrubMarket" }
     },
 
@@ -68,7 +68,7 @@
         ]}
       ],
       featured: { tag: "Partner voice", img: "partner-voice.png", href: "customers.html", linkText: "Read customer stories →",
-        quote: "GrubMarket's commitment to AI technology and innovation aligns perfectly with our vision to elevate our capabilities and drive future growth through technology integration.",
+        quote: "GrubMarket's commitment to AI aligns perfectly with our vision to drive future growth through technology.",
         name: "Isabel Freeland", role: "President & CEO, Coast Citrus Distributors" }
     },
 
@@ -106,7 +106,7 @@
         ]}
       ],
       featured: { tag: "From our CEO", img: "assets/img/remote/unsplash-1521737604893-d14cc237f11d.jpg", href: "leadership.html", linkText: "Meet the team →",
-        quote: "Our mission is to digitally transform the food supply chain through AI, eCommerce, and vertical Software-as-a-Service — driven by our team's relentless pursuit of operational excellence and sustainable growth.",
+        quote: "Our mission is to digitally transform the food supply chain through AI, eCommerce, and vertical Software-as-a-Service.",
         name: "Mike Xu", role: "Founder & CEO, GrubMarket" }
     }
   ];
