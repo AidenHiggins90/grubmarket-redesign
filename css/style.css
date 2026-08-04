@@ -196,10 +196,11 @@ img { max-width: 100%; }
   display: grid; grid-template-columns: 1fr 300px; gap: 40px;
   padding: 30px 34px 32px;
   /* Every panel is the same height so the box doesn't jump between tabs.
-     Natural heights ranged 420-609px because both the link groups and the
-     featured quote vary in length. align-items:stretch (not start) lets the
-     featured card fill the slack instead of leaving dead white space. */
-  min-height: 0; align-items: stretch;
+     Once the nav descriptions became single-line phrases and the featured
+     quotes were trimmed, natural heights fell to 403-452px (from 420-609px),
+     so the shared height is now 452 rather than 609. align-items:stretch lets
+     the featured card fill any slack instead of leaving dead white space. */
+  min-height: 452px; align-items: stretch;
 }
 .mega-main { min-width: 0; }
 
