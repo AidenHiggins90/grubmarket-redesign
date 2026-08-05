@@ -52,6 +52,14 @@ notes line by line.**
   disclaimers before the numbers. I need real figures/a data feed, or permission
   to cut these sections until you have them.
   (Earlier I described this as "every number is an em-dash" — that was wrong.)
+- **"10,000+ business customers" — I cannot verify this.** It appears as a
+  headline stat on the homepage and About page. No source I can find states a
+  GrubMarket customer count. Several sources *do* report GrubMarket having more
+  than 10,000 employees, so I suspect this figure may be an employee count that
+  got relabelled at some point. I left it alone rather than guess which metric
+  was intended — you can confirm it in seconds and I'll correct or relabel it.
+  Every other number on the site has now been checked against a primary source.
+
 - **Customer stories.** Marked "illustrative — named case studies to follow."
   Real quotes from Coast Citrus and Schoenmann are in place and sourced. If you
   want named case studies, I need approved copy.
