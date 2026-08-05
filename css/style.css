@@ -688,6 +688,11 @@ img { max-width: 100%; }
 
 /* IR stock ticker strip — illustrative pre-IPO quote, styled like a real one. */
 .ir-stock-band { background: var(--surface); border-bottom: 1px solid var(--line); }
+/* The band mimics a live ticker, so it needs a label that can't be skimmed past:
+   the exchange slot said "NYSE", which is simply untrue for a private company. */
+.stk-illus { flex: none; font-size: 10.5px; font-weight: 800; letter-spacing: .09em;
+  text-transform: uppercase; color: #7a4b00; background: #FFE9B8;
+  border: 1px solid #E8C87A; border-radius: 5px; padding: 3px 8px; }
 .ir-stock { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; padding: 16px 24px; }
 .stk-main { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
 .stk-sym { font-family: var(--head); font-weight: 700; color: var(--ink); font-size: 18px; letter-spacing: -0.01em; }
