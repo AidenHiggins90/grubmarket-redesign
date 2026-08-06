@@ -52,13 +52,13 @@ notes line by line.**
   disclaimers before the numbers. I need real figures/a data feed, or permission
   to cut these sections until you have them.
   (Earlier I described this as "every number is an em-dash" — that was wrong.)
-- **"10,000+ business customers" — I cannot verify this.** It appears as a
-  headline stat on the homepage and About page. No source I can find states a
-  GrubMarket customer count. Several sources *do* report GrubMarket having more
-  than 10,000 employees, so I suspect this figure may be an employee count that
-  got relabelled at some point. I left it alone rather than guess which metric
-  was intended — you can confirm it in seconds and I'll correct or relabel it.
-  Every other number on the site has now been checked against a primary source.
+- ~~**"10,000+ business customers"**~~ **Checked — it holds up.** I flagged this
+  as unverified and speculated it might be a relabelled employee count. That was
+  wrong. Sacra's GrubMarket profile breaks the customer base down as "over 500
+  grocery stores, 8,000 restaurants, and 2,000 corporate offices" — 10,500, which
+  is exactly consistent with "10,000+ business customers". Caveat: Sacra is a
+  research firm, not GrubMarket, and GrubMarket's own site states no customer
+  count, so this is a credible secondary source rather than an official one.
 
 - **Customer stories.** Marked "illustrative — named case studies to follow."
   Real quotes from Coast Citrus and Schoenmann are in place and sourced. If you
