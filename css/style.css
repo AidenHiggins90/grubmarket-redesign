@@ -465,6 +465,8 @@ img { max-width: 100%; }
    QUOTES
    ============================================================ */
 .quote-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+/* a lone quote shouldn't sit in the left half of a two-column grid */
+.quote-grid > .quote:only-child { grid-column: 1 / -1; max-width: 760px; margin: 0 auto; }
 .quote { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 44px 40px 36px; box-shadow: var(--shadow-md); font-size: 19px; line-height: 1.6; color: var(--ink); }
 .quote::before { content: "“"; font-family: var(--head); font-size: 96px; color: var(--mint-100); position: absolute; top: 16px; left: 26px; line-height: 1; pointer-events: none; }
 .quote .body-q { position: relative; }
