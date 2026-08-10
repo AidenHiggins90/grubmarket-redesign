@@ -989,13 +989,8 @@ img { max-width: 100%; }
 .os-num { position: absolute; top: 13px; right: 16px; font-family: var(--head); font-weight: 900;
   font-size: 15px; color: rgba(255,255,255,.9); }
 .os-cube:hover .os-num { color: #fff; }
-/* icon straddles the band and the white body, tying the two halves together */
-.os-ico { position: absolute; top: 52px; left: 20px; z-index: 2;
-  width: 52px; height: 52px; border-radius: 14px; background: var(--surface); color: var(--green);
-  display: grid; place-items: center; box-shadow: 0 3px 10px rgba(13,75,28,.16); }
-.os-ico svg { width: 25px; height: 25px; }
 .os-name { font-family: var(--head); font-weight: 900; font-size: 18px; color: var(--ink-green);
-  margin-top: 40px; }
+  margin-top: 18px; }
 .os-tagline { font-size: 12.5px; color: var(--body); margin-top: 5px; line-height: 1.45; }
 /* fixed two-row box so the chip area is the same height in every cube even
    when a module has more products than fit on one line */
