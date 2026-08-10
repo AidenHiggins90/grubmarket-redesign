@@ -18,9 +18,6 @@
 @font-face { font-family: "Museo Sans Rounded"; font-weight: 900; font-display: swap;
   src: url("../assets/fonts/MuseoSansRounded-900.woff2") format("woff2"),
        url("../assets/fonts/MuseoSansRounded-900.otf") format("opentype"); }
-@font-face { font-family: "Patua One"; font-display: swap;
-  src: url("../assets/fonts/PatuaOne-Regular.woff2") format("woff2"),
-       url("../assets/fonts/PatuaOne-Regular.ttf") format("truetype"); }
 
 /* ---- Design tokens ---- */
 :root {
@@ -276,7 +273,7 @@ img { max-width: 100%; }
 .hero .lead { max-width: 40ch; margin-bottom: 28px; }
 .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
 .hero-meta { display: flex; gap: 28px; margin-top: 34px; flex-wrap: wrap; }
-.hero-meta .m { font-size: 15px; color: var(--ink-green); font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.hero-meta .m { font-size: 15px; color: var(--ink-green); font-weight: 700; display: flex; align-items: center; gap: 8px; }
 .hero-meta .m svg { width: 17px; height: 17px; color: var(--ink-green); stroke-width: 2.4; }
 .hero-art {
   border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg);
@@ -580,7 +577,7 @@ img { max-width: 100%; }
 .module-head h3 { margin: 0; font-size: 20px; color: var(--ink-green); display: flex; align-items: center; gap: 10px; }
 .module-head .mh-desc { font-size: 13.5px; color: var(--muted); margin: 10px 0 0; line-height: 1.5; }
 .core-tag { flex: none; width: 24px; height: 24px; border-radius: 50%; display: inline-grid; place-items: center;
-  font-size: 12px; font-weight: 800; letter-spacing: 0; text-transform: none; color: #fff; background: var(--green); padding: 0; }
+  font-size: 12px; font-weight: 900; letter-spacing: 0; text-transform: none; color: #fff; background: var(--green); padding: 0; }
 .app-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
 .app-tile { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 12px; padding: 20px; background: var(--mint-50);
   cursor: pointer; text-align: left; transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease, background .15s ease; }
@@ -595,7 +592,7 @@ img { max-width: 100%; }
 .arch { max-width: 760px; margin: 0 auto; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
 .arch-row { display: flex; align-items: baseline; gap: 24px; padding: 22px 28px; }
 .arch-row + .arch-row { border-top: 1px solid var(--line); }
-.arch-row h4 { flex: none; width: 140px; font-family: var(--head); font-weight: 800; margin: 0; font-size: 15px; color: var(--ink-green); }
+.arch-row h4 { flex: none; width: 140px; font-family: var(--head); font-weight: 900; margin: 0; font-size: 15px; color: var(--ink-green); }
 .arch-row p { margin: 0; font-size: 14.5px; color: var(--body); line-height: 1.5; }
 .arch-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .arch-tags span { font-size: 12.5px; font-weight: 700; padding: 6px 14px; border-radius: 20px; background: var(--mint-50); color: var(--ink-green); border: 1px solid var(--line); }
@@ -647,7 +644,7 @@ img { max-width: 100%; }
    and underlined against the red rather than inheriting the green link colour */
 .form-status a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .form-status a:hover { text-decoration-thickness: 2px; }
-.form-status.err { line-height: 1.55; font-weight: 600; }
+.form-status.err { line-height: 1.55; font-weight: 700; }
 @media (max-width: 600px) { .lead-form { grid-template-columns: 1fr; } }
 
 /* ============================================================
@@ -692,7 +689,7 @@ img { max-width: 100%; }
 .ir-stock-band { background: var(--surface); border-bottom: 1px solid var(--line); }
 /* The band mimics a live ticker, so it needs a label that can't be skimmed past:
    the exchange slot said "NYSE", which is simply untrue for a private company. */
-.stk-illus { flex: none; font-size: 10.5px; font-weight: 800; letter-spacing: .09em;
+.stk-illus { flex: none; font-size: 10.5px; font-weight: 900; letter-spacing: .09em;
   text-transform: uppercase; color: #7a4b00; background: #FFE9B8;
   border: 1px solid #E8C87A; border-radius: 5px; padding: 3px 8px; }
 .ir-stock { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; padding: 16px 24px; }
@@ -985,7 +982,7 @@ img { max-width: 100%; }
 
 .os-body { display: flex; flex-direction: column; align-items: flex-start; flex: 1 1 auto;
   min-height: 0; padding: 0 20px 20px; }
-.os-num { position: absolute; top: 13px; right: 16px; font-family: var(--head); font-weight: 800;
+.os-num { position: absolute; top: 13px; right: 16px; font-family: var(--head); font-weight: 900;
   font-size: 15px; color: rgba(255,255,255,.9); }
 .os-cube:hover .os-num { color: #fff; }
 /* icon straddles the band and the white body, tying the two halves together */
@@ -993,14 +990,14 @@ img { max-width: 100%; }
   width: 52px; height: 52px; border-radius: 14px; background: var(--surface); color: var(--green);
   display: grid; place-items: center; box-shadow: 0 3px 10px rgba(13,75,28,.16); }
 .os-ico svg { width: 25px; height: 25px; }
-.os-name { font-family: var(--head); font-weight: 800; font-size: 18px; color: var(--ink-green);
+.os-name { font-family: var(--head); font-weight: 900; font-size: 18px; color: var(--ink-green);
   margin-top: 40px; }
 .os-tagline { font-size: 12.5px; color: var(--body); margin-top: 5px; line-height: 1.45; }
 /* fixed two-row box so the chip area is the same height in every cube even
    when a module has more products than fit on one line */
 .os-tags { display: flex; flex-wrap: wrap; align-content: flex-start; gap: 6px;
   margin-top: 12px; min-height: 46px; }
-.os-tags span { font-size: 11px; font-weight: 600; color: var(--green-mid); background: var(--mint-50);
+.os-tags span { font-size: 11px; font-weight: 700; color: var(--green-mid); background: var(--mint-50);
   border: 1px solid var(--line); border-radius: 20px; padding: 3px 9px; line-height: 1.3; }
 .os-tags .os-tag-more { color: var(--muted); background: transparent; border-color: transparent;
   padding-left: 2px; align-self: center; }
