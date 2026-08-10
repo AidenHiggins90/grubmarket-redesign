@@ -121,7 +121,9 @@ img { max-width: 100%; }
   display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
   font-family: var(--sans); font-weight: 700; font-size: 15px; line-height: 1;
   padding: 14px 22px; border-radius: 8px;
-  border: 2px solid var(--green); color: var(--green);
+  /* --green-mid, not --green: the outline button appears on white AND on the
+     mint/paper tints, where --green only reaches 4.31-4.39:1. */
+  border: 2px solid var(--green-mid); color: var(--green-mid);
   background: transparent; transition: all .16s ease; white-space: nowrap;
 }
 .btn:hover { background: var(--mint-50); color: var(--ink-green); border-color: var(--ink-green); }
@@ -132,7 +134,7 @@ img { max-width: 100%; }
 .btn.solid-light { background: #fff; color: var(--ink-green); border-color: #fff; }
 .btn.solid-light:hover { background: var(--mint-50); color: var(--ink-green); transform: translateY(-1px); }
 .btn.sm { padding: 11px 16px; font-size: 14px; }
-.btn.link { border: 0; padding: 0; background: none; color: var(--green); font-weight: 700; }
+.btn.link { border: 0; padding: 0; background: none; color: var(--green-mid); font-weight: 700; }
 .btn.link:hover { color: var(--ink-green); gap: 12px; }
 .btn .arr { transition: transform .15s ease; }
 .btn.link:hover .arr { transform: translateX(3px); }
@@ -156,8 +158,10 @@ img { max-width: 100%; }
   padding: 9px 14px; border-radius: 8px;
 }
 .nav-link:hover { background: var(--mint-25); color: var(--ink-green); }
-.nav-link.is-active { color: var(--green); background: var(--mint-25); }
-.mobile-panel a.is-active { color: var(--green); }
+.nav-link.is-active { color: var(--green-mid); background: var(--mint-25); }
+/* Not .btn.solid: that already has a green fill, so recolouring its label
+   green makes the current-page CTA invisible (1.00:1). */
+.mobile-panel a.is-active:not(.solid) { color: var(--green-mid); }
 .footer a.is-active { color: #fff; }
 
 .dropdown { position: static; }
@@ -235,7 +239,7 @@ img { max-width: 100%; }
 .mega-featured .mf-quote { margin: 8px 0 12px; font-family: var(--head); font-weight: 700; color: var(--ink); font-size: 14.5px; line-height: 1.42; }
 .mega-featured .mf-name { font-family: var(--sans); font-weight: 700; color: var(--ink-green); font-size: 12.5px; }
 .mega-featured .mf-role { font-size: 11.5px; color: var(--muted); line-height: 1.35; margin-top: 1px; }
-.mega-featured .mf-link { display: inline-block; font-size: 12.5px; font-weight: 700; color: var(--green); margin-top: 12px; }
+.mega-featured .mf-link { display: inline-block; font-size: 12.5px; font-weight: 700; color: var(--green-mid); margin-top: 12px; }
 .mega-featured:hover .mf-link { color: var(--ink-green); }
 .nav-cta { margin-left: 8px; }
 
